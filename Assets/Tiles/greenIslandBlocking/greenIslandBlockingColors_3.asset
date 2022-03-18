@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: testTiles_5
+  m_Name: greenIslandBlockingColors_3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 3047410807044590080, guid: 56b63bceafd03e84eb1c1a5f70b0e7d7, type: 3}
+  m_Sprite: {fileID: 1035446306169184412, guid: ed0bce7354c8a624f9291ba923688634, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
