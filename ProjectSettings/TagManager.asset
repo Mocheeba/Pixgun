@@ -56,6 +56,9 @@ TagManager:
   - name: Dangerous 1
     uniqueID: 2985277497
     locked: 0
-  - name: Player 2
+  - name: Interactive 2
+    uniqueID: 1396900507
+    locked: 0
+  - name: Player 3
     uniqueID: 1069136997
     locked: 0
