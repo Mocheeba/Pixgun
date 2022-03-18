@@ -1,0 +1,564 @@
+fileFormatVersion: 2
+guid: 8c1ffbb346b1eb0479289b06124486a3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4690830372754205099
+    second: Different_Idle_PyxelEdit_0
+  - first:
+      213: 1932385496417361739
+    second: Different_Idle_PyxelEdit_1
+  - first:
+      213: -2330959327308748182
+    second: Different_Idle_PyxelEdit_2
+  - first:
+      213: 2355016821851341412
+    second: Different_Idle_PyxelEdit_3
+  - first:
+      213: -4213614082535192071
+    second: Different_Idle_PyxelEdit_4
+  - first:
+      213: -801975823257852423
+    second: Different_Idle_PyxelEdit_5
+  - first:
+      213: -4385646247183988007
+    second: Different_Idle_PyxelEdit_6
+  - first:
+      213: 5052309641200262633
+    second: Different_Idle_PyxelEdit_7
+  - first:
+      213: 7607137309422165285
+    second: Different_Idle_PyxelEdit_8
+  - first:
+      213: 201325741329959599
+    second: Different_Idle_PyxelEdit_9
+  - first:
+      213: -2712637201757524015
+    second: Different_Idle_PyxelEdit_10
+  - first:
+      213: -8827027965088878181
+    second: Different_Idle_PyxelEdit_12
+  - first:
+      213: -4276155134249931275
+    second: Different_Idle_PyxelEdit_14
+  - first:
+      213: 4642197530183931901
+    second: Different_Idle_PyxelEdit_16
+  - first:
+      213: -2302618978101957978
+    second: Different_Idle_PyxelEdit_18
+  - first:
+      213: -2839636551118026870
+    second: Different_Idle_PyxelEdit_19
+  - first:
+      213: 4952918197573929782
+    second: Different_Idle_PyxelEdit_20
+  - first:
+      213: -4963559703257376251
+    second: Different_Idle_PyxelEdit_22
+  - first:
+      213: 714649539536568658
+    second: Different_Idle_PyxelEdit_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 21
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9a0a5fe5d291140800000000000000
+      internalID: 4690830372754205099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 21
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fd21bee5631da10800000000000000
+      internalID: 1932385496417361739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 21
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ae0ed77d4c6afd0800000000000000
+      internalID: -2330959327308748182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 21
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462c4827253bea020800000000000000
+      internalID: 2355016821851341412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 21
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f908ed015c3685c0800000000000000
+      internalID: -4213614082535192071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 21
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5a340ec3fced4f0800000000000000
+      internalID: -801975823257852423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 21
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dac21e69fd0323c0800000000000000
+      internalID: -4385646247183988007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_7
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 21
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edd503b9d86d1640800000000000000
+      internalID: 5052309641200262633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_8
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 21
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d9abd141bf19960800000000000000
+      internalID: 7607137309422165285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_9
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 21
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa4d10f1b04bc200800000000000000
+      internalID: 201325741329959599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_10
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 21
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dfabb056d6ca5ad0800000000000000
+      internalID: -2712637201757524015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_12
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 21
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b91307655d8108580800000000000000
+      internalID: -8827027965088878181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_14
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 21
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fde19abf8b08a4c0800000000000000
+      internalID: -4276155134249931275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_16
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 21
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df71fcbee066c6040800000000000000
+      internalID: 4642197530183931901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_18
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 21
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aae82d3d347b00e0800000000000000
+      internalID: -2302618978101957978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_19
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 21
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87056f0a959798d0800000000000000
+      internalID: -2839636551118026870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_20
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 21
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b46f7ebdc4cb440800000000000000
+      internalID: 4952918197573929782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_22
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 21
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a96e97fb4ed1bb0800000000000000
+      internalID: -4963559703257376251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Different_Idle_PyxelEdit_23
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 21
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25149f648f1fae900800000000000000
+      internalID: 714649539536568658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
