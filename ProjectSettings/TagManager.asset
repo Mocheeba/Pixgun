@@ -48,21 +48,21 @@ TagManager:
   - name: Foreground -2
     uniqueID: 286938793
     locked: 0
-  - name: Ground -1
-    uniqueID: 3088858085
-    locked: 0
-  - name: Platforms 0
-    uniqueID: 1591682603
-    locked: 0
-  - name: Dangerous 1
+  - name: Dangerous -1
     uniqueID: 2985277497
     locked: 0
-  - name: Interactive 2
+  - name: Ground 1
+    uniqueID: 3088858085
+    locked: 0
+  - name: Platforms 2
+    uniqueID: 1591682603
+    locked: 0
+  - name: Interactive 3
     uniqueID: 1396900507
     locked: 0
-  - name: Player 3
+  - name: Player 4
     uniqueID: 1069136997
     locked: 0
-  - name: Enemy 3
+  - name: Enemy 4
     uniqueID: 3523214451
     locked: 0
