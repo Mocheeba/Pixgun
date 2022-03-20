@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class FallowEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed;
+    public Transform target;
+    public float minimumDistance;
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        
+        if (Vector2.Distance(transform.position, target.position) < minimumDistance)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
+        else
+        {
+            // ATTACK
+        }
     }
 }

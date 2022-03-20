@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,9 +12,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Climbing
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -61,4 +62,7 @@ TagManager:
     locked: 0
   - name: Player 3
     uniqueID: 1069136997
+    locked: 0
+  - name: Enemy 3
+    uniqueID: 3523214451
     locked: 0
