@@ -26,6 +26,6 @@ public class BoobaMovement : MonoBehaviour
 
     void FlipEnemyFacing()
     {
-        Transform.localScale = new Vector2 (-(Mathf.Sign(myRigidbody.velocity.x)), 1f);
+        Transform.localScale = new Vector2(-(Mathf.Sign(myRigidbody.velocity.x)), 1f);
     }
 }
