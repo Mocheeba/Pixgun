@@ -17,4 +17,15 @@ public class BoobaMovement : MonoBehaviour
     {
         myRigidbody.velocity = new Vector2(-moveSpeed, 0f);
     }
+
+    void OnTriggerExit2D(Collider 2D other)
+    {
+        moveSpeed = -moveSpeed;
+        FlipHoriontal();
+    }
+
+    void FlipEnemyFacing()
+    {
+        Transform.localScale = new Vector2 (-(Mathf.Sign(myRigidbody.velocity.x)), 1f);
+    }
 }
