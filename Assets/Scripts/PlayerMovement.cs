@@ -7,10 +7,10 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 5f;
-    [SerializeField] float climbSpeed = 5f;
-    [SerializeField] Vector2 deathKick = new Vector2 (10f, 10f);
-    [SerializeField] GameObject bullet;
-    [SerializeField] Transform gun;
+    //[SerializeField] float climbSpeed = 5f;
+    //[SerializeField] Vector2 deathKick = new Vector2 (10f, 10f);
+    //[SerializeField] GameObject bullet;
+    //[SerializeField] Transform gun;
     
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     {
       //  if (!isAlive) { return; }
         if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))) { return;}
-        Debug.Log("#Jump");
+        //Debug.Log("#Jump");
         if(value.isPressed)
         {
             // do stuff
