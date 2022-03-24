@@ -11190,9 +11190,9 @@ GameObject:
   - component: {fileID: 1525699014}
   - component: {fileID: 1525699013}
   - component: {fileID: 1525699015}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: platformsAssets
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
