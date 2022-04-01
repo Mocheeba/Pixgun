@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public ParticleSystem dust;
+
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 5f;
     //[SerializeField] float climbSpeed = 5f;
@@ -60,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // do stuff
             myRigidbody.velocity += new Vector2 (0f, jumpSpeed);
+            CreateDust();
         }
     }
 
@@ -80,9 +83,14 @@ public class PlayerMovement : MonoBehaviour
         if (playerHasHorizontalSpeed)
         {
             transform.localScale = new Vector2 (Mathf.Sign(myRigidbody.velocity.x), 1f);
+      
         }
     }
 
+    void CreateDust()
+    {
+        dust.Play();
+    }
     //void ClimbLadder()
     //{
     //    if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Climbing"))) 
