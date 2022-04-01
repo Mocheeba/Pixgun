@@ -7,18 +7,23 @@ public class PlayerController : MonoBehaviour
 
     private float movementInputDirection;
 
+    private int amountOfJumpsLeft;
+
     private bool isFacingRight = true;
     private bool isWalking = true;
     private bool isGrounded;
+    private bool canJump;
 
     private Rigidbody2D rb;
     private Animator anim;
 
+    public int amountOfJumps = 1;
 
     public float movementSpeed = 10.0f;
     public float jumpForce = 10.0f;
     public float groundCheckRadius;
-    
+
+
     public Transform groundCheck;
 
     public LayerMask whatIsGround;
@@ -27,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        amountOfJumpsLeft = amountOfJumps;
     }
 
     // Update is called once per frame
@@ -41,6 +47,8 @@ public class PlayerController : MonoBehaviour
     {
         ApplyMovement();
         CheckSurroudings();
+        UpdateAnimations();
+        CheckIfCanJump();
     }
 
     private void CheckGround()
@@ -53,9 +61,26 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
 
+    private void CheckIfCanJump()
+    { 
+        if(isGrounded &&  rb.velocity.y <= 0)
+        {
+            amountOfJumpsLeft = amountOfJumps;
+        }    
+
+        if(amountOfJumpsLeft <= 0)
+        {
+            canJump = false;
+        }
+        else
+        {
+            canJump = true;
+        }
+    }
+
     private void CheckMovementDirection()
     {
-        if (isFacingRight && movementInputDirection < 0)
+        if(isFacingRight && movementInputDirection < 0)
         {
             Flip();
         }
@@ -64,7 +89,7 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        if (Mathf.Abs(rb.velocity.x) >= 0.01f)
+        if(Mathf.Abs(rb.velocity.x) >= 0.01f)
         {
             isWalking = true;
         }
@@ -102,7 +127,12 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        if(canJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            amountOfJumpsLeft--;
+        }
+
     }
 
     private void OnDrawGizmos()
