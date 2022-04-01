@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
        //gravityScaleAtStart = myRigidbody.gravityScale;
     }
 
-    void Update()
+    void FixedUpdate()
     {
       //  if (!isAlive) { return; }
         Run();
@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         if(value.isPressed)
         {
             // do stuff
+            myAnimator.SetBool("Jump", true);
             myRigidbody.velocity += new Vector2 (0f, jumpSpeed);
             CreateDust();
         }
