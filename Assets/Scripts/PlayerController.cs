@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     private bool isWalking = true;
     private bool isGrounded;
     private bool canJump;
+    private bool isTouchingWall;
+    private bool wallSliding;
+
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -22,11 +25,13 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed = 10.0f;
     public float jumpForce = 10.0f;
     public float groundCheckRadius;
-
+    public float wallCheckDistance;
+    public float wallSlideSpeed;
 
     public ParticleSystem dust;
 
     public Transform groundCheck;
+    public Transform wallCheck;
 
     public LayerMask whatIsGround;
 
@@ -43,24 +48,33 @@ public class PlayerController : MonoBehaviour
         CheckInput();
         CheckMovementDirection();
         UpdateAnimations();
+        CheckIfCanJump();
+        CheckIfWallSliding();
     }
 
     private void FixedUpdate()
     {
         ApplyMovement();
-        CheckSurroudings();
-        UpdateAnimations();
-        CheckIfCanJump();
+        CheckSurroundings();
     }
 
-    private void CheckGround()
+    private void CheckIfWallSliding()
     {
-
+        if (isTouchingWall && !isGrounded && rb.velocity.y < 0)
+        {
+            isTouchingWall = true;
+        }
+        else
+        {
+            isTouchingWall = false;
+        }
     }
 
-    private void CheckSurroudings()
+    private void CheckSurroundings()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+
+        isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
     }
 
     private void CheckIfCanJump()
@@ -121,6 +135,14 @@ public class PlayerController : MonoBehaviour
     private void ApplyMovement()
     {
         rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+
+        if(isWallSliding)
+        {
+            if(rb.velocity.y < -wallSlidingSpeed)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
+            }
+        }
     }
 
     private void Flip()
@@ -138,12 +160,13 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             amountOfJumpsLeft--;
         }
-
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+
+        Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
     }
 
     void CreateDust()
