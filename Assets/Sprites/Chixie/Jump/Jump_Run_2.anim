@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Chixie_Peak_Jump
+  m_Name: Jump_Run_2
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1404565295330982030, guid: 7e8c6d3bf879c344c99e7c0357028e99, type: 3}
+      value: {fileID: 6261172401226892168, guid: e8a9e8a4a6607dc4c923a7fcd3722cb5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1404565295330982030, guid: 7e8c6d3bf879c344c99e7c0357028e99, type: 3}
+    - {fileID: 6261172401226892168, guid: e8a9e8a4a6607dc4c923a7fcd3722cb5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
