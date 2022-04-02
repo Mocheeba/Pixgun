@@ -10,11 +10,11 @@ public class PlayerController : MonoBehaviour
     private int amountOfJumpsLeft;
 
     private bool isFacingRight = true;
-    private bool isWalking = true;
+    private bool isWalking;
     private bool isGrounded;
-    private bool canJump;
     private bool isTouchingWall;
-    private bool wallSliding;
+    private bool isWallSliding;
+    private bool canJump;
 
 
     private Rigidbody2D rb;
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dust;
 
     public Transform groundCheck;
-    public Transform wallCheck;
+    public Transform wallCheck; 
 
     public LayerMask whatIsGround;
 
@@ -62,11 +62,11 @@ public class PlayerController : MonoBehaviour
     {
         if (isTouchingWall && !isGrounded && rb.velocity.y < 0)
         {
-            isTouchingWall = true;
+            isWallSliding = true;
         }
         else
         {
-            isTouchingWall = false;
+            isWallSliding = false;
         }
     }
 
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfCanJump()
     { 
-        if(isGrounded &&  rb.velocity.y <= 0)
+        if(isGrounded &&  rb.velocity.y <= 0 || isWallSliding)
         {
             amountOfJumpsLeft = amountOfJumps;
         }    
@@ -120,6 +120,7 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isWalking", isWalking);
         anim.SetBool("isGrounded", isGrounded);
         anim.SetFloat("yVelocity", rb.velocity.y);
+        anim.SetBool("isWallSliding", isWallSliding);
     }
 
     private void CheckInput()
@@ -138,7 +139,7 @@ public class PlayerController : MonoBehaviour
 
         if(isWallSliding)
         {
-            if(rb.velocity.y < -wallSlidingSpeed)
+            if(rb.velocity.y < -wallSlideSpeed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
             }
