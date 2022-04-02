@@ -39,11 +39,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9091018371893951796}
+  - component: {fileID: 843977431}
   - component: {fileID: 9091018371893951797}
   - component: {fileID: 9091018371893951803}
   - component: {fileID: 9091018371893951802}
   - component: {fileID: 9091018371893951801}
-  - component: {fileID: 843977431}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -66,6 +66,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &843977431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091018371893951798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c11aa40370286489b4d9da18f54194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountOfJumps: 3
+  movementSpeed: 10
+  jumpForce: 5
+  groundCheckRadius: 0.28
+  wallCheckDistance: 0
+  dust: {fileID: 0}
+  groundCheck: {fileID: 1024164126}
+  wallCheck: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!95 &9091018371893951797
 Animator:
   serializedVersion: 3
@@ -123,7 +146,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1069136997
-  m_SortingLayer: 8
+  m_SortingLayer: 10
   m_SortingOrder: 4
   m_Sprite: {fileID: 4690830372754205099, guid: 8c1ffbb346b1eb0479289b06124486a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -183,23 +206,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &843977431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9091018371893951798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93c11aa40370286489b4d9da18f54194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amountOfJumps: 3
-  movementSpeed: 10
-  jumpForce: 5
-  groundCheckRadius: 0.28
-  groundCheck: {fileID: 1024164126}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 512
