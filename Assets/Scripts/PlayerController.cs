@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius;
     public float wallCheckDistance;
     public float wallSlideSpeed;
+    public float movementForceInAir;
+    public float airDragMultipler;
+    public float variableJumpHeightMultipler = 0.5f;
 
     public ParticleSystem dust;
 
@@ -135,9 +138,28 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyMovement()
     {
-        rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+        if(isGrounded)
+        {
+            rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+        }
+        else if(!isGrounded && !isWallSliding && movementForceInAir != 0)
+        {
+            Vector2 forceToAdd = new Vector2(movementForceInAir * movementInputDirection, 0);
+            rb.AddForce(forceToAdd);
 
-        if(isWallSliding)
+            if(Mathf.Abs(rb.velocity.x) > movementSpeed)
+            {
+                rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+            }
+        }    
+
+        else if(!isGrounded && !isWallSliding && movementInputDirection == 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x * airDragMultipler, rb.velocity.y);
+        }
+
+
+        if (isWallSliding)
         {
             if(rb.velocity.y < -wallSlideSpeed)
             {
@@ -148,9 +170,13 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
-        CreateDust();
-        isFacingRight = !isFacingRight;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
+        if(!isWallSliding)
+        {
+            CreateDust();
+            isFacingRight = !isFacingRight;
+            transform.Rotate(0.0f, 180.0f, 0.0f);
+        }
+
     }
 
     private void Jump()
