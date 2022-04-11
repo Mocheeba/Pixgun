@@ -41,7 +41,7 @@ AnimatorStateMachine:
     m_Position: {x: 560, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2892591782386565919}
-    m_Position: {x: 250, y: 270, z: 0}
+    m_Position: {x: 180, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7933854094264124212}
     m_Position: {x: 560, y: 140, z: 0}
@@ -50,7 +50,7 @@ AnimatorStateMachine:
     m_Position: {x: 530, y: 480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6686971611461816540}
-    m_Position: {x: 80, y: 250, z: 0}
+    m_Position: {x: 20, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2593303977198395800}
     m_Position: {x: 780, y: 170, z: 0}
@@ -394,49 +394,49 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: yVelocity
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isGrounded
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isWallSliding
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isAttacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: firstAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: attack1
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: canAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
