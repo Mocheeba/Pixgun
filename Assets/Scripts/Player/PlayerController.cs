@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
     public float jumpTimerSet = 0.15f;
     public float turnTimerSet = 0.1f;
     public float wallJumpTimerSet = 0.5f;
+    /* Dash  */
+
 
     public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
