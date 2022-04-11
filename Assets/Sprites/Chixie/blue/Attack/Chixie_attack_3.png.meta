@@ -217,9 +217,9 @@ TextureImporter:
       name: Chixie_attack_3_5
       rect:
         serializedVersion: 2
-        x: 299
+        x: 295
         y: 17
-        width: 56
+        width: 60
         height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
