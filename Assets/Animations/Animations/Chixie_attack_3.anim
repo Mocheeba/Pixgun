@@ -96,14 +96,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.81666666
-    functionName: EnableFlip
+    functionName: FinishAttack1
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.81666666
-    functionName: FinishAttack1
+    functionName: EnableFlip
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

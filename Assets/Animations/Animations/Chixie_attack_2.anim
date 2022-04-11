@@ -85,15 +85,8 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5
-    functionName: checkAttackHitbox
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 0.73333335
-    functionName: EnableFlip
+    functionName: checkAttackHitbox
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -101,6 +94,13 @@ AnimationClip:
     messageOptions: 0
   - time: 1
     functionName: FinishAttack1
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1
+    functionName: EnableFlip
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

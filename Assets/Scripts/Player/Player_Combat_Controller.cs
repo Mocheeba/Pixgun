@@ -50,7 +50,7 @@ public class Player_Combat_Controller : MonoBehaviour
     {
         if (gotInput)
         {
-            //Perform Attack1
+            //Perform Attack1;
             if (!isAttacking)
             {
                 Debug.Log("Perform attack1");
