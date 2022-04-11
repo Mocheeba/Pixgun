@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCombatController : MonoBehaviour
+public class Player_Combat_Controller : MonoBehaviour
 {
     [SerializeField]
     private bool combatEnabled;
@@ -34,9 +34,11 @@ public class PlayerCombatController : MonoBehaviour
     private void CheckCombatInput()
     {
         if (Input.GetMouseButtonDown(0))
+            Debug.Log("On click attack");
         {
             if (combatEnabled)
             {
+                Debug.Log("Attemp combat");
                 //Attempt combat
                 gotInput = true;
                 lastInputTime = Time.time;
@@ -51,6 +53,7 @@ public class PlayerCombatController : MonoBehaviour
             //Perform Attack1
             if (!isAttacking)
             {
+                Debug.Log("Perform attack1");
                 gotInput = false;
                 isAttacking = true;
                 isFirstAttack = !isFirstAttack;
@@ -67,16 +70,25 @@ public class PlayerCombatController : MonoBehaviour
         }
     }
 
-    private void CheckAttackHitBox()
+    private void checkAttackHitbox()
     {
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable);
-
-        foreach (Collider2D collider in detectedObjects)
-        {
-            collider.transform.parent.SendMessage("Damage", attack1Damage);
-            //Instantiate hit particle
-        }
     }
+
+    //private void CheckAttackHitBox()
+    //{
+    //    Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable);
+
+    //    attackDetails.damageAmount = attack1Damage;
+    //    attackDetails.position = transform.position;
+    //    attackDetails.stunDamageAmount = stunDamageAmount;
+
+    //    foreach (Collider2D collider in detectedObjects)
+    //    {
+    //        collider.transform.parent.SendMessage("Damage", attackDetails);
+    //        Instantiate hit particle
+    //    }
+    //}
 
     private void FinishAttack1()
     {
@@ -89,5 +101,6 @@ public class PlayerCombatController : MonoBehaviour
     {
         Gizmos.DrawWireSphere(attack1HitBoxPos.position, attack1Radius);
     }
+
 
 }
