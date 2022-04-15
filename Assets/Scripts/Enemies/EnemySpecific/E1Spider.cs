@@ -17,7 +17,9 @@ public class E1Spider : Entity
         base.Start();
 
         moveState = new E1Spider_MoveState(this, stateMachine, "move", moveStateData, this);
+        idleState = new E1Spider_IdleState(this, stateMachine, "idle", idleStateData, this);
 
+        stateMachine.Initialize(moveState);
 
     }
 
