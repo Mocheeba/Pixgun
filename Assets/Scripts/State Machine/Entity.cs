@@ -55,11 +55,14 @@ public class Entity : MonoBehaviour
     public virtual void CheckWall()
     {
         Physics2D.Raycast(wallCheck.position, aliveGO.transform.right, entityData.wallCheckDistance, entityData.whatIsGround);
+        Debug.Log("Wall Detected! ");
+
     }
 
     public virtual void CheckLedge()
     {
         Physics2D.Raycast(ledgeCheck.position, Vector2.down, entityData.ledgeCheckDistance, entityData.whatIsGround);
+        Debug.Log("Ledge Detected! ");
     }
 
     public virtual void Flip()
