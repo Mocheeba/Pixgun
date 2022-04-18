@@ -27,6 +27,7 @@ public class E1Spider_MoveState : MoveState
 
         if (isDetectingWall || !isDetectingLedge)
         {
+            Debug.Log("logic update");
             enemy.idleState.SetFlipAfterIdle(true);
             stateMachine.ChangeState(enemy.idleState);
         }
