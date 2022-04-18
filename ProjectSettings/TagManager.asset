@@ -76,3 +76,6 @@ TagManager:
   - name: Enemy 4
     uniqueID: 3523214451
     locked: 0
+  - name: Crystals 5
+    uniqueID: 1444999329
+    locked: 0
