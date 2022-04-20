@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class IdleState : State
 {
-
     protected D_IdleState stateData;
 
     protected bool flipAfterIdle;
-    protected bool isIdleTimeOver;
+    protected bool isIdleTimerOver;
 
     protected float idleTime;
 
-
-    public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolname, D_IdleState stateData) : base(entity, stateMachine, animBoolname)
+    public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName) : base(entity, stateMachine, animBoolName)
     {
-        this.entity = entity;
-        this.stateData = stateData;
-        this.aniBoolName = animBoolname; 
     }
 
     public override void Enter()
@@ -25,8 +20,9 @@ public class IdleState : State
         base.Enter();
 
         entity.SetVelocity(0f);
-        isIdleTimeOver = false;
+        isIdleTimerOver = false;
         SetRandomIdleTime();
+
     }
 
     public override void Exit()
@@ -35,7 +31,7 @@ public class IdleState : State
 
         if (flipAfterIdle)
         {
-        entity.Flip();
+            entity.Flip();
         }
     }
 
@@ -45,7 +41,7 @@ public class IdleState : State
 
         if(Time.time >= startTime + idleTime)
         {
-            isIdleTimeOver = true; 
+            isIdleTimerOver = true;
         }
     }
 
@@ -54,13 +50,9 @@ public class IdleState : State
         base.PhysicsUpdate();
     }
 
-    public void SetFlipAfterIdle(bool flip)
-    {
-        flipAfterIdle = flip;
-    }
-    
     private void SetRandomIdleTime()
     {
         idleTime = Random.Range(stateData.minIdleTime, stateData.maxIdleTime);
     }
+
 }

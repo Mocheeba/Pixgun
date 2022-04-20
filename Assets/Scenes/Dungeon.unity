@@ -48797,6 +48797,18 @@ PrefabInstance:
       value: CrystalWithLight
       objectReference: {fileID: 0}
     - target: {fileID: 4675778125007023670, guid: fe4ab44b6bf2e624ba5be07070583a58, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6802974
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675778125007023670, guid: fe4ab44b6bf2e624ba5be07070583a58, type: 3}
+      propertyPath: m_Color.g
+      value: 0.16862744
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675778125007023670, guid: fe4ab44b6bf2e624ba5be07070583a58, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675778125007023670, guid: fe4ab44b6bf2e624ba5be07070583a58, type: 3}
       propertyPath: m_ShadowIntensity
       value: 0
       objectReference: {fileID: 0}
