@@ -6,12 +6,13 @@ public class IdleState : State
 {
     protected D_IdleState stateData;
 
+  
     protected bool flipAfterIdle;
     protected bool isIdleTimerOver;
 
     protected float idleTime;
 
-    public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName) : base(entity, stateMachine, animBoolName)
+    public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData) : base(entity, stateMachine, animBoolName)
     {
     }
 
@@ -48,6 +49,11 @@ public class IdleState : State
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+    }
+
+    public void SetFlipAfterIdle(bool flip)
+    {
+        flipAfterIdle = flip;
     }
 
     private void SetRandomIdleTime()
