@@ -22,6 +22,12 @@ public class Player : MonoBehaviour
     public PlayerInputHandler InputHandler { get; private set; }
     public Rigidbody2D RB { get; private set; }
     #endregion
+    #region Check Transform
+
+    [SerializeField]
+    private Transform groundCheck;
+
+    #endregion
     #region Other variables
     public Vector2 CurrentVelocity { get; private set; }
     
@@ -81,6 +87,11 @@ public class Player : MonoBehaviour
     }    
     #endregion
     #region Check Functions
+    public bool CheckIfGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, PlayerData.groundCheckRadius, PlayerData.whatIsGround);
+    }
+    
     public void CheckIfshouldFlip(int xInput)
     {
         if(xInput != 0 && xInput != facingDirection)
@@ -88,8 +99,9 @@ public class Player : MonoBehaviour
             Flip();
         }
     }
+
     #endregion
-#region Other Functions
+    #region Other Functions
     private void Flip()
     {
         facingDirection *= -1;
