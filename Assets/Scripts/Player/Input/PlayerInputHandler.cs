@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    private Vector2 movementInput;
+    public Vector2 MovementInput { get; private set; }
     public void OnMoveInput(InputAction.CallbackContext context)
     {
-        movementInput = context.ReadValue<Vector2>();
+        MovementInput = context.ReadValue<Vector2>();
         Debug.Log("On movement Input");
     }
 
