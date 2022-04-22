@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
 
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
+    public PlayerJumpState JumpState { get; private set; }
+    public PlayerInAirState InAirState { get; private set; }
+    public PlayerLandState LandState { get; private set; }
+
+
     [SerializeField]
     private PlayerData PlayerData;
     #endregion
@@ -32,6 +37,9 @@ public class Player : MonoBehaviour
 
         IdleState = new PlayerIdleState(this, StateMachine, PlayerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, PlayerData, "move");
+        JumpState = new PlayerJumpState(this, StateMachine, PlayerData, "inAir");
+        InAirState = new PlayerInAirState(this, StateMachine, PlayerData, "inAir");
+        LandState = new PlayerLandState(this, StateMachine, PlayerData, "land");
     }
 
     private void Start()
@@ -64,6 +72,13 @@ public class Player : MonoBehaviour
         RB.velocity = workspace;
         CurrentVelocity = workspace;
     }
+
+    public void SetVelocityY(float velocity)
+    {
+       workspace.Set(CurrentVelocity.x, velocity);
+       RB.velocity = workspace;
+       CurrentVelocity = workspace;
+    }    
     #endregion
     #region Check Functions
     public void CheckIfshouldFlip(int xInput)
