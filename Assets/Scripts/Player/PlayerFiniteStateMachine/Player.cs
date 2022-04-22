@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        CurrentVelocity = RB.velocity;
+        
         StateMachine.CurrentState.LogicUpdate();
 
     }
@@ -32,12 +32,5 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
-    }
-
-    public void SetVelocityX(float velocity)
-    {
-        workspace.Set(velocity, CurrentVelocity.y);
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
     }
 }
