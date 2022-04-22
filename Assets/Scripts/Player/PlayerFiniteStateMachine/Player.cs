@@ -11,8 +11,14 @@ public class Player : MonoBehaviour
 
     public Animator Anim { get; private set; }
     public PlayerInputHandler InputHandler { get; private set; }    
+    public Rigidbody2D RB { get; private set; }
+
+    public Vector2 CurrentVelocity { get; private set; }
+
 
     [SerializeField] PlayerData playerData;
+
+    public Vector2 workspace;
 
     private void Awake()
     {
@@ -28,15 +34,26 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
 
         StateMachine.Initialize(IdleState);
+        RB = GetComponent<Rigidbody2D>();
+        Debug.Log("component" + RB);
     }
 
     private void Update()
     {
+        CurrentVelocity = RB.velocity;
         StateMachine.CurrentState.LogicUpdate();
+
     }
 
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
+    }
+
+    public void SetVelocityX(float velocity)
+    {
+        workspace.Set(velocity, CurrentVelocity.y);
+        RB.velocity = workspace;
+        CurrentVelocity = workspace;
     }
 }

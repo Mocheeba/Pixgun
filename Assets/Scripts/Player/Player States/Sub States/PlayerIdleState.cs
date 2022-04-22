@@ -16,6 +16,8 @@ public class PlayeridleState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        player.SetVelocityX(0f);
+        Debug.Log("idle");
     }
 
     public override void Exit()
@@ -30,6 +32,7 @@ public class PlayeridleState : PlayerGroundedState
         if(input.x != 0f)
         {
             stateMachine.ChangeState(player.MoveState);
+            Debug.Log("move");
         }
     }
 

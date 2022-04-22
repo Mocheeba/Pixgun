@@ -9,7 +9,6 @@ public class PlayerInputHandler : MonoBehaviour
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         MovementInput = context.ReadValue<Vector2>();
-        Debug.Log("On movement Input");
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
