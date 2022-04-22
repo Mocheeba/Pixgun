@@ -2,9 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player data/Base data")]
-public class PlayerData : ScriptableObject
+public class PlayerData : MonoBehaviour
 {
-    [Header("Move State")]
-    public float movementVelocity = 10f;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
