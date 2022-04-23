@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 33e6703e87833914aadb254e3c35c8bf
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8137533489727238886
+    second: Jump_Run_6_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +92,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Jump_Run_6_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 24
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d86f4d76ca11f80800000000000000
+      internalID: -8137533489727238886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
