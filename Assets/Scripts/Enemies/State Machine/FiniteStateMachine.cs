@@ -16,6 +16,6 @@ public class FiniteStateMachine
     {
         currentState.Exit();
         currentState = newState;
-        currentState.Enter();
+        currentState.Enter(); 
     }
 }
