@@ -112,9 +112,9 @@ TextureImporter:
       name: Land_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 21
-        width: 29
+        x: 21
+        y: 5
+        width: 26
         height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -133,9 +133,9 @@ TextureImporter:
       name: Land_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 21
-        width: 26
+        x: 69
+        y: 5
+        width: 27
         height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,10 +154,10 @@ TextureImporter:
       name: Land_2
       rect:
         serializedVersion: 2
-        x: 122
-        y: 21
-        width: 26
-        height: 17
+        x: 117
+        y: 5
+        width: 27
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
