@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Prefabs/Player.prefab.meta
+guid: a5aef5d6d6cdb6e4d991206935b837d6
+========
 guid: c7debc78411a0a24ebdb942f69371b69
-=======
-guid: c14fef6fe81abe246a2b65864eac8fdb
->>>>>>> 92a22c3 (Prefab)
+>>>>>>>> 2622b7b (work):Assets/Prefabs/Player 1.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

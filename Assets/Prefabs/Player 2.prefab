@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7b1295d4961bc468a22c137e2de39b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerData: {fileID: 11400000, guid: ae8ca5d91ee6de54eb3de8f980f7e843, type: 2}
+  PlayerData: {fileID: 11400000, guid: d5706fd2ae80f5a4ebad632af3739af4, type: 2}
   groundCheck: {fileID: 5454652247995922516}
 --- !u!114 &5454652247830636804
 MonoBehaviour:
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: fd770ba4bd3d28c4eb3c57775b80b269, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
