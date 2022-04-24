@@ -18,6 +18,7 @@ public class PlayerJumpState : PlayerAbilityState
         isAbilityDone = true;
         amountOfJumpsLeft--;
         player.InAirState.SetIsJumping();
+        player.PlayDust();
     }
 
     public bool CanJump()
