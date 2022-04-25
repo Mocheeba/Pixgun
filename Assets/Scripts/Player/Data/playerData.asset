@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc9f4783a992d114483388db2332dc67, type: 3}
+  m_Script: {fileID: 11500000, guid: 626de7676f50ae34db3fff6830cd9784, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
-  movementVelocity: 6.1
-  jumpVelocity: 4.22
-  amountOfJumps: 2
-  caoyteTime: 2.3
-  variableJumpHeightMultiplier: 3.02
+  movementVelocity: 8
+  jumpVelocity: 15
+  amountOfJumps: 1
+  caoyteTime: 0.2
+  variableJumpHeightMultiplier: 0.5
   groundCheckRadius: 0.3
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
