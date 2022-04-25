@@ -71,7 +71,7 @@ public class PlayerInAirState : PlayerState
                 player.SetVelocityY(player.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
                 isJumping = false;
             }
-            else if (player.CurrentVelocity.y <= 0.0f)
+            else if (player.CurrentVelocity.y <= 0f)
             {
                 isJumping = false;
             }
