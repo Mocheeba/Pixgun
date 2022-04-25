@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private PlayerData PlayerData;
+
+    
     #endregion
     #region Components
     public Animator Anim { get; private set; }
@@ -111,5 +113,6 @@ public class Player : MonoBehaviour
         facingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
+
     #endregion
 }
