@@ -14,6 +14,7 @@ public class PlayerState
 
     private string animBoolName;
 
+
     public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName)
     {
         this.player = player;

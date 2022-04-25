@@ -10,6 +10,7 @@ public class PlayerInputHandler : MonoBehaviour
     public int NormInputX { get; private set; }
     public int NormInputY { get; private set; }
     public bool JumpInput { get; private set; }
+    public bool JumpInputStop { get; private set; }
 
     [SerializeField]
     private float imputHoldTime = 0.2f;
@@ -19,6 +20,7 @@ public class PlayerInputHandler : MonoBehaviour
     private void Update()
     {
         CheckJumpInputHoldTime();
+        
     }
 
 
@@ -33,10 +35,16 @@ public class PlayerInputHandler : MonoBehaviour
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-       if(context.started)
+        if (context.started)
         {
             JumpInput = true;
+            JumpInputStop = false;
             jumpInputStartTime = Time.time;
+
+        }
+        if (context.canceled)
+        {
+            JumpInputStop = true;
         }
     }
 
@@ -44,10 +52,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void CheckJumpInputHoldTime()
     {
-        if(Time.time >= jumpInputStartTime + imputHoldTime)
+        if (Time.time >= jumpInputStartTime + imputHoldTime)
         {
             JumpInput = false;
         }
     }
-
 }
