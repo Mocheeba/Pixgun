@@ -14,7 +14,6 @@ public class PlayerData : ScriptableObject
 
     [Header("In Air State")]
     public float caoyteTime = 0.2f;
-    public float variableJumpHeightMultiplier = 0.5f;
 
     [Header("Check Variables")]
     public float groundCheckRadius = 0.3f;

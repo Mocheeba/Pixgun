@@ -7,9 +7,7 @@ public class PlayerInAirState : PlayerState
     private int xInput;
     private bool isGrounded;
     private bool jumpInput;
-    private bool jumpInputStop;
     private bool caoyteTime;
-    private bool isJumping;
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -34,15 +32,12 @@ public class PlayerInAirState : PlayerState
     {
         base.LogicUpdate();
 
-        CheckCoyoteTime();
+        StartCoyoteTime();
 
         xInput = player.InputHandler.NormInputX;
         jumpInput = player.InputHandler.JumpInput;
-        jumpInputStop = player.InputHandler.JumpInputStop;
 
-        CheckJumpMultiplier();
-
-        if (isGrounded && player.CurrentVelocity.y < 0.01f)
+        if(isGrounded && player.CurrentVelocity.y < 0.01f)
         {
             player.CheckIfshouldFlip(xInput);
             stateMachine.ChangeState(player.LandState);
@@ -61,6 +56,7 @@ public class PlayerInAirState : PlayerState
         }
     }
 
+<<<<<<< HEAD
     private void CheckJumpMultiplier()
     {
 
@@ -78,6 +74,8 @@ public class PlayerInAirState : PlayerState
         }
     }
 
+=======
+>>>>>>> parent of ce85809 (miasto deszczu)
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
@@ -93,6 +91,4 @@ public class PlayerInAirState : PlayerState
     }
 
     public void StartCoyoteTime() => caoyteTime = true;
-
-    public void SetIsJumping() => isJumping = true;
 }
