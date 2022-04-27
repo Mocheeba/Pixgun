@@ -2950,46 +2950,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
-      value: 73932e7a-1ec0-434c-94ba-facd89b8afea
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
-      value: Gameplay/Grab[/Keyboard/ctrl]
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1561610152}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnGrabInput
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerInputHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4947193173970090159, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4947193173970090166, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
       propertyPath: m_Name
       value: Player
@@ -23647,17 +23607,6 @@ Transform:
   m_Father: {fileID: 323440365}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1561610152 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4947193173970090161, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-  m_PrefabInstance: {fileID: 254781098}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e9a694be164ec14d908bcf8be3a9326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1756378933
 GameObject:
   m_ObjectHideFlags: 0
