@@ -6,6 +6,7 @@ public class PlayerInAirState : PlayerState
 {
     private int xInput;
     private bool isGrounded;
+    private bool isTouchingWall;
     private bool jumpInput;
     private bool jumpInputStop;
     private bool caoyteTime;
@@ -18,6 +19,8 @@ public class PlayerInAirState : PlayerState
     {
         base.DoChecks();
         isGrounded = player.CheckIfGrounded();
+        isTouchingWall = player.CheckIfTouchingWall();
+
     }
 
     public override void Enter()
@@ -50,6 +53,10 @@ public class PlayerInAirState : PlayerState
         else if(jumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
+        }
+        else if(isTouchingWall && xInput == player.facingDirection)
+        {
+            stateMachine.ChangeState(player.WallSlideState);
         }
         else
         {

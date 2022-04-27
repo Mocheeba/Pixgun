@@ -13,6 +13,11 @@ public class Player : MonoBehaviour
     public PlayerInAirState InAirState { get; private set; }
     public PlayerLandState LandState { get; private set; }
 
+    public PlayerWallSlideState WallSlideState { get; private set; }   
+    
+    public PlayerWallGrabState  WallGrabState { get; private set; }
+
+    public PlayerWallClimbState WallClimbState { get; private set; }
 
     [SerializeField]
     private PlayerData PlayerData;
@@ -26,6 +31,9 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private Transform groundCheck;
+
+    [SerializeField]
+    private Transform wallCheck;
 
     #endregion
     #region Other variables
@@ -46,6 +54,9 @@ public class Player : MonoBehaviour
         JumpState = new PlayerJumpState(this, StateMachine, PlayerData, "inAir");
         InAirState = new PlayerInAirState(this, StateMachine, PlayerData, "inAir");
         LandState = new PlayerLandState(this, StateMachine, PlayerData, "land");
+        WallSlideState = new PlayerWallSlideState(this, StateMachine, PlayerData, "wallSlide");
+        WallGrabState = new PlayerWallGrabState(this, StateMachine, PlayerData, "wallGrab");    
+        WallClimbState = new PlayerWallClimbState(this, StateMachine, PlayerData, "wallClimb");
     }
 
     private void Start()
@@ -98,6 +109,11 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
+    }
+
+    public bool CheckIfTouchingWall()
+    {
+        return Physics2D.Raycast(wallCheck.position, Vector2.right * facingDirection, PlayerData.wallCheckDistance, PlayerData.whatIsGround);
     }
 
     #endregion
