@@ -54,13 +54,13 @@ public class PlayerInAirState : PlayerState
         }
         else if(jumpInput && player.JumpState.CanJump())
         {
+            player.InputHandler.UseJumpInput();
             stateMachine.ChangeState(player.JumpState);
         }
         else if(isTouchingWall && grabInput)
         {
             stateMachine.ChangeState(player.WallGrabState);
         }
-
         else if(isTouchingWall && xInput == player.facingDirection && player.CurrentVelocity.y <= 0)
         {
             stateMachine.ChangeState(player.WallSlideState);

@@ -47,14 +47,13 @@ public class PlayerTouchingWallState : PlayerState
 
         xInput = player.InputHandler.NormInputX;
         yInput = player.InputHandler.NormInputY;
-
         grabInput = player.InputHandler.GrabInput;
 
         if(isGrounded && !grabInput)
         {
             stateMachine.ChangeState(player.IdleState);
         }
-        else if(!isTouchingWall || xInput != player.facingDirection && !grabInput)
+        else if(!isTouchingWall || (xInput != player.facingDirection && !grabInput))
         {
             stateMachine.ChangeState(player.InAirState);
         }

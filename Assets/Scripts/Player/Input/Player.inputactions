@@ -26,7 +26,7 @@
                 {
                     "name": "Grab",
                     "type": "Button",
-                    "id": "73932e7a-1ec0-434c-94ba-facd89b8afea",
+                    "id": "23126a6e-aa29-47b2-9791-b926622e864c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -124,22 +124,11 @@
                 },
                 {
                     "name": "",
-                    "id": "e5b3f6da-ef9f-4d0d-b76e-09c9e87de510",
+                    "id": "91f0f3f5-cae8-4b7e-b2ca-1faf5300bdf5",
                     "path": "<Keyboard>/ctrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Grab",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "876ba47e-c0cc-4e4c-941d-439ee93c061f",
-                    "path": "<XInputController>/rightShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
                     "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
