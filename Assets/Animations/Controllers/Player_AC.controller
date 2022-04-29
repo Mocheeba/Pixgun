@@ -57,7 +57,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 83aaeb711e43c8d4590f573fbfc96427, type: 2}
     m_Threshold: 0
-    m_Position: {x: 0, y: 10}
+    m_Position: {x: 0, y: 12}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -81,7 +81,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: bbbb77cbfc2e1b8478105365226a2a1f, type: 2}
     m_Threshold: 0.36734694
-    m_Position: {x: 1, y: 1}
+    m_Position: {x: 2, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -89,7 +89,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: c4539f7c5af63c8429d03c7497d0ac44, type: 2}
     m_Threshold: 0.48979595
-    m_Position: {x: 1, y: -4}
+    m_Position: {x: 4, y: -4}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -97,7 +97,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 8e8f255cd0c98664b89cc53041d991cb, type: 2}
     m_Threshold: 0.6122449
-    m_Position: {x: 1, y: -7}
+    m_Position: {x: 7, y: -7}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -535,7 +535,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Land
-  m_Speed: 0.91
+  m_Speed: 0.85
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8736696258971453165}
