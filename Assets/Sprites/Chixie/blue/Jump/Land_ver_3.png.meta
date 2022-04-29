@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: e7870599205070c458a3685c9b1410e0
+guid: 1cc9eddb2ca7aaa4585bb98cb04b5db1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8923801116385467004
-    second: Player_Vertical1.2.3.4_0
+      213: -3526301721735540619
+    second: Land_ver_3_0
   - first:
-      213: -8902775804084085627
-    second: Player_Vertical1.2.3.4_1
+      213: -8381379482342120613
+    second: Land_ver_3_1
   - first:
-      213: -3200815528755689821
-    second: Player_Vertical1.2.3.4_2
-  - first:
-      213: -5272123780814185333
-    second: Player_Vertical1.2.3.4_3
+      213: -2506649762998506589
+    second: Land_ver_3_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,85 +100,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_Vertical1.2.3.4_0
+      name: Land_ver_3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 64
+        x: 21
+        y: 13
+        width: 26
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4852c9b3a2a482480800000000000000
-      internalID: -8923801116385467004
+      spriteID: 570da19644f001fc0800000000000000
+      internalID: -3526301721735540619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Vertical1.2.3.4_1
+      name: Land_ver_3_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 64
+        x: 85
+        y: 13
+        width: 26
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58c10aa339cf27480800000000000000
-      internalID: -8902775804084085627
+      spriteID: b53204b64cb5fab80800000000000000
+      internalID: -8381379482342120613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_Vertical1.2.3.4_2
+      name: Land_ver_3_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 64
+        x: 149
+        y: 13
+        width: 26
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a686f83c3b6493d0800000000000000
-      internalID: -3200815528755689821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Vertical1.2.3.4_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8c5ea0ba57a5d6b0800000000000000
-      internalID: -5272123780814185333
+      spriteID: 3ab28244257963dd0800000000000000
+      internalID: -2506649762998506589
       vertices: []
       indices: 
       edges: []
