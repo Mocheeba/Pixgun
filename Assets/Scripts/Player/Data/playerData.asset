@@ -21,7 +21,7 @@ MonoBehaviour:
   caoyteTime: 0.98
   variableJumpHeightMultiplier: 0.85
   wallSlideVelocity: 0.84
-  wallClimbVelocity: 0.15
+  wallClimbVelocity: 3
   groundCheckRadius: 0.3
   wallCheckDistance: 1.14
   whatIsGround:
