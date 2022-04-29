@@ -57,15 +57,15 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 83aaeb711e43c8d4590f573fbfc96427, type: 2}
     m_Threshold: 0
-    m_Position: {x: 0, y: 18}
-    m_TimeScale: 1
+    m_Position: {x: 0, y: 12.5}
+    m_TimeScale: 2
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: b90dcb27990dbcb45993bdcbef74c4ac, type: 2}
     m_Threshold: 0.12244899
-    m_Position: {x: 0, y: 14}
+    m_Position: {x: 0, y: 8.1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -73,7 +73,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 6a61cbd8a7d22484597ff46468921d01, type: 2}
     m_Threshold: 0.24489798
-    m_Position: {x: 0, y: 10}
+    m_Position: {x: 0, y: 4}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -81,7 +81,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: bbbb77cbfc2e1b8478105365226a2a1f, type: 2}
     m_Threshold: 0.36734694
-    m_Position: {x: 1, y: 5}
+    m_Position: {x: 2.5, y: 1.4}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -89,7 +89,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: c4539f7c5af63c8429d03c7497d0ac44, type: 2}
     m_Threshold: 0.48979595
-    m_Position: {x: 1, y: 0}
+    m_Position: {x: 4, y: -4}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -97,7 +97,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 8e8f255cd0c98664b89cc53041d991cb, type: 2}
     m_Threshold: 0.6122449
-    m_Position: {x: 1, y: -5}
+    m_Position: {x: 7, y: -7}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -105,7 +105,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 7747f0ea36ab74042896beb5bdf8a646, type: 2}
     m_Threshold: 0.7346939
-    m_Position: {x: 0, y: -10}
+    m_Position: {x: 0, y: -11}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -113,7 +113,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 7747f0ea36ab74042896beb5bdf8a646, type: 2}
     m_Threshold: 0.85714287
-    m_Position: {x: 1, y: -16}
+    m_Position: {x: 1, y: -14}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -298,55 +298,55 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: inAir
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: move
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: idle
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: yVelocity
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: xVelocity
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: wallGrab
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: wallClimb
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: wallSlide
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -474,7 +474,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: JumpFall Blend Tree
-  m_Speed: 0.09
+  m_Speed: 0
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4436936485620967898}
@@ -535,7 +535,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Land
-  m_Speed: 0.91
+  m_Speed: 0.76
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8736696258971453165}

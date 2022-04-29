@@ -45,15 +45,12 @@ public class PlayerGroundedState : PlayerState
 
         if (JumpInput && player.JumpState.CanJump())
         {
-            player.InputHandler.UseJumpInput();
             stateMachine.ChangeState(player.JumpState);
-        }
-        else if(!isGrouded)
+        }else if(!isGrouded)
         {
             player.InAirState.StartCoyoteTime();
             stateMachine.ChangeState(player.InAirState);
-        }
-        else if (isTouchingWall && grabInput)
+        }else if (isTouchingWall && grabInput)
         {
             stateMachine.ChangeState(player.WallGrabState);
         }
