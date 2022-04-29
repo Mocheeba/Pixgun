@@ -43,18 +43,15 @@ public class PlayerWallGrabState : PlayerTouchingWallState
     {
         base.LogicUpdate();
 
-        if (!isExitingState)
-        {
-            HoldPosition();
+        HoldPosition();
 
-            if (yInput > 0)
-            {
-                stateMachine.ChangeState(player.WallClimbState);
-            }
-            else if (yInput < 0 || !grabInput)
-            {
-                stateMachine.ChangeState(player.WallSlideState);
-            }
+        if (yInput > 0)
+        {
+            stateMachine.ChangeState(player.WallClimbState);
+        }
+        else if (yInput < 0 || !grabInput)
+        {
+            stateMachine.ChangeState(player.WallSlideState);
         }
     }
 
@@ -64,61 +61,6 @@ public class PlayerWallGrabState : PlayerTouchingWallState
         
         player.SetVelocityX(0f);
         player.SetVelocityY(0f);
-    }
-
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
-    }
-
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-    }
-
-    public override void AnimationTrigger()
-    {
-        base.AnimationTrigger();
-    }
-
-    public override void DoChecks()
-    {
-        base.DoChecks();
-    }
-
-    public override void Enter()
-    {
-        base.Enter();
-
-        holdPosition = player.transform.position;
-    }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
-        HoldPosition();
-
-        if (yInput > 0)
-        {
-            stateMachine.ChangeState(player.WallClimbState);
-        }else if(yInput < 0 || !grabInput)
-        {
-            stateMachine.ChangeState(player.WallSlideState);
-        }
-    }
-
-    private void HoldPosition()
-    {
-
-        player.transform.position = holdPosition;
-
-        player.SetVelocityX(0);
-      //  player.SetVelocityY(0);
     }
 
     public override void PhysicsUpdate()

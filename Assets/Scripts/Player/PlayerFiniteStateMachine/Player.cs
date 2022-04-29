@@ -19,8 +19,6 @@ public class Player : MonoBehaviour
 
     public PlayerWallClimbState WallClimbState { get; private set; }
 
-    public PlayerWallJumpState WallJumpState { get; private set; }
-
     [SerializeField]
     private PlayerData PlayerData;
     #endregion
@@ -59,7 +57,6 @@ public class Player : MonoBehaviour
         WallSlideState = new PlayerWallSlideState(this, StateMachine, PlayerData, "wallSlide");
         WallGrabState = new PlayerWallGrabState(this, StateMachine, PlayerData, "wallGrab");    
         WallClimbState = new PlayerWallClimbState(this, StateMachine, PlayerData, "wallClimb");
-        WallJumpState = new PlayerWallJumpState(this, StateMachine, PlayerData, "inAir");
     }
 
     private void Start()
@@ -86,14 +83,6 @@ public class Player : MonoBehaviour
     }
     #endregion
     #region Set Functions
-
-    public void SetVolocity(float velocity, Vector2 angle, int direction)
-    {
-        angle.Normalize();
-        workspace.Set(angle.x * velocity * direction, angle.y * velocity);
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
-    }
     public void SetVelocityX(float velocity)
     {
         workspace.Set(velocity, CurrentVelocity.y);
@@ -107,31 +96,24 @@ public class Player : MonoBehaviour
        RB.velocity = workspace;
        CurrentVelocity = workspace;
     }    
-
-
     #endregion
     #region Check Functions
     public bool CheckIfGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, PlayerData.groundCheckRadius, PlayerData.whatIsGround);
     }
+    
+    public void CheckIfshouldFlip(int xInput)
+    {
+        if(xInput != 0 && xInput != facingDirection)
+        {
+            Flip();
+        }
+    }
 
     public bool CheckIfTouchingWall()
     {
         return Physics2D.Raycast(wallCheck.position, Vector2.right * facingDirection, PlayerData.wallCheckDistance, PlayerData.whatIsGround);
-    }
-
-    public bool CheckIfTouchingWallBack()
-    {
-        return Physics2D.Raycast(wallCheck.position, Vector2.right * facingDirection, PlayerData.wallCheckDistance, PlayerData.whatIsGround);
-    }
-
-    public void CheckIfshouldFlip(int xInput)
-    {
-        if (xInput != 0 && xInput != facingDirection)
-        {
-            Flip();
-        }
     }
 
     #endregion

@@ -15,9 +15,6 @@ MonoBehaviour:
   movementVelocity: 8.04
   jumpVelocity: 12.49
   amountOfJumps: 2
-  wallJumpVelocity: 15.97
-  WallJumpTime: 0.4
-  wallJumpAngle: {x: 1, y: 2}
   caoyteTime: 0.98
   variableJumpHeightMultiplier: 0.85
   wallSlideVelocity: 0.84
