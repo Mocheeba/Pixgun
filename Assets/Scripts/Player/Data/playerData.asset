@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   movementVelocity: 8.04
-  jumpVelocity: 9.23
+  jumpVelocity: 11
   amountOfJumps: 2
   wallJumpVelocity: 13.7
   wallJumpTime: 0.4
@@ -22,7 +22,7 @@ MonoBehaviour:
   variableJumpHeightMultiplier: 0.85
   wallSlideVelocity: 1.14
   wallClimbVelocity: 2.21
-  startOffset: {x: 1, y: 1}
+  startOffset: {x: 0.4, y: 0.5}
   stopOffset: {x: 0.4, y: 0.4}
   groundCheckRadius: 0.3
   wallCheckDistance: 0.4
