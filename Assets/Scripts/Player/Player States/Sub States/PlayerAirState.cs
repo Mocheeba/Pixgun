@@ -16,6 +16,7 @@ public class PlayerInAirState : PlayerState
     private bool wallJumpCaoyteTime;
     private bool isJumping;
     private bool grabInput;
+    private bool isTouchingLedge;
 
     private float startWallJumpCaoyteTime;
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
@@ -32,8 +33,14 @@ public class PlayerInAirState : PlayerState
         isGrounded = player.CheckIfGrounded();
         isTouchingWall = player.CheckIfTouchingWall();
         isTouchingWallBack = player.CheckIfTouchingWallBack();
+        isTouchingLedge = player.CheckIfTouchingLedge();
 
-        if(!wallJumpCaoyteTime && !isTouchingWall && !isTouchingWallBack && (oldIsTouchingWall || oldIsTouchingWallBack))
+        if (isTouchingWall && !isTouchingLedge)
+        {
+            player.LedgeClimbState.SetDetectedPosition(player.transform.position); // exact x,y position when we detect ledge.
+        }
+
+        if (!wallJumpCaoyteTime && !isTouchingWall && !isTouchingWallBack && (oldIsTouchingWall || oldIsTouchingWallBack))
          {
             StartWallJumpCaoyteTime();
          }
@@ -52,7 +59,7 @@ public class PlayerInAirState : PlayerState
         oldIsTouchingWall = false;
         oldIsTouchingWallBack = false;
         isTouchingWall = false;
-        isTouchingWallBack = false;       
+        isTouchingWallBack = false;
     }
 
     public override void LogicUpdate()
@@ -71,8 +78,12 @@ public class PlayerInAirState : PlayerState
 
         if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
-            player.CheckIfshouldFlip(xInput);
+            player.CheckIfShouldFlip(xInput);
             stateMachine.ChangeState(player.LandState);
+        }
+        else if (isTouchingWall && !isTouchingLedge && !isGrounded)
+        {
+            stateMachine.ChangeState(player.LedgeClimbState);
         }
         else if(jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCaoyteTime))
         {
@@ -96,7 +107,7 @@ public class PlayerInAirState : PlayerState
         }
         else
         {
-            player.CheckIfshouldFlip(xInput);
+            player.CheckIfShouldFlip(xInput);
             player.SetVelocityX(playerData.movementVelocity * xInput);
 
             player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
