@@ -81,7 +81,7 @@ public class PlayerInAirState : PlayerState
             player.CheckIfShouldFlip(xInput);
             stateMachine.ChangeState(player.LandState);
         }
-        else if (isTouchingWall && !isTouchingLedge)
+        else if (isTouchingWall && !isTouchingLedge && !isGrounded)
         {
             stateMachine.ChangeState(player.LedgeClimbState);
         }
