@@ -71,14 +71,14 @@ TagManager:
   - name: 'Ground Asset 3 '
     uniqueID: 1591682603
     locked: 0
-  - name: Platforms 4
-    uniqueID: 1396900507
+  - name: Enviroment 4
+    uniqueID: 3523214451
     locked: 0
   - name: Interactive 5
     uniqueID: 1069136997
     locked: 0
-  - name: Enviroment 6
-    uniqueID: 3523214451
+  - name: Platforms 6
+    uniqueID: 1396900507
     locked: 0
   - name: Player 7
     uniqueID: 1838052767
