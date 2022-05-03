@@ -77,9 +77,12 @@ TagManager:
   - name: Interactive 5
     uniqueID: 1069136997
     locked: 0
-  - name: Player 6
+  - name: Enviroment 6
     uniqueID: 3523214451
     locked: 0
-  - name: Enemy 7
+  - name: Player 7
     uniqueID: 1838052767
+    locked: 0
+  - name: Enemy 8
+    uniqueID: 2671946599
     locked: 0
