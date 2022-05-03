@@ -86,3 +86,6 @@ TagManager:
   - name: Enemy 8
     uniqueID: 2671946599
     locked: 0
+  - name: 'Trap 9 '
+    uniqueID: 1740965369
+    locked: 0
