@@ -68,15 +68,18 @@ TagManager:
   - name: Ground Asset 2
     uniqueID: 1444999329
     locked: 0
-  - name: Platforms 3
+  - name: 'Ground Asset 3 '
     uniqueID: 1591682603
     locked: 0
-  - name: Interactive 4
+  - name: Platforms 4
     uniqueID: 1396900507
     locked: 0
-  - name: Player 5
+  - name: Interactive 5
     uniqueID: 1069136997
     locked: 0
-  - name: Enemy 6
+  - name: Player 6
     uniqueID: 3523214451
+    locked: 0
+  - name: Enemy 7
+    uniqueID: 1838052767
     locked: 0
