@@ -29,4 +29,6 @@ public class testLightFricking : MonoBehaviour
         myLight.pointLightOuterRadius = Random.Range(lightFlickerMin, lightFlickerMax);
         StartCoroutine(LightFlicker());
     }
+
+
 }
