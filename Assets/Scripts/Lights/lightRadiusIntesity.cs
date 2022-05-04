@@ -7,7 +7,7 @@ public class lightRadiusIntesity : MonoBehaviour
     float duration = 1.0f;
     float originalOuterRadius = 1.0f;
 
-    public float intensityRange = 1.0f;
+    public float intensityRange = 3.0f;
  
 
     Light2D lt;
@@ -41,17 +41,17 @@ public class lightRadiusIntesity : MonoBehaviour
     {
         float outerRadius = lt.pointLightOuterRadius;
         float innerRadius = lt.pointLightInnerRadius;
-       // float dinstanceRadius = Mathf.Abs(innerRadius - (outerRadius - 2.0f));
 
-        float dinstanceRadius = Mathf.Lerp(outerRadius, innerRadius, 2.0f);
+        float outerRadiusRange = 5.0f;
+        float innerRadiusRange = outerRadiusRange;
 
-        lt.intensity = Mathf.PingPong(Time.time, 10);
 
-        lt.pointLightOuterRadius = Mathf.PingPong(Time.time, 10);
+        lt.intensity = Mathf.PingPong(Time.time, intensityRange);
 
-        lt.pointLightInnerRadius = Mathf.PingPong(Time.time / 1, dinstanceRadius);
+        lt.pointLightOuterRadius = Mathf.PingPong(Time.time, outerRadiusRange);
 
-        lt.intensity = Mathf.PingPong(Time.time / 2, intensityRange);
+        lt.pointLightInnerRadius = Mathf.PingPong(Time.time, (innerRadiusRange * 0.2f));
+
     }
 
 
