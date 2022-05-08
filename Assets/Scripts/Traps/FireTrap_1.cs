@@ -15,15 +15,27 @@ public class FireTrap_1 : MonoBehaviour
     private bool triggered;//When trap is triggered
     private bool active;//When the trap is active and can hurt the player
 
+    private Health playerHealth;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
     }
+
+    private void Update()
+    {
+        if(playerHealth != null && active)
+        {
+            playerHealth.TakeDamage(damage);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
+            playerHealth = collision.GetComponent<Health>();
+
             if (!triggered)
                 StartCoroutine(ActiveFireTrap());
 
@@ -31,6 +43,13 @@ public class FireTrap_1 : MonoBehaviour
                 collision.GetComponent<Health>().TakeDamage(damage);
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+            playerHealth = null;
+    }
+
 
     private IEnumerator ActiveFireTrap()
     {
