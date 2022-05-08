@@ -22,7 +22,7 @@ public class ArrowTrap : MonoBehaviour
     {
         for (int i = 0; i < arrows.Length; i++)
         {
-            if(!arrows[i].activeInHierarchy)
+            if (!arrows[i].activeInHierarchy)
                 return i;
         }
         return 0;
@@ -32,7 +32,7 @@ public class ArrowTrap : MonoBehaviour
     {
         cooldownTimer += Time.deltaTime;
 
-        if (cooldownTimer >= 0)
+        if (cooldownTimer >= attackCooldown)
             Attack();
     }
 
