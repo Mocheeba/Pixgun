@@ -205,10 +205,10 @@ TextureImporter:
       name: chexie_ledge_sprites_3
       rect:
         serializedVersion: 2
-        x: 336
-        y: 22
-        width: 21
-        height: 39
+        x: 335
+        y: 23
+        width: 22
+        height: 38
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,10 +226,10 @@ TextureImporter:
       name: chexie_ledge_sprites_4
       rect:
         serializedVersion: 2
-        x: 429
-        y: 9
-        width: 24
-        height: 53
+        x: 418
+        y: 8
+        width: 35
+        height: 54
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,10 +247,10 @@ TextureImporter:
       name: chexie_ledge_sprites_5
       rect:
         serializedVersion: 2
-        x: 528
-        y: 15
-        width: 27
-        height: 47
+        x: 521
+        y: 10
+        width: 34
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
