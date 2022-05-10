@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127665624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0.18, y: 0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4947193173689487096}
@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 4947193173970090164}
   - component: {fileID: 4947193173970090165}
   - component: {fileID: 254781100}
+  - component: {fileID: 242788160}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -254,7 +255,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 15
+  m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -275,9 +276,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1069136997
-  m_SortingLayer: 11
-  m_SortingOrder: 4
+  m_SortingLayerID: 1838052767
+  m_SortingLayer: 13
+  m_SortingOrder: 7
   m_Sprite: {fileID: -2330959327308748182, guid: 8c1ffbb346b1eb0479289b06124486a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -367,3 +368,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f723516c8a11f746aaf5b9f352303d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &242788160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4947193173970090166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6bef281d857b6429d21d02b0e5534d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 3
+  iFramesDuration: 3
+  numberOfFlashes: 3

@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Trap
   - TrapSaw
+  - SpikeTrap
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Enemy
   - Ground
   - Walls
-  - 
+  - MovingPlatforms
   - 
   - 
   - 

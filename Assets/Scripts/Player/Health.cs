@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    [Header("iFrames")]
-    [SerializeField] private float iFramesDuration;
+    [Header("Health")]
     [SerializeField] private float startingHealth;
 
+    [Header("iFrames")]
+    [SerializeField] private float iFramesDuration;
     [SerializeField] private int numberOfFlashes;
-
     private SpriteRenderer spriteRenderer;
 
+    [Header("Components")]
+    private bool invulnerable;
 
     private Animator anim;
     private bool dead;
@@ -38,7 +40,7 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-
+        if (invulnerable) return;
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
 
 
@@ -69,6 +71,7 @@ public class Health : MonoBehaviour
 
     private IEnumerator Invunerability()
     {
+        invulnerable = true;
         Physics2D.IgnoreLayerCollision(7, 8, true);
         for (int i = 0; i < numberOfFlashes; i++)
         {
@@ -78,6 +81,6 @@ public class Health : MonoBehaviour
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
         Physics2D.IgnoreLayerCollision(7, 8, false);
-
+        invulnerable = false;
     }
 }

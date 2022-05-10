@@ -109,12 +109,12 @@ TextureImporter:
       name: WallClimb_0
       rect:
         serializedVersion: 2
-        x: 29
+        x: 28
         y: 20
-        width: 18
+        width: 19
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,12 +130,12 @@ TextureImporter:
       name: WallClimb_1
       rect:
         serializedVersion: 2
-        x: 94
+        x: 93
         y: 21
-        width: 17
+        width: 18
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: WallClimb_2
       rect:
         serializedVersion: 2
-        x: 157
+        x: 156
         y: 22
-        width: 18
+        width: 19
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: WallClimb_3
       rect:
         serializedVersion: 2
-        x: 222
+        x: 221
         y: 23
-        width: 17
+        width: 18
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,12 +193,12 @@ TextureImporter:
       name: WallClimb_4
       rect:
         serializedVersion: 2
-        x: 285
+        x: 284
         y: 28
-        width: 19
+        width: 20
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
