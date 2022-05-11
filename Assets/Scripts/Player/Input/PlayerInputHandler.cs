@@ -11,7 +11,6 @@ public class PlayerInputHandler : MonoBehaviour
     public int NormInputY { get; private set; }
     public bool JumpInput { get; private set; }
     public bool JumpInputStop { get; private set; }
-
     public bool GrabInput { get; private set; }
 
     [SerializeField]
@@ -46,23 +45,18 @@ public class PlayerInputHandler : MonoBehaviour
         {
             NormInputY = 0;
         }
-
-
-        NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
-
-        NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
-
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-       if(context.started)
+        if (context.started)
         {
             JumpInput = true;
             JumpInputStop = false;
             jumpInputStartTime = Time.time;
         }
-       if (context.canceled)
+
+        if (context.canceled)
         {
             JumpInputStop = true;
         }
@@ -85,7 +79,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void CheckJumpInputHoldTime()
     {
-        if(Time.time >= jumpInputStartTime + imputHoldTime)
+        if (Time.time >= jumpInputStartTime + imputHoldTime)
         {
             JumpInput = false;
         }

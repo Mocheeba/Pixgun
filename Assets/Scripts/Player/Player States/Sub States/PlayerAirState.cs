@@ -97,7 +97,7 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.JumpState);
         }
-        else if(isTouchingWall && grabInput)
+        else if(isTouchingWall && grabInput && isTouchingLedge)
         {
             stateMachine.ChangeState(player.WallGrabState);
         }
@@ -114,10 +114,8 @@ public class PlayerInAirState : PlayerState
             player.Anim.SetFloat("xVelocity", Mathf.Abs(player.CurrentVelocity.x));
         }
     }
-
     private void CheckJumpMultiplier()
     {
-
         if (isJumping)
         {
             if (jumpInputStop)
@@ -125,7 +123,7 @@ public class PlayerInAirState : PlayerState
                 player.SetVelocityY(player.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
                 isJumping = false;
             }
-            else if (player.CurrentVelocity.y <= 0.0f)
+            else if (player.CurrentVelocity.y <= 0f)
             {
                 isJumping = false;
             }
