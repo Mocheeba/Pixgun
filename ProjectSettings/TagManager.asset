@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Ground
   - Trap
+  - TrapSaw
+  - SpikeTrap
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Enemy
   - Ground
   - Walls
-  - 
+  - MovingPlatforms
   - 
   - 
   - 
@@ -88,4 +90,7 @@ TagManager:
     locked: 0
   - name: 'Trap 9 '
     uniqueID: 1740965369
+    locked: 0
+  - name: Collectables 10
+    uniqueID: 1141940335
     locked: 0

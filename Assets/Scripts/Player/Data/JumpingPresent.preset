@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: JumpingPresent
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: dc9f4783a992d114483388db2332dc67, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: movementVelocity
+    value: 7.32
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: jumpVelocity
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: amountOfJumps
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallJumpVelocity
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallJumpTime
+    value: 0.59
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallJumpAngle.x
+    value: 0.72
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallJumpAngle.y
+    value: 1.54
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: caoyteTime
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: variableJumpHeightMultiplier
+    value: 0.9
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallSlideVelocity
+    value: 2.34
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallClimbVelocity
+    value: 3.19
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: startOffset.x
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: startOffset.y
+    value: 0.57
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: stopOffset.x
+    value: 0.35
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: stopOffset.y
+    value: 0.65
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: groundCheckRadius
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: wallCheckDistance
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: whatIsGround.m_Bits
+    value: 2560
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
