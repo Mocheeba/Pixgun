@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2824301096589891558}
   m_LocalRotation: {x: -0, y: -0, z: 0.90693045, w: 0.4212805}
-  m_LocalPosition: {x: 0.24999745, y: 0.38208917, z: 0}
+  m_LocalPosition: {x: 0.0000012516975, y: 0.38208917, z: 0}
   m_LocalScale: {x: 0.9119857, y: 0.9067443, z: 1}
   m_Children: []
   m_Father: {fileID: 2824301096685861235}
@@ -96,7 +96,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2824301096685861232}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.443357, y: 64.885635, z: 0}
   m_LocalScale: {x: 1.1188812, y: 1.0811045, z: 1}
   m_Children:
@@ -143,8 +143,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -771752845
-  m_SortingLayer: 12
-  m_SortingOrder: 6
+  m_SortingLayer: 10
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: ab03bf84b7c538b4baea03917ef411e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -166,6 +166,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2824301097134582420}
   - component: {fileID: 2824301097134582423}
+  - component: {fileID: 1511707916579326869}
+  - component: {fileID: 803015175}
   m_Layer: 0
   m_Name: Point Light 2D (14)
   m_TagString: Untagged
@@ -181,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2824301097134582421}
   m_LocalRotation: {x: -0, y: -0, z: 0.90693045, w: 0.4212805}
-  m_LocalPosition: {x: 0, y: 0.38208917, z: 0}
+  m_LocalPosition: {x: 0, y: 0.13208917, z: 0}
   m_LocalScale: {x: 0.9119857, y: 0.9067443, z: 1}
   m_Children: []
   m_Father: {fileID: 2824301096685861235}
@@ -228,3 +230,32 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1511707916579326869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824301097134582421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 147a50a3674946144a49596e67dd3da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensityRange: 0.3
+--- !u!114 &803015175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824301097134582421}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bcacd063170064bac049e0c10d8a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlickering: 1
+  FlickerMode: 3
+  FlickerTime: 8
+  RandomIntensity: 0
