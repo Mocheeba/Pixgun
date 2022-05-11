@@ -112,13 +112,6 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.WallSlideState);
         }
-
-
-        else if(dashInput && player.DashState.CheckIfCanDash())
-        {
-            stateMachine.ChangeState(player.DashState);
-        }    
-
         else
         {
             player.CheckIfShouldFlip(xInput);
@@ -136,6 +129,7 @@ public class PlayerInAirState : PlayerState
             if (jumpInputStop)
             {
                 player.SetVelocityY(player.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
+                Debug.Log("Hey ho kurwo" + playerData.variableJumpHeightMultiplier);
                 isJumping = false;
             }
             else if (player.CurrentVelocity.y <= 0f)

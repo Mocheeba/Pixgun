@@ -31,7 +31,6 @@ public class PlayerGroundedState : PlayerState
         base.Enter();
 
         player.JumpState.ResetAmountOfJumpsLeft();
-        player.DashState.ResetCanDash();
     }
 
     public override void Exit()
@@ -60,10 +59,6 @@ public class PlayerGroundedState : PlayerState
         else if (isTouchingWall && grabInput && isTouchingLedge)
         {
             stateMachine.ChangeState(player.WallGrabState);
-        }
-        else if (dashInput && player.DashState.CheckIfCanDash())
-        {
-            stateMachine.ChangeState(player.DashState);
         }
     }
 

@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
 
     public PlayerLedgeClimbState LedgeClimbState { get; private set; }
 
-    public PlayerDashState DashState { get; private set; }
 
     [SerializeField]
     private PlayerData PlayerData;
@@ -71,7 +70,6 @@ public class Player : MonoBehaviour
         WallClimbState = new PlayerWallClimbState(this, StateMachine, PlayerData, "wallClimb");
         WallJumpState = new PlayerWallJumpState(this, StateMachine, PlayerData, "inAir");
         LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, PlayerData, "ledgeClimbState");
-        DashState = new PlayerDashState(this, StateMachine, PlayerData, "inAir");
     }
 
     private void Start()
@@ -80,7 +78,6 @@ public class Player : MonoBehaviour
         Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
-        DashDirectionIndicator = transform.Find("DashDirectionIndicator");
         
 
         facingDirection = 1;
