@@ -4,27 +4,21 @@ using UnityEngine;
 
 public class PlayerInAirState : PlayerState
 {
-    //Input
     private int xInput;
-    private bool jumpInput;
-    private bool jumpInputStop;
-    private bool grabInput;
-    private bool dashInput;
-
-    //Checks
     private bool isGrounded;
     private bool isTouchingWall;
     private bool isTouchingWallBack;
     private bool oldIsTouchingWall;
     private bool oldIsTouchingWallBack;
-    private bool isTouchingLedge;
-
+    private bool jumpInput;
+    private bool jumpInputStop;
     private bool caoyteTime;
     private bool wallJumpCaoyteTime;
     private bool isJumping;
+    private bool grabInput;
+    private bool isTouchingLedge;
 
     private float startWallJumpCaoyteTime;
-
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -79,7 +73,6 @@ public class PlayerInAirState : PlayerState
         jumpInput = player.InputHandler.JumpInput;
         jumpInputStop = player.InputHandler.JumpInputStop;
         grabInput = player.InputHandler.GrabInput;
-        dashInput = player.InputHandler.DashInput;
 
         CheckJumpMultiplier();
 
@@ -104,7 +97,7 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.JumpState);
         }
-        else if(isTouchingWall && grabInput && isTouchingLedge)
+        else if(isTouchingWall && grabInput)
         {
             stateMachine.ChangeState(player.WallGrabState);
         }
@@ -124,19 +117,18 @@ public class PlayerInAirState : PlayerState
 
     private void CheckJumpMultiplier()
     {
+
         if (isJumping)
         {
             if (jumpInputStop)
             {
                 player.SetVelocityY(player.CurrentVelocity.y * playerData.variableJumpHeightMultiplier);
-                Debug.Log("Hey ho kurwo" + playerData.variableJumpHeightMultiplier);
                 isJumping = false;
             }
-            else if (player.CurrentVelocity.y <= 0f)
+            else if (player.CurrentVelocity.y <= 0.0f)
             {
                 isJumping = false;
             }
-
         }
     }
 
