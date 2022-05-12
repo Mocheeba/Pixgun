@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 1cc9eddb2ca7aaa4585bb98cb04b5db1
+guid: fcc8c248a6960a4469f43c905a14e761
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3526301721735540619
-    second: Land_ver_3_0
+      213: 6697756849232947850
+    second: JumpVErt_0
   - first:
-      213: -8381379482342120613
-    second: Land_ver_3_1
+      213: 5883072582728219559
+    second: JumpVErt_1
   - first:
-      213: -2506649762998506589
-    second: Land_ver_3_2
+      213: 1743379878813043865
+    second: JumpVErt_2
+  - first:
+      213: -8576841072809135562
+    second: JumpVErt_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,68 +99,113 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Land_ver_3_0
+      name: JumpVErt_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 13
-        width: 30
-        height: 22
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 570da19644f001fc0800000000000000
-      internalID: -3526301721735540619
+      spriteID: a8a287e3e5633fc50800000000000000
+      internalID: 6697756849232947850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Land_ver_3_1
+      name: JumpVErt_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 13
-        width: 30
-        height: 22
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b53204b64cb5fab80800000000000000
-      internalID: -8381379482342120613
+      spriteID: 7abfa59185fd4a150800000000000000
+      internalID: 5883072582728219559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Land_ver_3_2
+      name: JumpVErt_2
       rect:
         serializedVersion: 2
-        x: 145
-        y: 13
-        width: 30
-        height: 22
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ab28244257963dd0800000000000000
-      internalID: -2506649762998506589
+      spriteID: 99c073153cab13810800000000000000
+      internalID: 1743379878813043865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpVErt_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6323b308c70f8f880800000000000000
+      internalID: -8576841072809135562
       vertices: []
       indices: 
       edges: []

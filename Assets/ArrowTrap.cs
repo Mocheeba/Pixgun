@@ -5,7 +5,8 @@ using UnityEngine;
 public class ArrowTrap : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
-    [SerializeField] private Transform firePoint;
+    [SerializeField] private Transform firePoint1;
+    [SerializeField] private Transform firePoint2;
     [SerializeField] private GameObject[] arrows;
     private float cooldownTimer;
 
@@ -13,7 +14,9 @@ public class ArrowTrap : MonoBehaviour
     {
         cooldownTimer = 0;
 
-        arrows[FindArrow()].transform.position = firePoint.position;
+        arrows[FindArrow()].transform.position = firePoint1.position;
+        arrows[FindArrow()].transform.position = firePoint2.position;
+
         arrows[FindArrow()].GetComponent<EnemyProjectile>().ActiveProjectile();
 
     }

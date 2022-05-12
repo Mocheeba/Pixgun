@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2824301096589891561}
   - component: {fileID: 2824301096589891560}
+  - component: {fileID: 1255348432}
+  - component: {fileID: 1255348433}
   m_Layer: 0
   m_Name: Point Light 2D (16)
   m_TagString: Untagged
@@ -72,6 +74,38 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1255348432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824301096589891558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8edaf0088d1ac0459e99096b3fbbc32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  betweenLightFlickers: 3
+  lightFlickerMin: 1
+  lightFlickerMax: 11
+  beginningTime: 2
+--- !u!114 &1255348433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824301096589891558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bcacd063170064bac049e0c10d8a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlickering: 0
+  FlickerMode: 0
+  FlickerTime: 0
+  RandomIntensity: 0
 --- !u!1 &2824301096685861232
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +202,7 @@ GameObject:
   - component: {fileID: 2824301097134582423}
   - component: {fileID: 1511707916579326869}
   - component: {fileID: 803015175}
+  - component: {fileID: 26457131}
   m_Layer: 0
   m_Name: Point Light 2D (14)
   m_TagString: Untagged
@@ -259,3 +294,19 @@ MonoBehaviour:
   FlickerMode: 3
   FlickerTime: 8
   RandomIntensity: 0
+--- !u!114 &26457131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2824301097134582421}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bcacd063170064bac049e0c10d8a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlickering: 1
+  FlickerMode: 3
+  FlickerTime: 4
+  RandomIntensity: 2
