@@ -15155,11 +15155,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4947193173689487096, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.67
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 4947193173689487096, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.17
+      value: 62.29
       objectReference: {fileID: 0}
     - target: {fileID: 4947193173689487096, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39074,6 +39074,10 @@ PrefabInstance:
       value: 0.18535995
       objectReference: {fileID: 0}
     - target: {fileID: 5324180076020323075, guid: d618f2444f072e447ba0342dce6dd6b1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324180076020323075, guid: d618f2444f072e447ba0342dce6dd6b1, type: 3}
       propertyPath: m_Offset.x
       value: -0.0003337264
       objectReference: {fileID: 0}
@@ -39095,11 +39099,11 @@ PrefabInstance:
       objectReference: {fileID: 6250901871512983374, guid: b87f07eb20a93a44bbb809f40808b4a2, type: 3}
     - target: {fileID: 5324180076020323078, guid: d618f2444f072e447ba0342dce6dd6b1, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 5324180076020323078, guid: d618f2444f072e447ba0342dce6dd6b1, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.5019608
       objectReference: {fileID: 0}
     - target: {fileID: 5324180076020323078, guid: d618f2444f072e447ba0342dce6dd6b1, type: 3}
       propertyPath: m_Color.r
@@ -47167,8 +47171,11 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -0.5, y: 0.5}
       - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
+      - {x: -0.49373505, y: -1.3130466}
+      - {x: -0.004896313, y: -1.3326973}
+      - {x: 0.00089014834, y: -4.5720425}
+      - {x: 0.5029749, y: -4.5528665}
+      - {x: 0.5044624, y: 0.48662457}
 --- !u!1 &558336114
 GameObject:
   m_ObjectHideFlags: 0
@@ -65474,11 +65481,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676210591707244046, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_DeadZoneWidth
-      value: 0.214
+      value: 0.283
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676210591707244046, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
+      propertyPath: m_LookaheadTime
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5676210591707244046, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_DeadZoneHeight
       value: 0.154
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676210591707244046, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
+      propertyPath: m_LookaheadSmoothing
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5676210591707244046, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_TrackedObjectOffset.x
@@ -65486,11 +65501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676210591789971972, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.707815
+      value: 12.624375
       objectReference: {fileID: 0}
     - target: {fileID: 5676210591789971972, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 93.20721
+      value: 88.75185
       objectReference: {fileID: 0}
     - target: {fileID: 5676210591789971972, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65498,7 +65513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676210591789972219, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: orthographic size
-      value: 7.52
+      value: 6.82
       objectReference: {fileID: 0}
     - target: {fileID: 5676210592162679088, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_Name
@@ -65550,11 +65565,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5676210592287959709, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.707822
+      value: 10.479783
       objectReference: {fileID: 0}
     - target: {fileID: 5676210592287959709, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 88.483246
+      value: 88.60325
       objectReference: {fileID: 0}
     - target: {fileID: 5676210592287959709, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65566,7 +65581,7 @@ PrefabInstance:
       objectReference: {fileID: 161747106}
     - target: {fileID: 5676210592287959710, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 7.52
+      value: 6.82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b35bf8a431e6815499c57fe804125e4e, type: 3}
@@ -77893,6 +77908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1451061848}
   - component: {fileID: 1451061849}
+  - component: {fileID: 1451061850}
   m_Layer: 0
   m_Name: Point Light Background (11)
   m_TagString: Untagged
@@ -77955,6 +77971,22 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1451061850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451061847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bcacd063170064bac049e0c10d8a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlickering: 0
+  FlickerMode: 0
+  FlickerTime: 0
+  RandomIntensity: 0
 --- !u!1 &1451787813
 GameObject:
   m_ObjectHideFlags: 0

@@ -59,7 +59,7 @@ public class FireTrap_1 : MonoBehaviour
 
         //Wait for delay, active trap, turn on anim, raturn color back to normal
         yield return new WaitForSeconds(activeDelay);
-        spriteRend.color = Color.white; // turn the sprite back its to normal
+        //spriteRend.color = Color.white; // turn the sprite back its to normal
         active = true;
         anim.SetBool("isActivated", true);
 
