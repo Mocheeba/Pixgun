@@ -19,7 +19,7 @@ MonoBehaviour:
   wallJumpTime: 0.59
   wallJumpAngle: {x: 0.72, y: 1.54}
   caoyteTime: 0.3
-  variableJumpHeightMultiplier: 0.88
+  variableJumpHeightMultiplier: 0.22
   wallSlideVelocity: 2.34
   wallClimbVelocity: 3.19
   startOffset: {x: 0.4, y: 0.57}

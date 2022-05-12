@@ -77,7 +77,7 @@
                 {
                     "name": "up",
                     "id": "2a5c3511-5d21-4c57-bffd-eb2965e2d3bb",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -88,7 +88,7 @@
                 {
                     "name": "down",
                     "id": "e8339338-068f-4485-9cc0-9c750b5b6bd0",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -99,7 +99,7 @@
                 {
                     "name": "left",
                     "id": "ca12b412-5b52-4afb-9158-635ea1b106cc",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -110,7 +110,7 @@
                 {
                     "name": "right",
                     "id": "9c7136bb-d95f-48d7-976d-57f6e44baf95",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -120,7 +120,7 @@
                 },
                 {
                     "name": "",
-                    "id": "14c5fc6a-eb57-4030-b732-f560cf472081",
+                    "id": "c2a82c9f-5d01-473f-aea1-4dbe0f51b764",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
@@ -136,6 +136,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d4bffac-d622-4230-b02a-17d57837a22b",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
