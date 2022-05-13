@@ -12,6 +12,8 @@ public class PlayerDashState : PlayerAbilityState
 
     private Vector2 dashDirection;
     private Vector2 dashDirectionInput;
+    private Vector2 lastAIPos;
+
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -48,7 +50,13 @@ public class PlayerDashState : PlayerAbilityState
 
         if(!isExitingState)
         {
-            if(isHolding)
+
+
+            player.Anim.SetFloat("yVelocity", player.CurrentVelocity.y);
+            player.Anim.SetFloat("xVelocity", Mathf.Abs(player.CurrentVelocity.x));
+
+
+            if (isHolding)
             {
                 dashDirectionInput = player.InputHandler.DashDirectionInput;
                 dashInputStop = player.InputHandler.DashInputStop;
@@ -72,13 +80,15 @@ public class PlayerDashState : PlayerAbilityState
                     player.RB.drag = playerData.drag;
                     player.SetVelocity(playerData.dashVelocity, dashDirection);
                     player.DashDirectionIndicator.gameObject.SetActive(false);
+                    PlaceAfterImage();
                 }
             }
             else
             {
                 player.SetVelocity(playerData.dashVelocity, dashDirection);
+                CheckIfShouldPlaceAfterImage();
 
-                if(Time.time >= startTime + playerData.dashTime)
+                if (Time.time >= startTime + playerData.dashTime)
                 {
                     player.RB.drag = 0f;
                     isAbilityDone = true;
@@ -87,6 +97,20 @@ public class PlayerDashState : PlayerAbilityState
             }
         }
     }
+
+    private void CheckIfShouldPlaceAfterImage()
+    {
+        if (Vector2.Distance(player.transform.position, lastAIPos) >= playerData.distBetweenAfterImages)
+        {
+            PlaceAfterImage();
+        }
+    }
+    private void PlaceAfterImage()
+    {
+        PlayerAfterImagePool.Instance.GetFromPool();
+        lastAIPos = player.transform.position;
+    }
+
 
     public bool CheckIfCanDash()
     {

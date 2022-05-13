@@ -222,7 +222,19 @@ MonoBehaviour:
     m_ActionId: 612b6f69-554a-4690-8f7e-6c04ef4172d9
     m_ActionName: Gameplay/Dash[/Keyboard/leftShift]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4947193173970090161}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnDashDirectionInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 5125044f-b193-4ba1-877a-47e10e9f7f54
     m_ActionName: Gameplay/DashDirectionInput[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
@@ -445,6 +457,10 @@ PrefabInstance:
     - target: {fileID: 7863815818188277881, guid: fbf92395cf1080748a221eb75ccc5247, type: 3}
       propertyPath: m_Name
       value: DashDirectionIndicator
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863815818188277881, guid: fbf92395cf1080748a221eb75ccc5247, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf92395cf1080748a221eb75ccc5247, type: 3}
