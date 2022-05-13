@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class PlayerInAirState : PlayerState
 {
+    //Inputs 
     private int xInput;
+    private bool jumpInput;
+    private bool jumpInputStop;
+    private bool grabInput;
+    private bool caoyteTime;
+    private bool wallJumpCaoyteTime;
+
+    private float startWallJumpCaoyteTime;
+
+
+    //Checks
     private bool isGrounded;
     private bool isTouchingWall;
     private bool isTouchingWallBack;
     private bool oldIsTouchingWall;
     private bool oldIsTouchingWallBack;
-    private bool jumpInput;
-    private bool jumpInputStop;
-    private bool caoyteTime;
-    private bool wallJumpCaoyteTime;
     private bool isJumping;
-    private bool grabInput;
     private bool isTouchingLedge;
 
-    private float startWallJumpCaoyteTime;
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }

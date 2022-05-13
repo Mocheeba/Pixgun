@@ -22,6 +22,7 @@ public class PlayerGroundedState : PlayerState
         isGrouded = player.CheckIfGrounded();
         isTouchingWall = player.CheckIfTouchingWall();
         grabInput = player.InputHandler.GrabInput;
+        isTouchingLedge = player.CheckIfTouchingLedge();
     }
 
     public override void Enter()
