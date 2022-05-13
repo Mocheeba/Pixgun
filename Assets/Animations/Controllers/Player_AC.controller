@@ -166,7 +166,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 6a61cbd8a7d22484597ff46468921d01, type: 2}
     m_Threshold: 0.24489798
-    m_Position: {x: 0, y: -2}
+    m_Position: {x: 0, y: 2}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -174,7 +174,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: bbbb77cbfc2e1b8478105365226a2a1f, type: 2}
     m_Threshold: 0.36734694
-    m_Position: {x: 4, y: 12}
+    m_Position: {x: 4, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -198,7 +198,7 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 7747f0ea36ab74042896beb5bdf8a646, type: 2}
     m_Threshold: 0.7346939
-    m_Position: {x: 7, y: -2}
+    m_Position: {x: 8, y: -2}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: yVelocity
@@ -761,7 +761,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Chixie_Running
-  m_Speed: 0.78
+  m_Speed: 0.85
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -1964689718103268003}

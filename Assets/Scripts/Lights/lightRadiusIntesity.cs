@@ -3,12 +3,15 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class lightRadiusIntesity : MonoBehaviour
 { 
-    
-    float duration = 1.0f;
-    float originalOuterRadius = 1.0f;
+    /* 
+     * Inner radius 0, Intesity const 3.5, just change Outer radius 
+     * Keep distance from 2 values, make it smooth  */
 
-    public float intensityRange = 3.0f;
- 
+    [Header("Outer Radius Settings")]
+    float duration = 1.0f;
+    [Tooltip("Change duration value.")]
+    
+    float originalOuterRadius = 1.0f;
 
     Light2D lt;
    
@@ -21,8 +24,8 @@ public class lightRadiusIntesity : MonoBehaviour
 
     void Update()
     {
-        //IncreaseOuterRadius();
-        SmoothDampAngle();
+        IncreaseOuterRadius();
+        //SmoothDampAngle();
     
     }
 
@@ -37,22 +40,22 @@ public class lightRadiusIntesity : MonoBehaviour
         lt.pointLightOuterRadius = originalOuterRadius * amplitude;
     }
 
-    void SmoothDampAngle()
-    {
-        float outerRadius = lt.pointLightOuterRadius;
-        float innerRadius = lt.pointLightInnerRadius;
+    //void SmoothDampAngle()
+    //{
+    //    float outerRadius = lt.pointLightOuterRadius;
+    //    float innerRadius = lt.pointLightInnerRadius;
 
-        float outerRadiusRange = 5.0f;
-        float innerRadiusRange = outerRadiusRange;
+    //    float outerRadiusRange = 5.0f;
+    //    float innerRadiusRange = outerRadiusRange;
 
 
-        lt.intensity = Mathf.PingPong(Time.time, intensityRange);
+    //    lt.intensity = Mathf.PingPong(Time.time, intensityRange);
 
-        lt.pointLightOuterRadius = Mathf.PingPong(Time.time, outerRadiusRange);
+    //    lt.pointLightOuterRadius = Mathf.PingPong(Time.time, outerRadiusRange);
 
-        lt.pointLightInnerRadius = Mathf.PingPong(Time.time, (innerRadiusRange * 0.2f));
+    //    lt.pointLightInnerRadius = Mathf.PingPong(Time.time, (innerRadiusRange * 0.2f));
 
-    }
+    //}
 
 
 

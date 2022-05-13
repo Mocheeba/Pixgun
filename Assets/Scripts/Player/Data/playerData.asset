@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9f4783a992d114483388db2332dc67, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
-  movementVelocity: 7.32
-  jumpVelocity: 10.92
+  movementVelocity: 7.3
+  jumpVelocity: 11
   amountOfJumps: 2
-  wallJumpVelocity: 10.67
+  wallJumpVelocity: 11.11
   wallJumpTime: 0.59
-  wallJumpAngle: {x: 0.72, y: 1.54}
+  wallJumpAngle: {x: 0.75, y: 1.54}
   caoyteTime: 0.3
-  variableJumpHeightMultiplier: 0.22
+  variableJumpHeightMultiplier: 0.3
   wallSlideVelocity: 2.34
   wallClimbVelocity: 3.19
   startOffset: {x: 0.4, y: 0.57}
