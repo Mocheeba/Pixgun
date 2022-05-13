@@ -28,11 +28,18 @@ public class PlayerDashState : PlayerAbilityState
 
         Time.timeScale = playerData.holdTimeScale;
         startTime = Time.unscaledTime;
+
+        player.DashDirectionIndicator.gameObject.SetActive(true);
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        if(player.CurrentVelocity.y > 0)
+        {
+            player.SetVelocityY(player.CurrentVelocity.y * playerData.dashEndYMultiplier);
+        }    
     }
 
     public override void LogicUpdate()
@@ -64,6 +71,7 @@ public class PlayerDashState : PlayerAbilityState
                     player.CheckIfShouldFlip(Mathf.RoundToInt(dashDirection.x));
                     player.RB.drag = playerData.drag;
                     player.SetVelocity(playerData.dashVelocity, dashDirection);
+                    player.DashDirectionIndicator.gameObject.SetActive(false);
                 }
             }
             else
