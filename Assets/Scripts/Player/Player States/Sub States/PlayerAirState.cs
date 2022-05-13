@@ -9,6 +9,7 @@ public class PlayerInAirState : PlayerState
     private bool jumpInput;
     private bool jumpInputStop;
     private bool grabInput;
+    private bool dashInput;
     private bool caoyteTime;
     private bool wallJumpCaoyteTime;
 
@@ -23,7 +24,6 @@ public class PlayerInAirState : PlayerState
     private bool oldIsTouchingWallBack;
     private bool isJumping;
     private bool isTouchingLedge;
-
     public PlayerInAirState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -78,6 +78,7 @@ public class PlayerInAirState : PlayerState
         jumpInput = player.InputHandler.JumpInput;
         jumpInputStop = player.InputHandler.JumpInputStop;
         grabInput = player.InputHandler.GrabInput;
+        dashInput = player.InputHandler.DashInput;
 
         CheckJumpMultiplier();
 
@@ -109,6 +110,10 @@ public class PlayerInAirState : PlayerState
         else if(isTouchingWall && xInput == player.facingDirection && player.CurrentVelocity.y <= 0)
         {
             stateMachine.ChangeState(player.WallSlideState);
+        }
+        else if(dashInput && player.DashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.DashState);
         }
         else
         {
