@@ -11,6 +11,18 @@ public class MovePlatform : MonoBehaviour
     private Vector2 endPosition;
     private Rigidbody2D rBody;
 
+    // player
+
+    private Rigidbody2D playerRB;
+    private bool isOnPlatform;
+    private Rigidbody2D platformRBody;
+    private void Awake()
+    {
+        playerRB = GetComponent<Rigidbody2D>();
+    }
+
+
+
     void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
@@ -43,4 +55,34 @@ public class MovePlatform : MonoBehaviour
             yield return null;
         }
     }
+
+    void FixedUpdate()
+    {
+        if (isOnPlatform)
+        {
+            playerRB.velocity = playerRB.velocity + platformRBody.velocity;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Platform")
+        {
+            platformRBody = col.gameObject.GetComponent<Rigidbody2D>();
+            isOnPlatform = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Platform")
+        {
+            isOnPlatform = false;
+            platformRBody = null;
+        }
+    }
+
+
+
+
 }

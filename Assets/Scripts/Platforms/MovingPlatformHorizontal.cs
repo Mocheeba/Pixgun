@@ -41,7 +41,7 @@ public class MovingPlatformHorizontal : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             collision.transform.SetParent(null);
-
+            Debug.Log("set parent ");
         }
     }
 }
