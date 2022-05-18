@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 7930a9ffb8a13ef43bde792799841c52
+guid: 89d1a66b1b47c294bbfdf4f446fd54c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4908244485842079492
-    second: hurt_placeholder_0
+      213: 9205398095059366395
+    second: CrouchWalking_0
   - first:
-      213: 8442350624955729221
-    second: hurt_placeholder_1
+      213: -8619953089137851004
+    second: CrouchWalking_1
+  - first:
+      213: 2931432198458366777
+    second: CrouchWalking_2
+  - first:
+      213: -1992575050403481268
+    second: CrouchWalking_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,17 +99,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hurt_placeholder_0
+      name: CrouchWalking_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 21
-        width: 23
-        height: 21
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40f0369da569d1440800000000000000
-      internalID: 4908244485842079492
+      spriteID: bf132109bc420cf70800000000000000
+      internalID: 9205398095059366395
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hurt_placeholder_1
+      name: CrouchWalking_1
       rect:
         serializedVersion: 2
-        x: 86
-        y: 22
-        width: 23
-        height: 20
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +162,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54588c5f921492570800000000000000
-      internalID: 8442350624955729221
+      spriteID: 485486df556cf5880800000000000000
+      internalID: -8619953089137851004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalking_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93bd0489d0a8ea820800000000000000
+      internalID: 2931432198458366777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrouchWalking_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49f46c7c83f854e0800000000000000
+      internalID: -1992575050403481268
       vertices: []
       indices: 
       edges: []

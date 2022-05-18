@@ -25,6 +25,10 @@ public class Player : MonoBehaviour
 
     public PlayerDashState DashState { get; private set; }
 
+    public PlayerCrouchIdleState CrouchIdleState { get; private set; }
+    public PlayerCrouchMoveState CrouchMoveState { get; private set; }
+
+
     [SerializeField]
     private PlayerData PlayerData;
     #endregion
@@ -70,6 +74,8 @@ public class Player : MonoBehaviour
         WallJumpState = new PlayerWallJumpState(this, StateMachine, PlayerData, "inAir");
         LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, PlayerData, "ledgeClimbState");
         DashState = new PlayerDashState(this, StateMachine, PlayerData, "inAir");
+        CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, PlayerData, "crouchIdle");
+        CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, PlayerData, "crouchMove");
     }
 
     private void Start()
@@ -101,7 +107,7 @@ public class Player : MonoBehaviour
     public void SetVelocityZero()
     {
         RB.velocity = Vector2.zero;
-        CurrentVelocity = Vector2.zero;
+        CurrentVelocity = Vector2.zero;   
     }
     public void SetVelocity(float velocity, Vector2 angle, int direction)
     {
@@ -169,8 +175,8 @@ public class Player : MonoBehaviour
     {
         RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * facingDirection, PlayerData.wallCheckDistance, PlayerData.whatIsGround);
         float xDist = xHit.distance;
-        workspace.Set(xDist * facingDirection, 0f);
-        RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workspace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y, PlayerData.whatIsGround);
+        workspace.Set((xDist + 0.015f) * facingDirection, 0f);
+        RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workspace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y + 0.15f, PlayerData.whatIsGround);
         float yDist = yHit.distance;
 
         workspace.Set(wallCheck.position.x + (xDist * facingDirection), ledgeCheck.position.y - yDist);
