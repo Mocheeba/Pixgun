@@ -6,8 +6,6 @@ public class PlayerGroundedState : PlayerState
 {
     protected int xInput;
     protected int yInput;
-    
-    
 
     private bool JumpInput;
     private bool grabInput;

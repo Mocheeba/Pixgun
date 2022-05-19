@@ -22,6 +22,7 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.Exit();
     }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();
@@ -30,8 +31,7 @@ public class PlayerMoveState : PlayerGroundedState
 
         player.SetVelocityX(playerData.movementVelocity * xInput);
 
-
-        if (!isExitingState)
+        if(!isExitingState)
         {
             if (xInput == 0)
             {
@@ -41,7 +41,7 @@ public class PlayerMoveState : PlayerGroundedState
             {
                 stateMachine.ChangeState(player.CrouchMoveState);
             }
-        }
+        }    
     }
 
     public override void PhysicsUpdate()
