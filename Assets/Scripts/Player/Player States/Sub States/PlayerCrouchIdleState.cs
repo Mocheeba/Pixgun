@@ -11,10 +11,29 @@ public class PlayerCrouchIdleState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        player.SetVelocityZero();
+
     }
 
     public override void Exit()
     {
         base.Exit();
+    }
+
+    public override void LogicUpdate()
+    {
+        base.LogicUpdate();
+
+        if(!isExitingState)
+        {
+            if(xInput != 0)
+            {
+                stateMachine.ChangeState(player.CrouchMoveState);
+            }
+            else if(yInput != -1)
+            {
+                stateMachine.ChangeState(player.IdleState);
+            }
+        }
     }
 }
