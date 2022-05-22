@@ -158,36 +158,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4947193173689487096, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
   m_PrefabInstance: {fileID: 254781098}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &194214391
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 194214392}
-  m_Layer: 7
-  m_Name: CellingCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &194214392
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194214391}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 161747106}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &250799937
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,8 +254,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947193173970090165, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
-      propertyPath: m_Size.y
-      value: 1.2
+      propertyPath: m_Offset.x
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 4947193173970090166, guid: a5aef5d6d6cdb6e4d991206935b837d6, type: 3}
       propertyPath: m_Name
