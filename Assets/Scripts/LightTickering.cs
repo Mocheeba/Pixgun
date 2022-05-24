@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class LightTickering : MonoBehaviour
 {
@@ -10,11 +10,11 @@ public class LightTickering : MonoBehaviour
     public float FlickerTime;
     public float RandomIntensity;
 
-    Light2D myLight;
+    UnityEngine.Rendering.Universal.Light2D myLight;
 
     void Start()
     {
-        myLight = GetComponent<Light2D>();
+        myLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         isFlickering = false;
     }
 
@@ -32,10 +32,10 @@ public class LightTickering : MonoBehaviour
 
         if (FlickerMode == 1)
         {
-            this.gameObject.GetComponent<Light2D>().enabled = false;
+            this.gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>().enabled = false;
             FlickerTime = Random.Range(0.0f, 0.26f);
             yield return new WaitForSeconds(FlickerTime);
-            this.gameObject.GetComponent<Light2D>().enabled = true;
+            this.gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>().enabled = true;
             isFlickering = false;
         }
 
@@ -43,11 +43,11 @@ public class LightTickering : MonoBehaviour
         {
             //Light intensity changes
             RandomIntensity = Random.Range(0f, 3.1f);
-            this.gameObject.GetComponent<Light2D>().intensity = 1;
+            this.gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = 1;
             FlickerTime = Random.Range(0.0f, 0.5f);
             yield return new WaitForSeconds(FlickerTime);
             RandomIntensity = Random.Range(0f, 3.1f);
-            this.gameObject.GetComponent<Light2D>().intensity = RandomIntensity;
+            this.gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = RandomIntensity;
             isFlickering = false;
         }
 
@@ -55,11 +55,11 @@ public class LightTickering : MonoBehaviour
         {
             //Light Outer radius changes
             RandomIntensity = Random.Range(0f, 10.0f);
-            this.gameObject.GetComponent<Light2D>().pointLightOuterRadius = 1;
+            this.gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>().pointLightOuterRadius = 1;
             FlickerTime = Random.Range(0.0f, 0.5f);
             yield return new WaitForSeconds(FlickerTime);
             RandomIntensity = Random.Range(0f, 10.1f);
-            this.gameObject.GetComponent<Light2D>().intensity = RandomIntensity;
+            this.gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = RandomIntensity;
             isFlickering = false;
         }
 

@@ -159,6 +159,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1180,6 +1181,52 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      LongIdle_Green_37: 8788150921383639311
+      LongIdle_Green_42: 4151760320757655477
+      LongIdle_Green_24: -8165902736301101291
+      LongIdle_Green_39: -7835945747733497047
+      LongIdle_Green_25: -1454696820489818722
+      LongIdle_Green_31: -4094024636543608089
+      LongIdle_Green_44: -2163575874897203840
+      LongIdle_Green_7: -8823663584757279044
+      LongIdle_Green_27: -8848799591368418351
+      LongIdle_Green_16: 1053533541168404817
+      LongIdle_Green_15: 2654335976148756172
+      LongIdle_Green_22: 4983554816268724007
+      LongIdle_Green_30: -3371080815567929215
+      LongIdle_Green_28: 1069842569531339067
+      LongIdle_Green_23: 1667451871967426454
+      LongIdle_Green_1: -4661798063862267269
+      LongIdle_Green_17: 5359202023327304597
+      LongIdle_Green_4: -1032697181303775164
+      LongIdle_Green_29: 4287750025317614698
+      LongIdle_Green_8: -1920128879332672245
+      LongIdle_Green_41: -2852934225446244542
+      LongIdle_Green_36: -5985140202074311143
+      LongIdle_Green_26: -4688626375850895691
+      LongIdle_Green_32: 43689274292585175
+      LongIdle_Green_12: 1809765317918189597
+      LongIdle_Green_38: -8799622067414890463
+      LongIdle_Green_34: -4503612237836742853
+      LongIdle_Green_21: 3212749540517855217
+      LongIdle_Green_40: -5793988339046386242
+      LongIdle_Green_2: -2916047593592928204
+      LongIdle_Green_19: 5122622490481060492
+      LongIdle_Green_3: -971923992086806854
+      LongIdle_Green_14: -501019965238990493
+      LongIdle_Green_33: 3063468713836650492
+      LongIdle_Green_18: 7240713276317037174
+      LongIdle_Green_11: -7132444080620962246
+      LongIdle_Green_13: -6637903372978221694
+      LongIdle_Green_35: -2945315134517058751
+      LongIdle_Green_10: 6658796151311416633
+      LongIdle_Green_20: 7912062416771788650
+      LongIdle_Green_5: 7280816342431717696
+      LongIdle_Green_6: 1174332935457310610
+      LongIdle_Green_9: -6774289295260771431
+      LongIdle_Green_43: 3429648731709162225
+      LongIdle_Green_0: 5899862667037381374
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

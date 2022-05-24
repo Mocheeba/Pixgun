@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Chixie_Run_Green_0: -3704418560877846593
+      Chixie_Run_Green_2: 7717296459625461113
+      Chixie_Run_Green_1: 3473673514402541617
+      Chixie_Run_Green_3: 1394648159345486260
+      Chixie_Run_Green_5: -2357169942811850829
+      Chixie_Run_Green_4: -8127159417790245877
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

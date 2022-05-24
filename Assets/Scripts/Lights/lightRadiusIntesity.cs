@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class lightRadiusIntesity : MonoBehaviour
 { 
@@ -13,12 +13,12 @@ public class lightRadiusIntesity : MonoBehaviour
     
     float originalOuterRadius = 1.0f;
 
-    Light2D lt;
+    UnityEngine.Rendering.Universal.Light2D lt;
    
 
     void Start()
     {
-        lt = GetComponent<Light2D>();
+        lt = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
 
     }
 

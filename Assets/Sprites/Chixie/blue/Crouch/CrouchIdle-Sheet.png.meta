@@ -36,6 +36,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -220,6 +221,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      CrouchIdle-Sheet_1: -5586587376235071675
+      CrouchIdle-Sheet_2: -4173368173901536625
+      CrouchIdle-Sheet_3: 2063466420143767797
+      CrouchIdle-Sheet_0: -6898318859379600829
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

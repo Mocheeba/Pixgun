@@ -81,6 +81,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -556,6 +557,26 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Different_Idle_Green_1_7: -1545843437430393387
+      Different_Idle_Green_1_6: -87302842634569323
+      Different_Idle_Green_1_1: 4533656627519666498
+      Different_Idle_Green_1_3: 8160471732719958145
+      Different_Idle_Green_1_13: -819160783946530848
+      Different_Idle_Green_1_2: 8201141613042565977
+      Different_Idle_Green_1_17: -7896716462204133033
+      Different_Idle_Green_1_11: 3396676330303022611
+      Different_Idle_Green_1_14: -4189989075100599080
+      Different_Idle_Green_1_0: -4002107083910501659
+      Different_Idle_Green_1_16: -8563542399896059137
+      Different_Idle_Green_1_9: -4235587943718156794
+      Different_Idle_Green_1_15: 2895908150202631230
+      Different_Idle_Green_1_4: -766454509856707111
+      Different_Idle_Green_1_12: 2965144726921587505
+      Different_Idle_Green_1_8: 8783701387885223909
+      Different_Idle_Green_1_18: -6612426856799705837
+      Different_Idle_Green_1_5: -735629644575306097
+      Different_Idle_Green_1_10: 920285462122575156
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

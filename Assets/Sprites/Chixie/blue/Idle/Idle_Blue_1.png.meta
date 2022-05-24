@@ -117,6 +117,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -781,6 +782,35 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Idle_Blue_1_21: 1976632685351267509
+      Idle_Blue_1_18: -3560678475596136153
+      Idle_Blue_1_24: 8612768862276491502
+      Idle_Blue_1_1: 8412100650664516656
+      Idle_Blue_1_14: -4228573256166083599
+      Idle_Blue_1_27: 4725582548267770040
+      Idle_Blue_1_5: -139365500474771618
+      Idle_Blue_1_7: 8506262817117204418
+      Idle_Blue_1_13: 5665031605386441558
+      Idle_Blue_1_17: 2502824724648514818
+      Idle_Blue_1_10: -8736240353811178736
+      Idle_Blue_1_22: -9067840952703014341
+      Idle_Blue_1_12: 4806745015299730138
+      Idle_Blue_1_25: -4217919895271773554
+      Idle_Blue_1_26: -3369075207528483071
+      Idle_Blue_1_4: -8223962459386281670
+      Idle_Blue_1_15: -4126530061503625449
+      Idle_Blue_1_6: 7975208978689757979
+      Idle_Blue_1_0: -289551366699679795
+      Idle_Blue_1_20: -779582744152774303
+      Idle_Blue_1_23: -1225567662229377060
+      Idle_Blue_1_16: 6092689938989890026
+      Idle_Blue_1_11: 7807721311590748063
+      Idle_Blue_1_2: 1559711834004771812
+      Idle_Blue_1_8: 4085437818332931596
+      Idle_Blue_1_9: 1471162925522993095
+      Idle_Blue_1_19: 2132680639116760091
+      Idle_Blue_1_3: 3264826278944361392
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

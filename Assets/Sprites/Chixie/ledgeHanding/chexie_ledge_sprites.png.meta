@@ -48,6 +48,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -316,6 +317,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      chexie_ledge_sprites_5: 5333202845142661277
+      chexie_ledge_sprites_1: 8005793330533924874
+      chexie_ledge_sprites_4: -1039034976594204825
+      chexie_ledge_sprites_6: -133003324041986997
+      chexie_ledge_sprites_3: 1346583998110884534
+      chexie_ledge_sprites_2: -5098893237194739661
+      chexie_ledge_sprites_7: -5772601785659381483
+      chexie_ledge_sprites_0: -4237249735400855589
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
