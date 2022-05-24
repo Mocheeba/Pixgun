@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class testLightFricking : MonoBehaviour
 {
@@ -10,11 +10,11 @@ public class testLightFricking : MonoBehaviour
     [SerializeField] float lightFlickerMax;
     [SerializeField] float beginningTime;
 
-    Light2D myLight;
+    UnityEngine.Rendering.Universal.Light2D myLight;
 
     private void Start()
     {
-        myLight = GetComponent<Light2D>();
+        myLight = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         StartCoroutine(StartScene());
     }
 

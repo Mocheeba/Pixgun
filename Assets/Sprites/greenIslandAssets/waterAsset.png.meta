@@ -102,6 +102,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -748,6 +749,33 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      waterAsset_13: -8948322361342861180
+      waterAsset_15: 7982066433615693711
+      waterAsset_1: 4739961961077554151
+      waterAsset_9: -4414511153504463866
+      waterAsset_22: -5502630620684004318
+      waterAsset_8: 8285829346304637283
+      waterAsset_10: -4732537620889597972
+      waterAsset_4: 2350936631319065078
+      waterAsset_17: 4359866103162778184
+      waterAsset_19: 5385338378114720600
+      waterAsset_7: -2939432414871315309
+      waterAsset_21: -925862283114792857
+      waterAsset_20: 5447780664723594938
+      waterAsset_5: -2791714699528704996
+      waterAsset_12: -6784753710770598823
+      waterAsset_16: 27481558297025811
+      waterAsset_0: -6030692532167785309
+      waterAsset_23: 2296872831347680534
+      waterAsset_14: -6080212547035037125
+      waterAsset_24: -4548375369294937996
+      waterAsset_3: -5479289996145773139
+      waterAsset_2: -1813954186579349451
+      waterAsset_11: -211999809443718566
+      waterAsset_18: 4973405054692471519
+      waterAsset_6: -1933689226435455006
+      waterAsset_25: 1006264681948684074
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

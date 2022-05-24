@@ -327,6 +327,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -2548,6 +2549,108 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      greenIslandGroundAsset_54: -8255716123658370982
+      greenIslandGroundAsset_40: -5707958129806539306
+      greenIslandGroundAsset_5: 5349626268078637741
+      greenIslandGroundAsset_74: 9046533186551153796
+      greenIslandGroundAsset_72: 144798792296690811
+      greenIslandGroundAsset_90: -1111441383598809058
+      greenIslandGroundAsset_21: 6310577268626365647
+      greenIslandGroundAsset_17: -8116787926000726982
+      greenIslandGroundAsset_22: -6646526388358138817
+      greenIslandGroundAsset_57: -5509766137549637586
+      greenIslandGroundAsset_49: -8362154039710201378
+      greenIslandGroundAsset_1: -2208994231704824092
+      greenIslandGroundAsset_99: 8464135487059262658
+      greenIslandGroundAsset_10: -5991194482177021296
+      greenIslandGroundAsset_18: 2532082411034392936
+      greenIslandGroundAsset_62: 8809573199497684528
+      greenIslandGroundAsset_92: 1214747505044394670
+      greenIslandGroundAsset_42: -625775761134954420
+      greenIslandGroundAsset_51: -8404689259146338272
+      greenIslandGroundAsset_34: 2394335111824204942
+      greenIslandGroundAsset_87: 7870331255854845261
+      greenIslandGroundAsset_29: 6002785466912166248
+      greenIslandGroundAsset_48: -5069623248244141487
+      greenIslandGroundAsset_60: -3996562146731885496
+      greenIslandGroundAsset_75: 162253601845930340
+      greenIslandGroundAsset_64: 8239859487615095719
+      greenIslandGroundAsset_26: -6602789906151628265
+      greenIslandGroundAsset_89: 3578191698927288323
+      greenIslandGroundAsset_43: -5222254595953045445
+      greenIslandGroundAsset_84: -2932600827245956576
+      greenIslandGroundAsset_77: 1525116306072856191
+      greenIslandGroundAsset_98: -9171728630792390918
+      greenIslandGroundAsset_56: -1427027076335031334
+      greenIslandGroundAsset_12: 606037708515136952
+      greenIslandGroundAsset_83: -1746357413552126364
+      greenIslandGroundAsset_8: -7721713090219543735
+      greenIslandGroundAsset_46: -6897903912837023767
+      greenIslandGroundAsset_71: 7551329968151340644
+      greenIslandGroundAsset_44: 5558038608686738438
+      greenIslandGroundAsset_27: 2946283300791445736
+      greenIslandGroundAsset_76: 931076508358709989
+      greenIslandGroundAsset_9: -7625415027440655157
+      greenIslandGroundAsset_47: -1771884046991166000
+      greenIslandGroundAsset_2: 5647845582869276371
+      greenIslandGroundAsset_20: -1515822276491173788
+      greenIslandGroundAsset_24: 1299465421270886374
+      greenIslandGroundAsset_31: 1256974441049659647
+      greenIslandGroundAsset_63: 6650701754334411413
+      greenIslandGroundAsset_95: 2971440283959959683
+      greenIslandGroundAsset_85: -6468891767681603023
+      greenIslandGroundAsset_91: 4239970926102911887
+      greenIslandGroundAsset_13: 4251457931440932344
+      greenIslandGroundAsset_67: 4810075895269013384
+      greenIslandGroundAsset_4: 1006762231547592101
+      greenIslandGroundAsset_3: -9005992123810479556
+      greenIslandGroundAsset_81: -8466503623141733857
+      greenIslandGroundAsset_6: 8986776574009807473
+      greenIslandGroundAsset_94: -5107150913205014031
+      greenIslandGroundAsset_53: 4173165413200202166
+      greenIslandGroundAsset_80: -5388659824448811676
+      greenIslandGroundAsset_38: 5434796203563674447
+      greenIslandGroundAsset_96: 6267488953370579123
+      greenIslandGroundAsset_68: 2673999248647191248
+      greenIslandGroundAsset_79: 6783987571120379476
+      greenIslandGroundAsset_15: 3150174860706100366
+      greenIslandGroundAsset_19: -1311559646207229339
+      greenIslandGroundAsset_66: -3082709337324082018
+      greenIslandGroundAsset_86: 3311546948396416070
+      greenIslandGroundAsset_23: 1015318585228930237
+      greenIslandGroundAsset_93: -3800212559170335793
+      greenIslandGroundAsset_41: 6452294437256191169
+      greenIslandGroundAsset_59: -7718142897386702057
+      greenIslandGroundAsset_33: 4044489960669481693
+      greenIslandGroundAsset_36: 8880916732212898053
+      greenIslandGroundAsset_61: -4545417212020864081
+      greenIslandGroundAsset_45: 5879704791754648445
+      greenIslandGroundAsset_73: -5896365045317964723
+      greenIslandGroundAsset_97: 6442391479502237032
+      greenIslandGroundAsset_16: -7047348822126156289
+      greenIslandGroundAsset_55: -7910902227694811063
+      greenIslandGroundAsset_69: -5716202792379995082
+      greenIslandGroundAsset_78: -2360747048436491852
+      greenIslandGroundAsset_52: -1191790596375141793
+      greenIslandGroundAsset_28: -4564719728254824736
+      greenIslandGroundAsset_7: -9127393576905438753
+      greenIslandGroundAsset_14: 3025580442562965486
+      greenIslandGroundAsset_82: -3520501625724561529
+      greenIslandGroundAsset_39: -5104987197778149499
+      greenIslandGroundAsset_30: 5377266239575684954
+      greenIslandGroundAsset_65: 7424835367603198460
+      greenIslandGroundAsset_88: 7521841032072785397
+      greenIslandGroundAsset_70: 7955845418834751350
+      greenIslandGroundAsset_37: -5000582581720405490
+      greenIslandGroundAsset_25: -6357673821578435366
+      greenIslandGroundAsset_32: -4796791429971201433
+      greenIslandGroundAsset_50: 3426775479482789261
+      greenIslandGroundAsset_100: 5179511231437917221
+      greenIslandGroundAsset_11: -6480964721384767010
+      greenIslandGroundAsset_0: -7293422797004520194
+      greenIslandGroundAsset_58: 4932467499723884950
+      greenIslandGroundAsset_35: -7607158631846794202
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

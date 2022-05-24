@@ -105,6 +105,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -748,6 +749,34 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Arrow Trap - Level 2-Sheet_18: 1020657171881873848
+      Arrow Trap - Level 2-Sheet_24: 7309707645621324430
+      Arrow Trap - Level 2-Sheet_4: 8313525378994464754
+      Arrow Trap - Level 2-Sheet_11: -7604568194849570056
+      Arrow Trap - Level 2-Sheet_15: 5857132527778689964
+      Arrow Trap - Level 2-Sheet_12: -8050076197186275112
+      Arrow Trap - Level 2-Sheet_14: -1365216377321112892
+      Arrow Trap - Level 2-Sheet_20: 2045586277096578731
+      Arrow Trap - Level 2-Sheet_7: 8800064092615991385
+      Arrow Trap - Level 2-Sheet_9: 6519353979067779836
+      Arrow Trap - Level 2-Sheet_5: 7002548572550364113
+      Arrow Trap - Level 2-Sheet_13: 1280561529894724098
+      Arrow Trap - Level 2-Sheet_17: -1883865336929107971
+      Arrow Trap - Level 2-Sheet_2: 6082915564955437697
+      Arrow Trap - Level 2-Sheet_3: -4180394840586807927
+      Arrow Trap - Level 2-Sheet_21: 9047792599327611359
+      Arrow Trap - Level 2-Sheet_23: 692111423491022353
+      Arrow Trap - Level 2-Sheet_0: 128238647907437989
+      Arrow Trap - Level 2-Sheet_8: 8347837953906517618
+      Arrow Trap - Level 2-Sheet_19: 1772843162063233259
+      Arrow Trap - Level 2-Sheet_25: -5787878099192380589
+      Arrow Trap - Level 2-Sheet_6: -4201091877903136291
+      Arrow Trap - Level 2-Sheet_10: -6796901141374596118
+      Arrow Trap - Level 2-Sheet_26: 1573758900037336934
+      Arrow Trap - Level 2-Sheet_22: -6221356942466628382
+      Arrow Trap - Level 2-Sheet_1: 7957570276840403461
+      Arrow Trap - Level 2-Sheet_16: 7895127268831245701
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

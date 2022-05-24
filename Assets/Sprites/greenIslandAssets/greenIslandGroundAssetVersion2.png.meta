@@ -255,6 +255,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1972,6 +1973,84 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      greenIslandGroundAssetVersion2_35: 5794825907165870530
+      greenIslandGroundAssetVersion2_13: 2016108025967260876
+      greenIslandGroundAssetVersion2_12: -5674596668161179148
+      greenIslandGroundAssetVersion2_42: -1908814484444390237
+      greenIslandGroundAssetVersion2_16: 135991379315106985
+      greenIslandGroundAssetVersion2_24: -2212867817497000595
+      greenIslandGroundAssetVersion2_43: 270276547540246374
+      greenIslandGroundAssetVersion2_22: 5565698850568704114
+      greenIslandGroundAssetVersion2_69: 5329264106335958685
+      greenIslandGroundAssetVersion2_27: 7451887838234008162
+      greenIslandGroundAssetVersion2_54: 6499160297555618354
+      greenIslandGroundAssetVersion2_66: -4608816436282717578
+      greenIslandGroundAssetVersion2_3: -7666329389430814197
+      greenIslandGroundAssetVersion2_62: 571391275854878162
+      greenIslandGroundAssetVersion2_26: 1138348360479051118
+      greenIslandGroundAssetVersion2_58: -5216468232503850161
+      greenIslandGroundAssetVersion2_11: 898219615030137868
+      greenIslandGroundAssetVersion2_2: -6337456362280562349
+      greenIslandGroundAssetVersion2_76: -7498760582896442013
+      greenIslandGroundAssetVersion2_36: 7828246729263431765
+      greenIslandGroundAssetVersion2_0: 766616883427995477
+      greenIslandGroundAssetVersion2_6: -8133468180083878000
+      greenIslandGroundAssetVersion2_38: 5959576790346578776
+      greenIslandGroundAssetVersion2_37: -8772292333655094463
+      greenIslandGroundAssetVersion2_56: 1574379875888550460
+      greenIslandGroundAssetVersion2_48: 3803329370137965980
+      greenIslandGroundAssetVersion2_53: 4410492721506660045
+      greenIslandGroundAssetVersion2_39: 8992381823569958035
+      greenIslandGroundAssetVersion2_67: 2460372971502707870
+      greenIslandGroundAssetVersion2_10: 4311494233817688384
+      greenIslandGroundAssetVersion2_59: -2328752226419949322
+      greenIslandGroundAssetVersion2_71: 8110452995858685504
+      greenIslandGroundAssetVersion2_4: 2850344268569664013
+      greenIslandGroundAssetVersion2_46: -2347619166118129903
+      greenIslandGroundAssetVersion2_70: -1912419291009105488
+      greenIslandGroundAssetVersion2_31: -3045370547367155674
+      greenIslandGroundAssetVersion2_47: 233403409207702602
+      greenIslandGroundAssetVersion2_5: -7755479310720905861
+      greenIslandGroundAssetVersion2_64: -5561508218029911801
+      greenIslandGroundAssetVersion2_45: -9147972786757985728
+      greenIslandGroundAssetVersion2_55: -4527911019543223398
+      greenIslandGroundAssetVersion2_63: 7124616161932912023
+      greenIslandGroundAssetVersion2_74: 6843496481674311325
+      greenIslandGroundAssetVersion2_60: 1116788057109635232
+      greenIslandGroundAssetVersion2_44: -2137201099353354928
+      greenIslandGroundAssetVersion2_17: 5915899937641146836
+      greenIslandGroundAssetVersion2_50: 1714552084727360761
+      greenIslandGroundAssetVersion2_9: 6384393260466823793
+      greenIslandGroundAssetVersion2_57: -2086069386484359520
+      greenIslandGroundAssetVersion2_41: -3512698827784327143
+      greenIslandGroundAssetVersion2_14: 5850853982575092072
+      greenIslandGroundAssetVersion2_21: 8067060484342451479
+      greenIslandGroundAssetVersion2_8: 5527155790685948130
+      greenIslandGroundAssetVersion2_32: -7177996252842352038
+      greenIslandGroundAssetVersion2_28: 4731658517550123516
+      greenIslandGroundAssetVersion2_34: 8743358781993053766
+      greenIslandGroundAssetVersion2_61: -2783358265264185524
+      greenIslandGroundAssetVersion2_65: -1089412987478438493
+      greenIslandGroundAssetVersion2_30: 4084505022910348074
+      greenIslandGroundAssetVersion2_23: 5872709108990687824
+      greenIslandGroundAssetVersion2_33: -7439540753783729153
+      greenIslandGroundAssetVersion2_15: -3413047123568192489
+      greenIslandGroundAssetVersion2_25: -757490365648764715
+      greenIslandGroundAssetVersion2_72: -2466575246276482795
+      greenIslandGroundAssetVersion2_73: 3955274001579409218
+      greenIslandGroundAssetVersion2_7: -8713311808645067088
+      greenIslandGroundAssetVersion2_1: -2960536146146484573
+      greenIslandGroundAssetVersion2_75: 7845906281322708605
+      greenIslandGroundAssetVersion2_29: -6827620403091842251
+      greenIslandGroundAssetVersion2_68: 6607086449704597080
+      greenIslandGroundAssetVersion2_19: 2913655952717297538
+      greenIslandGroundAssetVersion2_52: 6935798942861804149
+      greenIslandGroundAssetVersion2_20: 2413996486645453158
+      greenIslandGroundAssetVersion2_49: 8014556115200413792
+      greenIslandGroundAssetVersion2_51: 7031529403591351636
+      greenIslandGroundAssetVersion2_40: 8094104865381324992
+      greenIslandGroundAssetVersion2_18: -4135915807776080101
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

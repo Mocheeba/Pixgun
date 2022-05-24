@@ -81,6 +81,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -556,6 +557,26 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Different_Idle_PyxelEdit_4: -4213614082535192071
+      Different_Idle_PyxelEdit_9: 201325741329959599
+      Different_Idle_PyxelEdit_3: 2355016821851341412
+      Different_Idle_PyxelEdit_5: -801975823257852423
+      Different_Idle_PyxelEdit_8: 7607137309422165285
+      Different_Idle_PyxelEdit_14: -4276155134249931275
+      Different_Idle_PyxelEdit_1: 1932385496417361739
+      Different_Idle_PyxelEdit_18: -2302618978101957978
+      Different_Idle_PyxelEdit_19: -2839636551118026870
+      Different_Idle_PyxelEdit_16: 4642197530183931901
+      Different_Idle_PyxelEdit_2: -2330959327308748182
+      Different_Idle_PyxelEdit_23: 714649539536568658
+      Different_Idle_PyxelEdit_0: 4690830372754205099
+      Different_Idle_PyxelEdit_20: 4952918197573929782
+      Different_Idle_PyxelEdit_22: -4963559703257376251
+      Different_Idle_PyxelEdit_6: -4385646247183988007
+      Different_Idle_PyxelEdit_7: 5052309641200262633
+      Different_Idle_PyxelEdit_10: -2712637201757524015
+      Different_Idle_PyxelEdit_12: -8827027965088878181
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

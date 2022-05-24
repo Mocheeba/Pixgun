@@ -42,6 +42,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Chixie_attack_3_0: -6820082017325842147
+      Chixie_attack_3_2: -6839883394812146096
+      Chixie_attack_3_1: -3581401064251912405
+      Chixie_attack_3_3: 1064499556650559366
+      Chixie_attack_3_4: -1846228809616692039
+      Chixie_attack_3_5: 3569290435576286728
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

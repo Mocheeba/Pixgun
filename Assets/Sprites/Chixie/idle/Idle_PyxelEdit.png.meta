@@ -105,6 +105,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -748,6 +749,34 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Idle_PyxelEdit_20: -5338543878720963668
+      Idle_PyxelEdit_12: -7881720145187702651
+      Idle_PyxelEdit_14: 7945761266966717500
+      Idle_PyxelEdit_10: 9042472081199688870
+      Idle_PyxelEdit_16: 9222643037821283204
+      Idle_PyxelEdit_6: 868533638929711127
+      Idle_PyxelEdit_0: -8065288106529093802
+      Idle_PyxelEdit_18: 7864053093269344351
+      Idle_PyxelEdit_13: -3516435943498509018
+      Idle_PyxelEdit_21: -5283261822632994844
+      Idle_PyxelEdit_11: -5410504242129841443
+      Idle_PyxelEdit_3: 8199147213937125204
+      Idle_PyxelEdit_26: -3518616535041171616
+      Idle_PyxelEdit_1: 3021020393107313146
+      Idle_PyxelEdit_17: 3145827281905275049
+      Idle_PyxelEdit_19: -5265710080632049930
+      Idle_PyxelEdit_5: -1465614283398114423
+      Idle_PyxelEdit_15: 6495859920182688210
+      Idle_PyxelEdit_8: 1848292102983744179
+      Idle_PyxelEdit_4: -6523653947564673735
+      Idle_PyxelEdit_25: -1599947652152932063
+      Idle_PyxelEdit_22: -8519779774441434679
+      Idle_PyxelEdit_7: -3656248310862238422
+      Idle_PyxelEdit_24: -29361497061397344
+      Idle_PyxelEdit_23: -6675654498891335744
+      Idle_PyxelEdit_9: 13595549372114015
+      Idle_PyxelEdit_2: -189823333739569507
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

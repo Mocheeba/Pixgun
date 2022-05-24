@@ -45,6 +45,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -292,6 +293,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      greenIslandBlockingColorsSlant_3: -3755974277248129346
+      greenIslandBlockingColorsSlant_5: 4110506536863038894
+      greenIslandBlockingColorsSlant_2: 3152217562184861068
+      greenIslandBlockingColorsSlant_4: 6286483067814890153
+      greenIslandBlockingColorsSlant_0: -8524654997012507740
+      greenIslandBlockingColorsSlant_1: -1378030801018624430
+      greenIslandBlockingColorsSlant_6: 5875401799712451850
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -114,6 +114,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -820,6 +821,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Fire Trap - Level 1-Sheet-Sheet_6: -28828403464701373
+      Fire Trap - Level 1-Sheet-Sheet_8: -1090374558722693780
+      Fire Trap - Level 1-Sheet-Sheet_5: -1249093759408025105
+      Fire Trap - Level 1-Sheet-Sheet_29: -7321903855327593800
+      Fire Trap - Level 1-Sheet-Sheet_10: -4375905123082087079
+      Fire Trap - Level 1-Sheet-Sheet_3: -2078272850745606449
+      Fire Trap - Level 1-Sheet-Sheet_9: 5602371278097660154
+      Fire Trap - Level 1-Sheet-Sheet_20: -4604837825835208773
+      Fire Trap - Level 1-Sheet-Sheet_24: 7891404611303008889
+      Fire Trap - Level 1-Sheet-Sheet_14: -3620592854949530877
+      Fire Trap - Level 1-Sheet-Sheet_28: 8607171721039762222
+      Fire Trap - Level 1-Sheet-Sheet_13: -7557512393972392009
+      Fire Trap - Level 1-Sheet-Sheet_16: -5269756913779040790
+      Fire Trap - Level 1-Sheet-Sheet_4: 5549696693350444486
+      Fire Trap - Level 1-Sheet-Sheet_26: -2270234760026843865
+      Fire Trap - Level 1-Sheet-Sheet_12: 7820370138271991482
+      Fire Trap - Level 1-Sheet-Sheet_11: 6322641444913152646
+      Fire Trap - Level 1-Sheet-Sheet_7: 8154808467620089760
+      Fire Trap - Level 1-Sheet-Sheet_2: 575125417908580722
+      Fire Trap - Level 1-Sheet-Sheet_25: 6037989446984082880
+      Fire Trap - Level 1-Sheet-Sheet_23: 5418167425054132459
+      Fire Trap - Level 1-Sheet-Sheet_19: -1076558676654731323
+      Fire Trap - Level 1-Sheet-Sheet_21: -5531068391250380262
+      Fire Trap - Level 1-Sheet-Sheet_0: 2853328259697920866
+      Fire Trap - Level 1-Sheet-Sheet_22: -3152787546832128195
+      Fire Trap - Level 1-Sheet-Sheet_15: -7394253152187237561
+      Fire Trap - Level 1-Sheet-Sheet_17: 1482599881960323641
+      Fire Trap - Level 1-Sheet-Sheet_18: -7180718758706555653
+      Fire Trap - Level 1-Sheet-Sheet_27: 7849865242014407838
+      Fire Trap - Level 1-Sheet-Sheet_1: 5830581596248038899
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
