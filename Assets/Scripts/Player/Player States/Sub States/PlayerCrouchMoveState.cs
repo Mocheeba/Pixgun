@@ -27,17 +27,14 @@ public class PlayerCrouchMoveState : PlayerGroundedState
         base.LogicUpdate();
 
         if (!isExitingState)
-        { 
-            player.SetVelocityX(playerData.crouchMovementVelocity * player.facingDirection);
-            player.CheckIfShouldFlip(xInput);
-        
-            if (xInput == 0)
+        {
+            if (xInput != 0)
             {
-                stateMachine.ChangeState(player.CrouchIdleState);
+                stateMachine.ChangeState(player.CrouchMoveState);
             }
             else if (yInput != -1)
             {
-                stateMachine.ChangeState(player.MoveState);
+                stateMachine.ChangeState(player.IdleState);
             }
         }
     }
