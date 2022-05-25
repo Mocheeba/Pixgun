@@ -394,7 +394,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.9
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 08dd163673ff68d49861ee35c45e5cbd, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -446,6 +446,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 4947193173689487096}
     m_Modifications:
     - target: {fileID: 7863815818188277880, guid: fbf92395cf1080748a221eb75ccc5247, type: 3}
@@ -501,6 +502,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf92395cf1080748a221eb75ccc5247, type: 3}
 --- !u!4 &599913781 stripped
 Transform:

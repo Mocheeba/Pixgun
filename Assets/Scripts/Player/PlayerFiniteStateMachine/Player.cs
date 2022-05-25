@@ -183,13 +183,10 @@ public class Player : MonoBehaviour
         Vector2 center = MovementCollider.offset;
         workspace.Set(MovementCollider.size.x, height);
 
-        center.y += (height - MovementCollider.size.y) / 5;
+        center.y += (height - MovementCollider.size.y) / 2;
 
         MovementCollider.size = workspace;
         MovementCollider.offset = center;
-
-        Debug.Log(MovementCollider.size + "in function");
-        Debug.Log(MovementCollider.offset + "in function");
     }
     public Vector2 DetermineCornerPosition()
     {
