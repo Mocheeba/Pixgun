@@ -14,7 +14,6 @@ public class PlayerCrouchIdleState : PlayerGroundedState
 
         player.SetVelocityZero();
         player.SetColliderHeight(playerData.crouchColliderHeight);
-        Debug.Log(playerData.crouchColliderHeight + "kurwe");
     }
 
     public override void Exit()
