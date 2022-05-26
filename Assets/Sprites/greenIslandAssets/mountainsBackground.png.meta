@@ -740,6 +740,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -783,6 +784,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -822,6 +824,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -5948,9 +5962,9 @@ TextureImporter:
       mountainsBackground_77: 3202143620443774943
       mountainsBackground_143: -6027233042755018450
       mountainsBackground_224: -5748755528593605165
+      mountainsBackground_233: -8379294987313251224
       mountainsBackground_147: -6335355617579254182
       mountainsBackground_134: -7791170991766004548
-      mountainsBackground_233: -8379294987313251224
       mountainsBackground_141: 3730569626767179052
       mountainsBackground_101: 1252329796164448761
       mountainsBackground_61: 8118491949892209042
@@ -6004,22 +6018,22 @@ TextureImporter:
       mountainsBackground_135: -8766754412827542323
       mountainsBackground_110: -7343751280169184203
       mountainsBackground_46: 3758576679050713390
-      mountainsBackground_144: -1096892905962085821
+      mountainsBackground_192: 4780710176275498921
       mountainsBackground_169: -7242923584709524597
+      mountainsBackground_144: -1096892905962085821
       mountainsBackground_93: -2188661565799991360
       mountainsBackground_75: -8698612703715362919
-      mountainsBackground_192: 4780710176275498921
       mountainsBackground_39: 8290370551697806049
       mountainsBackground_40: 4569597625514204877
       mountainsBackground_9: 542172298801591509
       mountainsBackground_217: -2151244378653737485
       mountainsBackground_59: 4531399029595544123
       mountainsBackground_199: 4200352749330932529
+      mountainsBackground_232: -726486018527126851
       mountainsBackground_96: 4310764853339743729
-      mountainsBackground_194: -1633035554260269055
       mountainsBackground_231: -4303210767519014398
       mountainsBackground_80: 1654220873929298508
-      mountainsBackground_232: -726486018527126851
+      mountainsBackground_194: -1633035554260269055
       mountainsBackground_18: 7858271627610685514
       mountainsBackground_27: 4580034140954041215
       mountainsBackground_204: 4156664690821522570
@@ -6128,7 +6142,6 @@ TextureImporter:
       mountainsBackground_228: 2087164431407047530
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
