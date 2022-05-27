@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9f4783a992d114483388db2332dc67, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
-  movementVelocity: 7.3
-  jumpVelocity: 11.48
-  amountOfJumps: 2
-  wallJumpVelocity: 11.11
-  wallJumpTime: 0.59
+  movementVelocity: 6.7
+  jumpVelocity: 14
+  amountOfJumps: 1
+  wallJumpVelocity: 14
+  wallJumpTime: 0.4
   wallJumpAngle: {x: 0.75, y: 1.54}
-  caoyteTime: 0.3
-  variableJumpHeightMultiplier: 0.35
+  caoyteTime: 0.2
+  variableJumpHeightMultiplier: 0.5
   wallSlideVelocity: 2.34
   wallClimbVelocity: 3.19
   startOffset: {x: 0.4, y: 0.57}
@@ -27,11 +27,11 @@ MonoBehaviour:
   dashCooldown: 1
   maxHoldTime: 1
   holdTimeScale: 0.5
-  dashTime: 0.5
-  dashVelocity: 15
+  dashTime: 0.3
+  dashVelocity: 18
   drag: 10
   dashEndYMultiplier: 0.2
-  distBetweenAfterImages: 1
+  distBetweenAfterImages: 0.5
   crouchMovementVelocity: 5
   crouchColliderHeight: 0.6
   standColliderHeight: 1.2
