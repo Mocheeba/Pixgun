@@ -75,6 +75,7 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 8, true);
         for (int i = 0; i < numberOfFlashes; i++)
         {
+            spriteRenderer.color = Color.red;
             spriteRenderer.color = new Color(1, 0, 0, 0.5f);
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
             spriteRenderer.color = Color.white;
