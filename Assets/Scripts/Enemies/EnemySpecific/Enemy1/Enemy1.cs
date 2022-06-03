@@ -17,5 +17,8 @@ public class Enemy1 : Entity
         base.Start();
 
         moveState = new E1_MoveState(this, stateMachine, "move", moveStateData, this);
+        moveState = new E1_MoveState(this, stateMachine, "idle", moveStateData, this);
+
+        stateMachine.Initialize(moveState);
     }
 }
