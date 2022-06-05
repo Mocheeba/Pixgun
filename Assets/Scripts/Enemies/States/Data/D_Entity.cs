@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,5 +9,4 @@ public class D_Entity : ScriptableObject
     public float ledgeCheckDistance = 0.4f;
 
     public LayerMask whatIsGround;
-
 }

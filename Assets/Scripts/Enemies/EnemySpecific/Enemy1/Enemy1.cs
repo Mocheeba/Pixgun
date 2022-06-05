@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,8 +17,10 @@ public class Enemy1 : Entity
         base.Start();
 
         moveState = new E1_MoveState(this, stateMachine, "move", moveStateData, this);
-        moveState = new E1_MoveState(this, stateMachine, "idle", moveStateData, this);
+        idleState = new E1_IdleState(this, stateMachine, "idle", idleStateData, this);
 
         stateMachine.Initialize(moveState);
+       
     }
+
 }

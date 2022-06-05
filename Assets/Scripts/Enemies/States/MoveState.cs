@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,19 +8,19 @@ public class MoveState : State
 
     protected bool isDetectingWall;
     protected bool isDetectingLedge;
-    public MoveState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData) : base(entity, stateMachine, animBoolName)
+
+    public MoveState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData) : base(etity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
     }
 
-    // ovveride 
     public override void Enter()
     {
-        base.Enter(); // we can remove to get diffrent behaviour
+        base.Enter();
         entity.SetVelocity(stateData.movementSpeed);
 
         isDetectingLedge = entity.CheckLedge();
-        isDetectingWall = entity.Checkwall();
+        isDetectingWall = entity.CheckWall();
     }
 
     public override void Exit()
@@ -36,15 +36,8 @@ public class MoveState : State
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-    }
 
-    public virtual void CheckWall()
-    {
-
-    }
-
-    public virtual void CheckLedge()
-    {
-
+        isDetectingLedge = entity.CheckLedge();
+        isDetectingWall = entity.CheckWall();
     }
 }

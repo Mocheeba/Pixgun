@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,8 +10,6 @@ public class IdleState : State
     protected bool isIdleTimeOver;
 
     protected float idleTime;
-
-
 
     public IdleState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData) : base(etity, stateMachine, animBoolName)
     {
@@ -31,7 +29,7 @@ public class IdleState : State
     {
         base.Exit();
 
-        if(flipAfterIdle)
+        if (flipAfterIdle)
         {
             entity.Flip();
         }
@@ -43,7 +41,7 @@ public class IdleState : State
 
         if(Time.time >= startTime + idleTime)
         {
-            isIdleTimeOver=true;
+            isIdleTimeOver = true;
         }
     }
 
@@ -52,11 +50,6 @@ public class IdleState : State
         base.PhysicsUpdate();
     }
 
-
-    private void SetIdleTime()
-    {
-
-    }
     public void SetFlipAfterIdle(bool flip)
     {
         flipAfterIdle = flip;
@@ -66,5 +59,4 @@ public class IdleState : State
     {
         idleTime = Random.Range(stateData.minIdleTime, stateData.maxIdleTime);
     }
-
 }
