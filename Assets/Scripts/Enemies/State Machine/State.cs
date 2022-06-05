@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class State 
+public class State
 {
     protected FiniteStateMachine stateMachine;
     protected Entity entity;
@@ -11,9 +11,9 @@ public class State
 
     protected string animBoolName;
 
-    public State(Entity entity, FiniteStateMachine stateMachine, string animBoolName)
+    public State(Entity etity, FiniteStateMachine stateMachine, string animBoolName)
     {
-        this.entity = entity;
+        this.entity = etity;
         this.stateMachine = stateMachine;
         this.animBoolName = animBoolName;
     }
@@ -31,7 +31,7 @@ public class State
 
     public virtual void LogicUpdate()
     {
-        
+
     }
 
     public virtual void PhysicsUpdate()

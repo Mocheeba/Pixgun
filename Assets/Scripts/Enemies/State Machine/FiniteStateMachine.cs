@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,6 @@ public class FiniteStateMachine
         currentState.Enter();
     }
 
-    //change the state we currently in
     public void ChangeState(State newState)
     {
         currentState.Exit();
