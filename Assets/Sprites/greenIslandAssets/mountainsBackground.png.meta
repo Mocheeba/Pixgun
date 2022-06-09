@@ -765,7 +765,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -5950,8 +5950,8 @@ TextureImporter:
       mountainsBackground_211: -8336884757735672186
       mountainsBackground_222: 2620292154835421343
       mountainsBackground_67: -6844325730522635333
-      mountainsBackground_35: 6334762955248925430
       mountainsBackground_98: 2738324124842788312
+      mountainsBackground_35: 6334762955248925430
       mountainsBackground_8: -8787957840207557318
       mountainsBackground_100: 7041528500775389512
       mountainsBackground_146: 5057216732456728266
