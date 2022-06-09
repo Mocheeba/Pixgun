@@ -94,3 +94,6 @@ TagManager:
   - name: Collectables 10
     uniqueID: 1141940335
     locked: 0
+  - name: Player 11
+    uniqueID: 1678870661
+    locked: 0
