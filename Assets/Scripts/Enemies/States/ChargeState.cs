@@ -5,15 +5,28 @@ using UnityEngine;
 public class ChargeState : State
 {
     protected D_ChargeState stateData;
+
+    protected bool isPlayerInMinAgroRange;
+    protected bool isDetectingLedge;
+    protected bool isDetectingWall;
     public ChargeState(Entity etity, FiniteStateMachine stateMachine, string animBoolName) : base(etity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
     }
 
+    public override void DoChecks()
+    {
+        base.DoChecks();
+
+        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+        isDetectingLedge = entity.CheckLedge();
+        isDetectingWall = entity.CheckWall();
+
+    }
+
     public override void Enter()
     {
         base.Enter();
-
         entity.SetVelocity(stateData.chargeSpeed);
     }
 
