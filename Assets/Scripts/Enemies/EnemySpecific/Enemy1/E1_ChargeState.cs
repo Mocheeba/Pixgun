@@ -5,7 +5,7 @@ using UnityEngine;
 public class E1_ChargeState : ChargeState
 {
     private Enemy1 enemy;
-    public E1_ChargeState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData, Enemy1 enemy) : base(etity, stateMachine, animBoolName, )
+    public E1_ChargeState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData, Enemy1 enemy) : base(etity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
     }
@@ -29,7 +29,12 @@ public class E1_ChargeState : ChargeState
     {
         base.LogicUpdate();
 
-        if(isChargeTimeOver)
+        if(!isDetectingLedge || isDetectingWall)
+        {
+            // TODO: look for player
+        }
+
+        else if(isChargeTimeOver)
         {
             if (isPlayerInMinAgroRange)
             {
