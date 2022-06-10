@@ -27,6 +27,7 @@ public class ChargeState : State
     public override void Enter()
     {
         base.Enter();
+
         entity.SetVelocity(stateData.chargeSpeed);
     }
 
