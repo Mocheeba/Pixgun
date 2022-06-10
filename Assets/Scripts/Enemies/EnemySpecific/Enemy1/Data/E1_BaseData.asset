@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8616551fadf786b468748b4b85698cb9, type: 3}
   m_Name: E1_BaseData
   m_EditorClassIdentifier: 
-  wallCheckDistance: 0.4
-  ledgeCheckDistance: 0.53
-  minAgroDistance: 3
-  maxAgroDistance: 4
+  wallCheckDistance: 2.57
+  ledgeCheckDistance: 0.56
+  minAgroDistance: 2.46
+  maxAgroDistance: 1.66
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
