@@ -31,7 +31,7 @@ public class E1_ChargeState : ChargeState
 
         if(!isDetectingLedge || isDetectingWall)
         {
-            // TODO: look for player
+            stateMachine.ChangeState(enemy.lookForPlayerState);
         }
 
         else if(isChargeTimeOver)
