@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
     protected Animator weaponAnimator;
 
     protected PlayerAttackState state;
+
+    protected int attackCounter;
     protected virtual void Start()
     {
         baseAnimator = transform.Find("Base").GetComponent<Animator>();
@@ -19,14 +21,23 @@ public class Weapon : MonoBehaviour
     {
         gameObject.SetActive(true);
 
+        if(attackCounter >= 3)
+        {
+            attackCounter = 0;
+        }
+
         baseAnimator.SetBool("attack", true);
         weaponAnimator.SetBool("attack", true);
-    }
 
+        baseAnimator.SetInteger("attackCounter", attackCounter);
+        weaponAnimator.SetInteger("attackCounter", attackCounter);
+    }
     public virtual void ExitWeapon()
     {
         baseAnimator.SetBool("attack", false);
         weaponAnimator.SetBool("attack", false);
+
+        attackCounter++;
 
         gameObject.SetActive(false);
     }
