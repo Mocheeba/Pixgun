@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
     public Transform DashDirectionIndicator { get; private set; }
 
     public BoxCollider2D MovementCollider { get; private set; }
+
+    public PlayerInventory Inventory { get; private set; }
     #endregion
     #region Check Transform
 
@@ -94,9 +96,12 @@ public class Player : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         DashDirectionIndicator = transform.Find("DashDirectionIndicator");
         MovementCollider = GetComponent<BoxCollider2D>();
-
+        Inventory = GetComponent<PlayerInventory>();
 
         facingDirection = 1;
+
+        PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
+       // SecondaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
 
         StateMachine.Initialize(IdleState);
     }
@@ -213,5 +218,6 @@ public class Player : MonoBehaviour
         facingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
+
     #endregion
 }
