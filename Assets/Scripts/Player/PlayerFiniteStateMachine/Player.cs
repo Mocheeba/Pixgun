@@ -28,6 +28,10 @@ public class Player : MonoBehaviour
     public PlayerCrouchMoveState CrouchMoveState  { get; private set; }
     public PlayerCrouchIdleState CrouchIdleState { get; private set; }
 
+    public PlayerAttackState PrimaryAttackState { get; private set; }
+
+    public PlayerAttackState SecondaryAttackState { get; private set; }
+
 
 
     [SerializeField]
@@ -79,6 +83,8 @@ public class Player : MonoBehaviour
         DashState = new PlayerDashState(this, StateMachine, PlayerData, "inAir");
         CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, PlayerData, "crouchIdle");
         CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, PlayerData, "crouchMove");
+        PrimaryAttackState = new PlayerAttackState(this, StateMachine, PlayerData, "attack");
+        SecondaryAttackState = new PlayerAttackState(this, StateMachine, PlayerData, "attack");
     }
 
     private void Start()
