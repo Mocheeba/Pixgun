@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerState 
 {
+    protected Core core;
+
     protected Player player;
     protected PlayerStateMachine stateMachine;
     protected PlayerData playerData;
@@ -21,6 +23,7 @@ public class PlayerState
         this.stateMachine = stateMachine;
         this.playerData = playerData;
         this.animBoolName = animBoolName;
+        core = player.Core;
     }
 // virtual is used when function can be overriten by class that's inherit from this class.
     public virtual void Enter()
