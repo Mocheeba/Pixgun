@@ -8,6 +8,8 @@ public class PlayerAttackState : PlayerAbilityState
 
     private float velocityToSet;
     private bool setVelocity;
+
+    private int xInput;
     public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -32,6 +34,10 @@ public class PlayerAttackState : PlayerAbilityState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        xInput = player.InputHandler.NormInputX;
+
+        player.CheckIfShouldFlip(xInput);
 
         if (setVelocity)
         {
