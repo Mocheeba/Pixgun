@@ -71,6 +71,11 @@ public class Weapon : MonoBehaviour
     {
         state.AnimationFinishTrigger();
     }
+
+    public virtual void AnimationActionTrigger()
+    {
+
+    }
     #endregion
 
     public void InitializeWeapon(PlayerAttackState state)
