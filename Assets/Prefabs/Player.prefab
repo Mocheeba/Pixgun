@@ -82,11 +82,11 @@ MonoBehaviour:
   groundCheck: {fileID: 4947193173715824755}
   wallCheck: {fileID: 4947193172730675509}
   ledgeCheck: {fileID: 1127665625}
-  groundCheckRadius: 3
-  wallCheckDistance: 3
+  groundCheckRadius: 0.3
+  wallCheckDistance: 0.3
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!1 &1120904974
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,8 +96,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1120904975}
-  - component: {fileID: 1120904976}
-  m_Layer: 7
+  - component: {fileID: 1724214339}
+  m_Layer: 12
   m_Name: Wand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ Transform:
   m_Father: {fileID: 1335002093}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1120904976
+--- !u!114 &1724214339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1120904974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ec44f393aed60b47b8e2f840ceb3224, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f714a1fa65b3f647bc2107772c20f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: b003e71805a94d1469f30ec2fcd9e19c, type: 2}
@@ -298,7 +298,9 @@ GameObject:
   - component: {fileID: 1568391581}
   - component: {fileID: 1568391583}
   - component: {fileID: 1568391584}
-  m_Layer: 7
+  - component: {fileID: 1671077999}
+  - component: {fileID: 1671078000}
+  m_Layer: 12
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568391580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -392,6 +394,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1671077999
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568391580}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6939621, y: -0.31313992}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9504547, y: 0.44079018}
+  m_EdgeRadius: 0
+--- !u!114 &1671078000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568391580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6d189408880c44dad9620de89aa00f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1627410344
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +444,7 @@ GameObject:
   - component: {fileID: 1627410347}
   - component: {fileID: 1627410348}
   - component: {fileID: 1627410349}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +653,7 @@ Transform:
   - {fileID: 599913781}
   - {fileID: 1335002093}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4947193173970090159
 MonoBehaviour:
@@ -930,8 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 1120904976}
-  - {fileID: 1120904976}
+  - {fileID: 1724214339}
 --- !u!1001 &7863815818720853325
 PrefabInstance:
   m_ObjectHideFlags: 0

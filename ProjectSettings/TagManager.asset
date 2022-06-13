@@ -22,8 +22,8 @@ TagManager:
   - Ground
   - Walls
   - MovingPlatforms
-  - 
-  - 
+  - Weapon
+  - Damageable
   - 
   - 
   - 
