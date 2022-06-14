@@ -22,7 +22,11 @@ public class PlayerJumpState : PlayerAbilityState
 
     public bool CanJump()
     {
-        if (amountOfJumpsLeft > 0)
+
+        if (DialogueMenager.isActive == true)
+            return false;
+
+        else if (amountOfJumpsLeft > 0)
         {
             return true;
         }    
