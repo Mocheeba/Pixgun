@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDetails:
   - attackName: Slash up
-    movementSpeed: 1
+    movementSpeed: 5
     damageAmount: 10
   - attackName: Slash middle
-    movementSpeed: 1
+    movementSpeed: 4
     damageAmount: 20
   - attackName: Slash End
-    movementSpeed: 1
+    movementSpeed: -4
     damageAmount: 30
