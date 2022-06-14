@@ -11,7 +11,7 @@ public class NPC_dialog : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") == true)
         {
             trigger.StartDialogue();
-            Movement.SetVelocityZero();
+            
         }
             
     }

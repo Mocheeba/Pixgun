@@ -24,6 +24,7 @@ public class DialogueMenager : MonoBehaviour
         isActive = true;
         Debug.Log("Started conversation! Loaded messages: " + messages.Length); 
         DisplayMessage();
+        backgroundBox.LeanScale(Vector3.one, 0.5f);
     }
 
     void DisplayMessage(){
@@ -33,6 +34,8 @@ public class DialogueMenager : MonoBehaviour
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
         actorImage.sprite = actorToDisplay.sprite;
+
+        AnimateTextColor();
     }
 
     public void NextMessage() {
@@ -44,20 +47,26 @@ public class DialogueMenager : MonoBehaviour
         else
          {
             Debug.Log("conversation over");
+            backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             isActive = false;
-
         }
+    }
+
+    void AnimateTextColor()
+    {
+        LeanTween.textAlpha(messageText.rectTransform, 0, 0);
+        LeanTween.textAlpha(messageText.rectTransform, 1, 0.5f);
     }
 
     private void Start()
     {
-
+        backgroundBox.transform.localScale = Vector3.zero;
     }
 
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) && isActive == true)
-                {
+        {
             NextMessage();
         }
     }

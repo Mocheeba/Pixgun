@@ -5,7 +5,7 @@ using UnityEngine;
 public class AggresiveWeapon : Weapon
 {
     private List<IDamageable> detectedDamageable = new List<IDamageable>();
- public override void AnimationActionTrigger()
+    public override void AnimationActionTrigger()
     {
         base.AnimationActionTrigger();
     }    

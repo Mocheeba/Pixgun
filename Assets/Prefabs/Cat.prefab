@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1149125690967950767}
   - component: {fileID: 1149125690967950772}
   - component: {fileID: 6324039033041317683}
-  m_Layer: 13
+  - component: {fileID: 1149125690967950774}
+  m_Layer: 8
   m_Name: Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +52,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 100
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -119,10 +120,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2624359, y: 0.18467855}
+  m_Offset: {x: -2.750885, y: 0.48092318}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -133,7 +134,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5248718, y: 1.6306429}
+  m_Size: {x: 9.753235, y: 2.2231321}
   m_EdgeRadius: 0
 --- !u!114 &1149125690967950772
 MonoBehaviour:
@@ -149,11 +150,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - actorId: 0
-    message: 11
+    message: "T\u2013to kocur w pelerynce! W dodatku, gadaj\u0105cy."
   - actorId: 1
-    message: 22
-  - actorId: 0
-    message: 11
+    message: "Je\u015Bli chcesz uciec z tego miejsca, to musisz zebra\u0107 WSZYSTKIE
+      dusze Pixgun! "
+  - actorId: 1
+    message: "Dla-czego Ci to m\xF3wi\u0119? A bo widzisz, widzia\u0142em jak dzielnie
+      walczy\u0142a\u015B z tym o to  zielonym glutem i postanowi\u0142em Ci pom\xF3c.
+      Dlaczego tak na mnie patrzysz? Nie jestem jak oni. Bo tu o widzisz, opr\xF3cz
+      mnie zostali sami zara\u017Ceni."
   - actorId: 1
     message: 22
   - actorId: 0
@@ -162,9 +167,9 @@ MonoBehaviour:
     message: 22
   actors:
   - name: Chixie
-    sprite: {fileID: 400221100, guid: d0ca1b6aa9675b14fba4abf0da8ad6f2, type: 3}
+    sprite: {fileID: 9042472081199688870, guid: 2a031da474501eb41b0b9fe9f90a58dd, type: 3}
   - name: Cat
-    sprite: {fileID: -8052679187600627163, guid: d2223d6a7816d474b83187392732daf6, type: 3}
+    sprite: {fileID: 1603438319, guid: 9004bb70582293f498b7fe353cf034bb, type: 3}
 --- !u!114 &6324039033041317683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,3 +183,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1149125690967950772}
+--- !u!95 &1149125690967950774
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590277693080936095}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62a7e68fe5c42484b8177fba4710221b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
