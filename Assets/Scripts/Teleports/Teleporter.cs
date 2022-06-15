@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
+    
+    
     // ustawiamy do jakiego tp 
     [SerializeField] private Transform destination;
 
@@ -12,5 +14,8 @@ public class Teleporter : MonoBehaviour
         return destination; 
     }
 
+    // play animation
+
+    // make sound 
 
 }
