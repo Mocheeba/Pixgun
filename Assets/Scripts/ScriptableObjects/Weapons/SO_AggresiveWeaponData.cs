@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [CreateAssetMenu(fileName ="newAggrressiveWeaponData", menuName = "Data/Weapon Data/Aggresive Weapon")]
 public class SO_AggresiveWeaponData : SO_WeaponData
 {

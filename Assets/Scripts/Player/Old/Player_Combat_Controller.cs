@@ -101,6 +101,19 @@ public class Player_Combat_Controller : MonoBehaviour
         anim.SetBool("attack1", false);
     }
 
+    private void Damage(AttackDetails attackDetails)
+    {
+       // if(!PC.GetDashStatus())
+        {
+            int direction;
+
+
+        }
+
+
+    }
+
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attack1HitBoxPos.position, attack1Radius);

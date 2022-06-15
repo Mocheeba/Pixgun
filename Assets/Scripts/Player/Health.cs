@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("minus 1 dmg");
             TakeDamage(1);
