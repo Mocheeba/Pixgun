@@ -10,7 +10,10 @@ public class CombatTestDummy : MonoBehaviour, IDamageable
 
     public void Damage(float amount)
     {
+
         Debug.Log(amount + " Damage taken");
+        anim.SetTrigger("damage");
+        Destroy(gameObject);
 
     }
 

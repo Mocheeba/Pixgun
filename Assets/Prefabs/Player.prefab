@@ -112,7 +112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649814928}
   m_LocalRotation: {x: -0, y: -0, z: -0.34577626, w: -0.93831706}
-  m_LocalPosition: {x: 0.06, y: -0.09, z: 0.032986347}
+  m_LocalPosition: {x: -0.05, y: -0.09, z: 0.032986347}
   m_LocalScale: {x: 1.3679781, y: 1.360116, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f714a1fa65b3f647bc2107772c20f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: b003e71805a94d1469f30ec2fcd9e19c, type: 2}
+  weaponData: {fileID: 11400000, guid: 76a8588b9f6e3934b92bfef2d5b30e25, type: 2}
 --- !u!1 &1127665624
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +514,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.6939621, y: -0.31313992}
@@ -850,6 +850,7 @@ GameObject:
   - component: {fileID: 4947193173970090165}
   - component: {fileID: 242788160}
   - component: {fileID: 1484039660}
+  - component: {fileID: 1147462981}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -875,7 +876,7 @@ Transform:
   - {fileID: 649814929}
   - {fileID: 8448566554767214959}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4947193173970090159
 MonoBehaviour:
@@ -1193,6 +1194,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - {fileID: 1724214339}
+--- !u!114 &1147462981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4947193173970090166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedffb83d9d51684ca602ed88a47bf86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTeleporter: {fileID: 0}
 --- !u!1001 &7863815818720853325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1201,6 +1215,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 4947193173689487096}
     m_Modifications:
+    - target: {fileID: 7863815818188277831, guid: fbf92395cf1080748a221eb75ccc5247, type: 3}
+      propertyPath: m_SortingLayer
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863815818188277831, guid: fbf92395cf1080748a221eb75ccc5247, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863815818188277831, guid: fbf92395cf1080748a221eb75ccc5247, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1678870661
+      objectReference: {fileID: 0}
     - target: {fileID: 7863815818188277880, guid: fbf92395cf1080748a221eb75ccc5247, type: 3}
       propertyPath: m_RootOrder
       value: 3

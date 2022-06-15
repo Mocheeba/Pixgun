@@ -17,7 +17,11 @@ public class Player_Combat_Controller : MonoBehaviour
 
     private float lastInputTime = Mathf.NegativeInfinity;
 
+    private AttackDetails attackDetails;
+
     private Animator anim;
+
+    //private PlayerStats PS;
 
     private void Start()
     {
@@ -70,25 +74,25 @@ public class Player_Combat_Controller : MonoBehaviour
         }
     }
 
-    private void checkAttackHitbox()
-    {
-        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable);
-    }
-
-    //private void CheckAttackHitBox()
+    //private void checkAttackHitbox()
     //{
     //    Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable);
-
-    //    attackDetails.damageAmount = attack1Damage;
-    //    attackDetails.position = transform.position;
-    //    attackDetails.stunDamageAmount = stunDamageAmount;
-
-    //    foreach (Collider2D collider in detectedObjects)
-    //    {
-    //        collider.transform.parent.SendMessage("Damage", attackDetails);
-    //        Instantiate hit particle
-    //    }
     //}
+
+    private void checkattackhitbox()
+    {
+        Collider2D[] detectedobjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable);
+
+        attackDetails.damageAmount = attack1Damage;
+        attackDetails.position = transform.position;
+        //attackDetails.stundamageamount = stundamageamount;
+
+        foreach (Collider2D collider in detectedobjects)
+        {
+            collider.transform.parent.SendMessage("damage", attackDetails);
+            //instantiate hit particle
+        }
+    }
 
     private void FinishAttack1()
     {
