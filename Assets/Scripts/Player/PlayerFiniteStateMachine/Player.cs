@@ -27,12 +27,12 @@ public class Player : MonoBehaviour
 
     public PlayerDashState DashState { get; private set; }
 
-    public PlayerCrouchMoveState CrouchMoveState  { get; private set; }
-    public PlayerCrouchIdleState CrouchIdleState { get; private set; }
+//    public PlayerCrouchMoveState CrouchMoveState  { get; private set; }
+   // public PlayerCrouchIdleState CrouchIdleState { get; private set; }
 
-    public PlayerAttackState PrimaryAttackState { get; private set; }
+    //public PlayerAttackState PrimaryAttackState { get; private set; }
 
-    public PlayerAttackState SecondaryAttackState { get; private set; }
+   // public PlayerAttackState SecondaryAttackState { get; private set; }
 
 
 
@@ -79,10 +79,10 @@ public class Player : MonoBehaviour
         WallJumpState = new PlayerWallJumpState(this, StateMachine, PlayerData, "inAir");
         LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, PlayerData, "ledgeClimbState");
         DashState = new PlayerDashState(this, StateMachine, PlayerData, "inAir");
-        CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, PlayerData, "crouchIdle");
-        CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, PlayerData, "crouchMove");
-        PrimaryAttackState = new PlayerAttackState(this, StateMachine, PlayerData, "attack");
-        SecondaryAttackState = new PlayerAttackState(this, StateMachine, PlayerData, "attack");
+        //CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, PlayerData, "crouchIdle");
+        //CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, PlayerData, "crouchMove");
+        //PrimaryAttackState = new PlayerAttackState(this, StateMachine, PlayerData, "attack");
+        //SecondaryAttackState = new PlayerAttackState(this, StateMachine, PlayerData, "attack");
     }
 
     private void Start()
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
         MovementCollider = GetComponent<BoxCollider2D>();
         Inventory = GetComponent<PlayerInventory>();
 
-        PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
+        //PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
        // SecondaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
 
         StateMachine.Initialize(IdleState);

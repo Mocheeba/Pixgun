@@ -52,14 +52,7 @@ public class PlayerGroundedState : PlayerState
         isTouchingLedge = core.CollisionSenses.Ledge;
         dashInput = player.InputHandler.DashInput;
 
-        if(player.InputHandler.AttackInputs[(int)CombatInputs.primary]) // && !isTouchingCeiling
-        {
-            stateMachine.ChangeState(player.PrimaryAttackState);
-        }
-        else if(player.InputHandler.AttackInputs[(int)CombatInputs.secondary]) // && !isTouchingCeiling
-        {
-            stateMachine.ChangeState(player.SecondaryAttackState);
-        }
+ 
         if (JumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);

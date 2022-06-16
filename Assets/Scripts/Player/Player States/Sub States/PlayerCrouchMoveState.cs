@@ -28,14 +28,10 @@ public class PlayerCrouchMoveState : PlayerGroundedState
 
         if (!isExitingState)
         {
-            if (xInput != 0)
-            {
-                stateMachine.ChangeState(player.CrouchMoveState);
-            }
-            else if (yInput != -1)
-            {
-                stateMachine.ChangeState(player.IdleState);
-            }
+             if (yInput != -1)
+                {
+                    stateMachine.ChangeState(player.IdleState);
+                }
         }
     }
 }
