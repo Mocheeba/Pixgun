@@ -53,6 +53,14 @@ public class PlayerGroundedState : PlayerState
         dashInput = player.InputHandler.DashInput;
 
  
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
+            Debug.Log("kierwa");
+
+    }
+
+
         if (JumpInput && player.JumpState.CanJump())
         {
             stateMachine.ChangeState(player.JumpState);
@@ -72,6 +80,8 @@ public class PlayerGroundedState : PlayerState
         }
         
     }
+
+
 
     public override void PhysicsUpdate()
     {

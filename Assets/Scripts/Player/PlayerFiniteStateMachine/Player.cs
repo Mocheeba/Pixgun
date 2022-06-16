@@ -50,6 +50,9 @@ public class Player : MonoBehaviour
     public BoxCollider2D MovementCollider { get; private set; }
 
     public PlayerInventory Inventory { get; private set; }
+
+    private bool isGrounded;
+
     #endregion
     #region Check Transform
 
@@ -131,5 +134,10 @@ public class Player : MonoBehaviour
 
     private void AnimationFinishTrigger() => StateMachine.CurrentState.AnimationFinishTrigger();
   
+    public bool canAttack()
+    {
+        return isGrounded; 
+    }
+
     #endregion
 }

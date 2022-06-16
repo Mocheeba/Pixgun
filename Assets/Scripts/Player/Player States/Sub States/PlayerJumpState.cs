@@ -35,6 +35,12 @@ public class PlayerJumpState : PlayerAbilityState
         }    
     }
 
+    public void canAttack()
+    {
+       if (Input.GetMouseButton(0)) 
+       Debug.Log("Attack?"); 
+    }
+
     public void ResetAmountOfJumpsLeft() => amountOfJumpsLeft = playerData.amountOfJumps;
 
     public void DecreaseAmountOfJumpLeft() => amountOfJumpsLeft--;
