@@ -6,15 +6,19 @@ public class PlayerController : MonoBehaviour
 {
 
     private float movementInputDirection;
+    private float jumpTimer;
 
     private int amountOfJumpLeft;
+    private int facingDirection = 1;
 
     private bool isFacingRight = true;
     private bool isWalking = true;
     private bool isGrounded = true;
     private bool isTouchingWall;
     private bool isWallSliding;
-    private bool canJump;
+    private bool canNormalJump;
+    private bool canWallJump;
+    private bool isAttemtingToJump;
 
 
     private Animator anim;
@@ -30,7 +34,12 @@ public class PlayerController : MonoBehaviour
     public float movementForceInAir;
     public float airDragMultiplier = 0.95f;
     public float variableJumpHeightMultiplier = 0.5f;
+    public float wallHopForce;
+    public float wallJumpForce;
+    public float jumpTimerSet = 0.15f;
 
+    public Vector2 wallHopDirection;
+    public Vector2 wallJumpDirection;
 
     public Transform groundCheck;
     public Transform wallCheck;
@@ -42,6 +51,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         amountOfJumpLeft = amountOfJump;
+        wallHopDirection.Normalize();
+        wallJumpDirection.Normalize();
     }
 
     void Update()
@@ -52,6 +63,7 @@ public class PlayerController : MonoBehaviour
         CheckSurroundings();
         CheckIfCanJump();
         CheckIfWallSliding();
+        CheckJump();
     }
 
 
@@ -62,7 +74,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfWallSliding()
     {
-        if(isTouchingWall && !isGrounded && rb.velocity.y < 0)
+        if(isTouchingWall &&movementInputDirection == facingDirection)
         {
             isWallSliding = true;
         }
@@ -82,20 +94,23 @@ public class PlayerController : MonoBehaviour
 
     private void CheckIfCanJump()
     {
-        if(isGrounded && rb.velocity.y <= 0)
+        if(isGrounded && rb.velocity.y <= 0.01f)
         {
             amountOfJumpLeft = amountOfJump;
+        }
+        if (isTouchingWall)
+        {
+            canWallJump = true;
         }
 
         if (amountOfJumpLeft <= 0)
         {
-            canJump = false;
+            canNormalJump = false;
         }
         else
         {
-            canJump = true;
+            canNormalJump = true;
         }
-
     }
 
     private void CheckMovementDirection()
@@ -133,7 +148,15 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Jump"))
         {
-            Jump();
+            if(isGrounded || (amountOfJumpLeft > 0 && isTouchingWall))
+            {
+                NormalJump();
+            }
+            else
+            {
+                jumpTimer = jumpTimerSet;
+                isAttemtingToJump();
+            }
         }
 
         if (Input.GetButtonUp("Jump"))
@@ -145,24 +168,15 @@ public class PlayerController : MonoBehaviour
     private void ApplyMovement()
     {
 
-        if(isGrounded)
-        {
-             rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
-        }
-        else if (!isGrounded && !isWallSliding && movementInputDirection != 0)
-        {
-            Vector2 forceToAdd = new Vector2(movementForceInAir * movementInputDirection, 0);
-            rb.AddForce(forceToAdd);
-
-            if(Mathf.Abs(rb.velocity.x) > movementSpeed)
-            {
-                rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
-            }
-        }
-        else if(!isGrounded && !isWallSliding && movementInputDirection == 0)
+        if (!isGrounded && !isWallSliding && movementInputDirection != 0)
         {
             rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
         }
+        else
+        {
+            rb.velocity = new Vector2(rb.velocity.x * movementInputDirection, rb.velocity.y);
+        }
+
 
         if (isWallSliding)
         {
@@ -174,19 +188,59 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void Jump()
+    private void CheckJump()
     {
-        if(canJump)
+        if(jumpTimer > 0)
         {
-            amountOfJumpLeft--;
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            // Wall Jump
+            if(!isGrounded && isTouchingWall && movementInputDirection != 0 && movementInputDirection != facingDirection)
+            {
+                WallJump();
+            }
+            else if (isGrounded)
+            {
+                NormalJump();
+            }
+        }
+
+        if(isAttemtingToJump)
+        {
+            jumpTimer -= Time.deltaTime;
         }
     }
+
+    private void NormalJump()
+    {
+        if(canNormalJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            amountOfJumpLeft--;
+            jumpTimer = 0;
+            isAttemtingToJump = false;
+        }
+    }
+
+    private void WallJump()
+    {
+        if(canWallJump)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0.0f);
+            isWallSliding = false;
+            amountOfJumpLeft == amountOfJump;
+            amountOfJumpLeft--;
+            Vector2 forceToAdd = new Vector2(wallHopForce * wallHopDirection.x * movementInputDirection, wallHopForce * wallHopDirection.y);
+            rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+            jumpTimer = 0;
+            isAttemtingToJump = false;
+        }
+    }
+
 
     private void Flip()
     {
         if (!isWallSliding)
         {
+            facingDirection *= -1;
             isFacingRight = !isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);           
         }
