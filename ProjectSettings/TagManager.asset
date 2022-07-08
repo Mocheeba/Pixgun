@@ -9,6 +9,7 @@ TagManager:
   - Trap
   - TrapSaw
   - SpikeTrap
+  - Cat
   layers:
   - Default
   - TransparentFX
@@ -22,9 +23,9 @@ TagManager:
   - Ground
   - Walls
   - MovingPlatforms
-  - 
-  - 
-  - 
+  - Weapon
+  - Damageable
+  - Dead
   - 
   - 
   - 
@@ -96,4 +97,7 @@ TagManager:
     locked: 0
   - name: Player 11
     uniqueID: 1678870661
+    locked: 0
+  - name: Cat
+    uniqueID: 3779649451
     locked: 0

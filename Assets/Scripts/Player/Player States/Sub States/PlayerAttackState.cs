@@ -7,9 +7,11 @@ public class PlayerAttackState : PlayerAbilityState
     private Weapon weapon;
 
     private float velocityToSet;
-    private bool setVelocity;
 
     private int xInput;
+
+    private bool setVelocity;
+    private bool shouldCheckFlip;
     public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -37,11 +39,15 @@ public class PlayerAttackState : PlayerAbilityState
 
         xInput = player.InputHandler.NormInputX;
 
-        player.CheckIfShouldFlip(xInput);
+
+        if (shouldCheckFlip)
+        {
+            core.Movement.CheckIfShouldFlip(xInput);
+        }
 
         if (setVelocity)
         {
-            player.SetVelocityX(velocityToSet * player.facingDirection);
+            core.Movement.SetVelocityX(velocityToSet * core.Movement.FacingDirection);
         }
     }
 
@@ -53,10 +59,15 @@ public class PlayerAttackState : PlayerAbilityState
 
     public void SetPlayerVelocity(float velocity)
     {
-        player.SetVelocityX(velocity * player.facingDirection);
+        core.Movement.SetVelocityX(velocity * core.Movement.FacingDirection);
 
         velocityToSet = velocity;
         setVelocity = true;
+    }
+
+    public void SetFlipCheck(bool value)
+    {
+        shouldCheckFlip = value;
     }
 
     #region Animation Triggers 
