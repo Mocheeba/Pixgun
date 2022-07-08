@@ -13,6 +13,6 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Dungeon_Marcel");
+        SceneManager.LoadScene("Storyboards");
     }
 }
