@@ -64,11 +64,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4514615338206252569}
   - {fileID: 4514615339179959862}
+  - {fileID: 4514615338206252569}
   - {fileID: 4514615339168592325}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4514615338635149415
 SpriteRenderer:
@@ -190,6 +190,11 @@ MonoBehaviour:
   movementForceInAir: 2
   airDragMultiplier: 2
   variableJumpHeightMultiplier: 0.5
+  wallHopForce: 0
+  wallJumpForce: 0
+  jumpTimerSet: 0.15
+  wallHopDirection: {x: 0, y: 0}
+  wallJumpDirection: {x: 0, y: 0}
   groundCheck: {fileID: 4514615338206252569}
   wallCheck: {fileID: 4514615339179959862}
   whatIsGround:
