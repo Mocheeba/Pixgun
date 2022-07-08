@@ -156,19 +156,44 @@ MonoBehaviour:
       dusze Pixgun! "
   - actorId: 1
     message: "Dla-czego Ci to m\xF3wi\u0119? A bo widzisz, widzia\u0142em jak dzielnie
-      walczy\u0142a\u015B z tym o to  zielonym glutem i postanowi\u0142em Ci pom\xF3c.
-      Dlaczego tak na mnie patrzysz? Nie jestem jak oni. Bo tu o widzisz, opr\xF3cz
-      mnie zostali sami zara\u017Ceni."
+      walczy\u0142a\u015B z tym o to  zielonym glutem i postanowi\u0142em Ci pom\xF3c. "
   - actorId: 1
-    message: 22
+    message: "Dlaczego tak na mnie patrzysz? Nie jestem jak oni. Bo tu o widzisz,
+      opr\xF3cz mnie zostali sami zara\u017Ceni."
   - actorId: 0
-    message: 11
+    message: "Zara\u017Ceni? Jak Zombie?"
   - actorId: 1
-    message: 22
+    message: "Mo\u017Cna tak to sp\u0142yci\u0107 \u2013 Jak Zombie! Ale widz\u0119,
+      \u017Ce Ciebie si\u0119 kl\u0105twa nie chwyta,  dlatego postanowi\u0142em
+      Ci\u0119 poprowadzi\u0107"
+  - actorId: 1
+    message: "Mo\u017Cna tak to sp\u0142yci\u0107 \u2013 Jak Zombie! Ale widz\u0119,
+      \u017Ce Ciebie si\u0119 kl\u0105twa nie chwyta,  dlatego postanowi\u0142em
+      Ci\u0119 poprowadzi\u0107"
+  - actorId: 1
+    message: "Mo\u017Cna tak to sp\u0142yci\u0107 \u2013 Jak Zombie! Ale widz\u0119,
+      \u017Ce Ciebie si\u0119 kl\u0105twa nie chwyta,  dlatego postanowi\u0142em
+      Ci\u0119 poprowadzi\u0107"
+  - actorId: 1
+    message: "Mo\u017Cna tak to sp\u0142yci\u0107 \u2013 Jak Zombie! Ale widz\u0119,
+      \u017Ce Ciebie si\u0119 kl\u0105twa nie chwyta,  dlatego postanowi\u0142em
+      Ci\u0119 poprowadzi\u0107"
+  - actorId: 1
+    message: "Mo\u017Cna tak to sp\u0142yci\u0107 \u2013 Jak Zombie! Ale widz\u0119,
+      \u017Ce Ciebie si\u0119 kl\u0105twa nie chwyta,  dlatego postanowi\u0142em
+      Ci\u0119 poprowadzi\u0107"
+  - actorId: 1
+    message: "Mo\u017Cna tak to sp\u0142yci\u0107 \u2013 Jak Zombie! Ale widz\u0119,
+      \u017Ce Ciebie si\u0119 kl\u0105twa nie chwyta,  dlatego postanowi\u0142em
+      Ci\u0119 poprowadzi\u0107"
+  - actorId: 1
+    message: "Mo\u017Cna tak to sp\u0142yci\u0107 \u2013 Jak Zombie! Ale widz\u0119,
+      \u017Ce Ciebie si\u0119 kl\u0105twa nie chwyta,  dlatego postanowi\u0142em
+      Ci\u0119 poprowadzi\u0107"
   actors:
   - name: Chixie
     sprite: {fileID: 9042472081199688870, guid: 2a031da474501eb41b0b9fe9f90a58dd, type: 3}
-  - name: Cat
+  - name: Lord Gin
     sprite: {fileID: 1603438319, guid: 9004bb70582293f498b7fe353cf034bb, type: 3}
 --- !u!114 &6324039033041317683
 MonoBehaviour:
