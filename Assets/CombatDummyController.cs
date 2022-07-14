@@ -21,6 +21,12 @@ public class CombatDummyController : MonoBehaviour
         pc = GameObject.Find("Player").GetComponent<PlayerController>();
 
         aliveGO = transform.Find("Alive").gameObject;
+        brokenTopGO = transform.Find("Broken Top").gameObject;
+        brokenBotGO = transform.Find("Broken Bottom").gameObject;
+
+        aliveAnim = aliveGO.GetComponent<Animator>();
+        
+
    }
 
 
