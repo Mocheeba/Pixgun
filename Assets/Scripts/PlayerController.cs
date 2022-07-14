@@ -252,9 +252,13 @@ public class PlayerController : MonoBehaviour
 
         PlayerAfterImagePool.Instance.GetFromPool();
         lastImageXpos = transform.position.x;
-
-
     }
+
+    public int GetFacingDirection()
+    {
+        return facingDirection;
+    }
+
 
     private void CheckJump()
     {
@@ -357,7 +361,7 @@ public class PlayerController : MonoBehaviour
 
     private void EnableFlip()
     {
-
+        canFlip = true;
     }
 
     private void Flip()
