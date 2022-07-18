@@ -5,28 +5,28 @@ using UnityEngine.UI;
 
 public class JumpsLeft : PlayerAbilityState
 {
-    public int amountOfJumpsLeft;
+    private int amountOfJump;
 
     //playerData.amountOfJumps
     public Text ValueText;
 
     public JumpsLeft(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
-        amountOfJumpsLeft = playerData.amountOfJumps;
+       // amountOfJump = PlayerJumpState.amountOfJumpsLeft;
     }
 
     private void Start()
     {
-        amountOfJumpsLeft = playerData.amountOfJumps;
+        //amountOfJump = PlayerJumpState.amountOfJumpsLeft;
 
-        Debug.Log(amountOfJumpsLeft);
+        Debug.Log(amountOfJump);
     }
 
     private void Update()
     {
-        ValueText.text = "Jumps: " + amountOfJumpsLeft.ToString();
+        ValueText.text = "Jumps: " + amountOfJump.ToString();
 
-        Debug.Log(amountOfJumpsLeft);
+        Debug.Log(amountOfJump);
 
     }
 }
