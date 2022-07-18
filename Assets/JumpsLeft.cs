@@ -12,7 +12,7 @@ public class JumpsLeft : PlayerAbilityState
 
     public JumpsLeft(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
-       // amountOfJump = PlayerJumpState.amountOfJumpsLeft;
+      // amountOfJump = PlayerJumpState.amountOfJumpsLeft;
     }
 
     private void Start()
