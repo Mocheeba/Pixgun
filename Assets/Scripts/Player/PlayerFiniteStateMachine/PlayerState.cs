@@ -10,6 +10,8 @@ public class PlayerState : MonoBehaviour
 
     protected float startTime;
 
+    protected bool isAnimationFinished;
+
     private string animBoolName;
 
     public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName)
@@ -27,6 +29,7 @@ public class PlayerState : MonoBehaviour
         player.Anim.SetBool(animBoolName, true);
         startTime = Time.time;
         Debug.Log(animBoolName);
+        isAnimationFinished = false;
 
     }
 
@@ -45,8 +48,10 @@ public class PlayerState : MonoBehaviour
         DoChecks();
     }
 
-    public virtual void DoChecks()
-    {
+    public virtual void DoChecks(){}
 
-    }
+    public virtual void AnimationTrigger()  {}
+
+    public virtual void AnimationFinishTrigger() => isAnimationFinished = true;
+    
 }
