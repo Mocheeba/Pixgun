@@ -32,6 +32,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -75,6 +76,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -107,10 +109,10 @@ TextureImporter:
       name: Player_Vertical_Jump_v2_0
       rect:
         serializedVersion: 2
-        x: 149
-        y: 37
-        width: 28
-        height: 18
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,69 +122,6 @@ TextureImporter:
       bones: []
       spriteID: ed277aedc1b571960800000000000000
       internalID: 7572621477999506142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Vertical_Jump_v2_1
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 45
-        width: 26
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54cb5c2382485cf50800000000000000
-      internalID: 6901067312200531013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Vertical_Jump_v2_2
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 16
-        width: 28
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f90261accb2a7c640800000000000000
-      internalID: 5100224034748375199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Vertical_Jump_v2_3
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 26
-        width: 27
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6ebdb94469ec3710800000000000000
-      internalID: 1674469778418155116
       vertices: []
       indices: 
       edges: []
@@ -199,12 +138,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Player_Vertical_Jump_v2_0: 7572621477999506142
-      Player_Vertical_Jump_v2_3: 1674469778418155116
-      Player_Vertical_Jump_v2_1: 6901067312200531013
-      Player_Vertical_Jump_v2_2: 5100224034748375199
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
