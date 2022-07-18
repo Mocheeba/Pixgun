@@ -38,6 +38,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -81,6 +82,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -113,10 +115,10 @@ TextureImporter:
       name: running_2_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 21
-        width: 29
-        height: 20
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +136,10 @@ TextureImporter:
       name: running_2_1
       rect:
         serializedVersion: 2
-        x: 87
-        y: 21
-        width: 28
-        height: 20
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +157,10 @@ TextureImporter:
       name: running_2_2
       rect:
         serializedVersion: 2
-        x: 149
-        y: 21
-        width: 28
-        height: 21
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +178,10 @@ TextureImporter:
       name: running_2_3
       rect:
         serializedVersion: 2
-        x: 212
-        y: 21
-        width: 28
-        height: 20
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +199,10 @@ TextureImporter:
       name: running_2_4
       rect:
         serializedVersion: 2
-        x: 278
-        y: 21
-        width: 29
-        height: 20
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +220,10 @@ TextureImporter:
       name: running_2_5
       rect:
         serializedVersion: 2
-        x: 343
-        y: 21
-        width: 26
-        height: 21
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,7 +256,6 @@ TextureImporter:
       running_2_0: 6394690285150206002
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
