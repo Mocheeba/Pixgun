@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 6
   jumpVelocity: 15
-  amountOfJumps: 2
+  amountOfJumps: 1
   groundCheckRadius: 0.7
   whatIsGround:
     serializedVersion: 2
