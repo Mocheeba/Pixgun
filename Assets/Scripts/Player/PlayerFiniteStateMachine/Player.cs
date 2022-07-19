@@ -110,7 +110,6 @@ public class Player : MonoBehaviour
     public bool CheckIfTouchingWall()
     {
         return Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.WallCheckDistance, playerData.whatIsGround);
-        Debug.DrawRay(transform.position, wallCheck.position, Color.green);
     }
     #endregion
     #region Other Functions
