@@ -12,6 +12,6 @@ public class PlayerWallSlideState : PlayerTouchingWallState
     {
         base.LogicUpdate();
 
-        player.SetVelocityY(playerData.wallSlideVelocity);
+        player.SetVelocityY(-playerData.wallSlideVelocity);
     }
 }
