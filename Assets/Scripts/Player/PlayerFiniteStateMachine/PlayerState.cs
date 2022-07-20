@@ -11,6 +11,7 @@ public class PlayerState : MonoBehaviour
     protected float startTime;
 
     protected bool isAnimationFinished;
+    protected bool isExitingState;
 
     private string animBoolName;
 
@@ -30,12 +31,14 @@ public class PlayerState : MonoBehaviour
         startTime = Time.time;
         Debug.Log(animBoolName);
         isAnimationFinished = false;
+        isExitingState = false;
 
     }
 
     public virtual void Exit()
     {
         player.Anim.SetBool(animBoolName, false);
+        isExitingState = true;
     }
 
     public virtual void LogicUpdate() 
