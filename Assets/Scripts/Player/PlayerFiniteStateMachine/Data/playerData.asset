@@ -13,13 +13,17 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   movementVelocity: 6
-  jumpVelocity: 15
+  jumpVelocity: 16
   amountOfJumps: 1
+  wallJumpVelocity: 16
+  wallJumpTime: 0.2
+  wallJumpAngle: {x: 1, y: 2}
   coyoteTime: 0.2
-  variableJumpHeightMultiplier: 0.5
-  groundCheckRadius: 0.3
-  WallCheckDistance: 0.5
+  variableJumpHeightMultiplier: 0.6
+  wallSlideVelocity: 1
+  wallClimbVelocity: 7
+  groundCheckRadius: 0.2
+  WallCheckDistance: 0.4
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  wallSlideVelocity: 1
