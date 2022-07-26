@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     public PlayerWallClimbState WallClimbState { get; private set; }
 
     public PlayerWallJumpState WallJumpState { get; private set; }
+
+    public PlayerLedgeClimbState LedgeClimbState { get; private set; }
     #endregion
     #region Components
     public PlayerInputHandler InputHandler { get; private set; }
@@ -33,6 +35,9 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private Transform wallCheck;
+
+    [SerializeField]
+    private Transform LedgeCheck;
 
     #endregion
     #region Other Variables
@@ -57,6 +62,7 @@ public class Player : MonoBehaviour
         WallGrabState = new PlayerWallGrabState(this, StateMachine, playerData, "wallGrab");
         WallClimbState = new PlayerWallClimbState(this, StateMachine, playerData, "wallClimb");
         WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir ");
+        LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeClimbState ");
     }
 
     private void Start()
@@ -118,6 +124,10 @@ public class Player : MonoBehaviour
         }
     }
 
+    public bool CheckIfTouchingLedge()
+    {
+        return Physics2D.Raycast(LedgeCheck.position, Vector2.right * FacingDirection, playerData.WallCheckDistance, playerData.whatIsGround);
+    }
     public bool CheckIfTouchingWallBack()
     {
         return Physics2D.Raycast(-wallCheck.position, Vector2.right * FacingDirection, playerData.WallCheckDistance, playerData.whatIsGround);
