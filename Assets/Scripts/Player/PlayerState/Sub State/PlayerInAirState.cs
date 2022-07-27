@@ -40,7 +40,7 @@ public class PlayerInAirState : PlayerState
 
         if(isTouchingWall && !isTouchingLedge)
         {
-            player.LedgeClimbState.SetDecetionPosition(player.transform.position);
+            player.LedgeClimbState.SetDetectionPosition(player.transform.position);
         }
 
         if (!wallJumpCoyoteTime && !isTouchingWall && !isTouchingWallBack && (oldIsTouchingWall || oldIsTouchingWallBack))
@@ -84,6 +84,10 @@ public class PlayerInAirState : PlayerState
         if (isGrounded && player.CurrentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(player.LandState);
+        }
+        else if (isTouchingWall && !isTouchingLedge && !isGrounded)
+        {
+            stateMachine.ChangeState(player.LedgeClimbState);
         }
         else if(jumpInput && (isTouchingWall || isTouchingWallBack || wallJumpCoyoteTime))
         {
