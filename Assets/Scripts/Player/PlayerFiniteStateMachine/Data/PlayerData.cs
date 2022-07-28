@@ -32,6 +32,9 @@ public class PlayerData : ScriptableObject
     public Vector2 startOffSet;
     public Vector2 stopOffSet;
 
+    [Header("Dash State")]
+    public float dashCooldown = 0.5f;
+
     [Header("Check Variables")]
     public float groundCheckRadius = 0.3f;
     public float WallCheckDistance = 0.5f;
