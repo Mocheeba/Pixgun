@@ -1,0 +1,11 @@
+29.04.2022:
+==========
+
+	- Dodanie Changeloga
+	- Pixgun 29.04 działający skok ze ścianki
+
+04.05.2022
+==========
+
+	- Dodanie świateł do planszy, spike
+	
