@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     public PlayerWallJumpState WallJumpState { get; private set; }
 
     public PlayerLedgeClimbState LedgeClimbState { get; private set; }
+
+    public PlayerDashState DashState { get; private set; }
     #endregion
     #region Components
     public PlayerInputHandler InputHandler { get; private set; }
@@ -63,6 +65,7 @@ public class Player : MonoBehaviour
         WallClimbState = new PlayerWallClimbState(this, StateMachine, playerData, "wallClimb");
         WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
         LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeClimbState");
+        DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
     }
 
     private void Start()
