@@ -8,8 +8,11 @@ public class Player : MonoBehaviour
     public PlayerStateMachine StateMachine { get; private set; }
 
     public PlayerIdleState IdleState { get; private set; }
+
     public PlayerMoveState MoveState { get; private set; }
+
     public PlayerJumpState JumpState { get; private set; }
+
     public PlayerInAirState InAirState { get; private set; }
     public PlayerLandState LandState { get; private set; }
 
@@ -24,6 +27,10 @@ public class Player : MonoBehaviour
     public PlayerLedgeClimbState LedgeClimbState { get; private set; }
 
     public PlayerDashState DashState { get; private set; }
+
+    public PlayerCrouchIdleState CrouchIdleState  { get; private set; }
+
+    public PlayerCrouchMoveState CrouchMoveState { get; private set; }
     #endregion
     #region Components
     public PlayerInputHandler InputHandler { get; private set; }
@@ -68,6 +75,8 @@ public class Player : MonoBehaviour
         WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
         LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeClimbState");
         DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
+        CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, playerData, "crouchIdle");
+        CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, playerData, "crouchMove");
     }
 
     private void Start()
@@ -160,8 +169,8 @@ public class Player : MonoBehaviour
     {
         RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.WallCheckDistance, playerData.whatIsGround);
         float xDist = xHit.distance;
-        workSpace.Set(xDist * FacingDirection, 0f);
-        RaycastHit2D yHit = Physics2D.Raycast(LedgeCheck.position + (Vector3)(workSpace), Vector3.down, LedgeCheck.position.y - wallCheck.position.y, playerData.whatIsGround);
+        workSpace.Set((xDist + 0.015f) * FacingDirection, 0f);
+        RaycastHit2D yHit = Physics2D.Raycast(LedgeCheck.position + (Vector3)(workSpace), Vector3.down, LedgeCheck.position.y - wallCheck.position.y + 0.015f, playerData.whatIsGround);
         float yDist = yHit.distance;
 
         workSpace.Set(wallCheck.position.x + (xDist * FacingDirection), LedgeCheck.position.y - yDist);

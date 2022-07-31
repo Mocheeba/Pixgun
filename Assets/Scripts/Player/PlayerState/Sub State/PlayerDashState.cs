@@ -8,12 +8,14 @@ public class PlayerDashState : PlayerAbilityState
     private bool DashInputStop;
 
     private float lastDashTime;
+     
     private bool isHolding;
 
     private Vector2 dashDirection;
     private Vector2 dashDirectionInput;
 
     private Vector2 lastAfterimagePosition;
+
     
 
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)

@@ -24,6 +24,14 @@ MonoBehaviour:
   wallClimbVelocity: 7
   startOffSet: {x: 0.4, y: 0.58}
   stopOffSet: {x: 0.24, y: 0.51}
+  dashCooldown: 1.98
+  maxHoldTime: 2.34
+  holdTimeScale: 0.25
+  dashTime: 0.29
+  dashVelocity: 29.36
+  drag: 11.7
+  dashEndYMultiplier: 0.26
+  distanceBetweenAfterImages: 0.12
   groundCheckRadius: 0.2
   WallCheckDistance: 0.4
   whatIsGround:
