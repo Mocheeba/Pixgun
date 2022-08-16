@@ -34,10 +34,14 @@ public class Player : MonoBehaviour
     #endregion
     #region Components
     public PlayerInputHandler InputHandler { get; private set; }
+
     public Rigidbody2D RB { get; private set; }
+
     public Animator Anim { get; private set; }
 
     public Transform DashDirectionIndicator { get; private set; }
+
+    public BoxCollider2D MovementCollider { get; private set; }
 
     #endregion
     #region Check Transforms
@@ -85,6 +89,7 @@ public class Player : MonoBehaviour
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
         DashDirectionIndicator = transform.Find("DashDirectionIndicator");
+        MovementCollider = GetComponent<BoxCollider2D>();
 
         FacingDirection = 1;
 
@@ -165,6 +170,17 @@ public class Player : MonoBehaviour
     #endregion
     #region Other Functions
 
+    public void SetColliderHeight(float height)
+    {
+        Vector2 center = MovementCollider.offset; // take offset
+        workSpace.Set(MovementCollider.size.x, height);
+
+        center.y += (height - MovementCollider.size.y) / 2;
+
+        MovementCollider.size = workSpace;
+        MovementCollider.offset = center; 
+    }
+    
     public Vector2 DetermineCornerPosition()
     {
         RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.WallCheckDistance, playerData.whatIsGround);
@@ -186,5 +202,6 @@ public class Player : MonoBehaviour
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
+
     #endregion
 }
