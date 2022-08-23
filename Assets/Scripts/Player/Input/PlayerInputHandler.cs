@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool DashInputStop { get; private set; }
     public float DashInputStartTime { get; private set; }
 
+    public bool[] AttackInputs { get; private set;}
+
     public bool JumpInputStop { get; private set; }
 
     [SerializeField]
@@ -35,6 +38,10 @@ public class PlayerInputHandler : MonoBehaviour
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+
+        int count = Enum.GetValues(typeof(CombatInputs)).Length;
+        AttackInputs = new bool[count];
+
         cam = Camera.main;
     }
 
@@ -42,6 +49,32 @@ public class PlayerInputHandler : MonoBehaviour
     {
         CheckJumpInputHoldTime();
         CheckDashInputHoldTime();
+    }
+
+    public void OnPrimaryAttackInput(InputAction.CallbackContext context)
+    {
+        if(context.started)
+        {
+            AttackInputs[(int)CombatInputs.primary] = true;
+        }
+
+        if(context.canceled) //last frame of attack
+        {
+            AttackInputs[(int)CombatInputs.primary] = false;
+        }
+    }
+
+    public void OnSecondaryAttackInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            AttackInputs[(int)CombatInputs.secondary] = true;
+        }
+
+        if (context.canceled) //last frame of attack
+        {
+            AttackInputs[(int)CombatInputs.secondary] = false;
+        }
     }
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -143,4 +176,10 @@ public class PlayerInputHandler : MonoBehaviour
 
         DashDirectionInput = Vector2Int.RoundToInt(RawDashDirectionInput.normalized); //if x 0.5 we go 1 etc
     }
+}
+
+public enum CombatInputs
+{
+    primary,
+    secondary
 }

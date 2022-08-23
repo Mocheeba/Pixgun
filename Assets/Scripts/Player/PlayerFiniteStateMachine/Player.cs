@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     public PlayerDashState DashState { get; private set; }
     public PlayerCrouchIdleState CrouchIdleState  { get; private set; }
     public PlayerCrouchMoveState CrouchMoveState { get; private set; }
+    public PlayerAttackState PrimaryAttack { get; private set; }
+    public PlayerAttackState SecondaryAttack { get; private set; }
     #endregion
 
     #region Components
@@ -73,6 +75,8 @@ public class Player : MonoBehaviour
         DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
         CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, playerData, "crouchIdle");
         CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, playerData, "crouchMove");
+        PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
     }
 
     private void Start()
