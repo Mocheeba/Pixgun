@@ -6,6 +6,8 @@ public class PlayerGroundedState : PlayerState
 {
     protected int xInput;
     protected int yInput;
+    protected bool isTouchingCeiling;
+
 
     private bool jumpInput;
     private bool grabInput;
@@ -25,6 +27,7 @@ public class PlayerGroundedState : PlayerState
         isGrounded = player.CheckIfGrounded();
         isTouchingWall = player.CheckIfTouchingWall();
         isTouchingLedge = player.CheckIfTouchingLedge();
+        isTouchingCeiling = player.CheckForCeiling();
     }
 
     public override void Enter()

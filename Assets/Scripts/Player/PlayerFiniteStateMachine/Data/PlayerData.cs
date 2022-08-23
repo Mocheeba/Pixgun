@@ -44,9 +44,9 @@ public class PlayerData : ScriptableObject
 
 
     [Header("Crouch States")]
-    public float crouchMovementVelocity = 5f;
-    public float crouchColliderHeight = 0.8f; 
-    public float standColliderHeight = 1.6f;
+    public float crouchMovementVelocity = 3f;
+    public float crouchColliderHeight = 2f; 
+    public float standColliderHeight = 2f;
 
     [Header("Check Variables")]
     public float groundCheckRadius = 0.3f;

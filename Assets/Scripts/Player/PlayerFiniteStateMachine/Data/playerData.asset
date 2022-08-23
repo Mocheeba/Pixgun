@@ -23,7 +23,7 @@ MonoBehaviour:
   wallSlideVelocity: 2
   wallClimbVelocity: 7
   startOffSet: {x: 0.4, y: 0.58}
-  stopOffSet: {x: 0.24, y: 0.51}
+  stopOffSet: {x: 0.24, y: 0.55}
   dashCooldown: 1.98
   maxHoldTime: 2.34
   holdTimeScale: 0.25

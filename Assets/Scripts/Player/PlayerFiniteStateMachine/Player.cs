@@ -43,6 +43,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform LedgeCheck;
 
+    [SerializeField]
+    private Transform CellingCheck;
+
     #endregion
     #region Other Variables
     public Vector2 CurrentVelocity { get; private set; }
@@ -131,6 +134,11 @@ public class Player : MonoBehaviour
 
     #endregion
     #region Check Functions
+
+    public bool CheckForCeiling()
+    {
+        return Physics2D.OverlapCircle(CellingCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+    }
 
     public bool CheckIfGrounded()
     {
