@@ -31,7 +31,7 @@ public class PlayerAttackState : PlayerAbilityState
 
         if (setVelocity)
         {
-            player.SetVelocity(velocity * player.FacingDirection);
+            player.SetVelocityX(velocityToSet * player.FacingDirection);
         }
 
     }

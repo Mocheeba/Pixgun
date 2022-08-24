@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
     {
         gameObject.SetActive(true);
 
-        if(attackCounter >= 3)
+        if(attackCounter >= weaponData.movementSpeed.Length)
         {
             attackCounter = 0;
         }

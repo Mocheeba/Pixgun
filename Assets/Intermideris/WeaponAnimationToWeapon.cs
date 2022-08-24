@@ -23,6 +23,6 @@ public class WeaponAnimationToWeapon : MonoBehaviour
 
     private void AnimationStopMovementTrigger()
     {
-        weapon.AnimationStopMovemntTrigger();
+        weapon.AnimationStopMovementTrigger();
     }
 }

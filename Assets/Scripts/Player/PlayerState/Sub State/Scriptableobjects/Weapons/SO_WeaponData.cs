@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreatedAssetMenu(fileName = "newWeaponData", "Data/Weapon Data/Weapon")]
+[CreateAssetMenu(fileName = "newWeaponData", menuName = "Data/Weapon Data/Weapon")]
 
-public class SO_WeaponData : MonoBehaviour
+public class SO_WeaponData : ScriptableObject
 {
-    public float[] movementSpeeed;
+    public float[] movementSpeed;
 }
