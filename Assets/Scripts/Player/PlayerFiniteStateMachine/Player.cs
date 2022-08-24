@@ -6,29 +6,35 @@ public class Player : MonoBehaviour
 {
     #region State Variables
     public PlayerStateMachine StateMachine { get; private set; }
-
-    public PlayerIdleState IdleState {get; private set; }
+    public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
     public PlayerJumpState JumpState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
     public PlayerLandState LandState { get; private set; }
-
     public PlayerWallSlideState WallSlideState { get; private set; }
-
     public PlayerWallGrabState WallGrabState { get; private set; }
-
     public PlayerWallClimbState WallClimbState { get; private set; }
-
     public PlayerWallJumpState WallJumpState { get; private set; }
-
     public PlayerLedgeClimbState LedgeClimbState { get; private set; }
-
     public PlayerDashState DashState { get; private set; }
+    public PlayerCrouchIdleState CrouchIdleState  { get; private set; }
+    public PlayerCrouchMoveState CrouchMoveState { get; private set; }
+    public PlayerAttackState PrimaryAttackState { get; private set; }
+    public PlayerAttackState SecondaryAttackState { get; private set; }
     #endregion
+
     #region Components
     public PlayerInputHandler InputHandler { get; private set; }
+
     public Rigidbody2D RB { get; private set; }
+
     public Animator Anim { get; private set; }
+
+    public Transform DashDirectionIndicator { get; private set; }
+
+    public BoxCollider2D MovementCollider { get; private set; }
+
+    public PlayerInventory Inventory { get; private set; }
 
     #endregion
     #region Check Transforms
@@ -41,6 +47,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform LedgeCheck;
 
+    [SerializeField]
+    private Transform CellingCheck;
+
     #endregion
     #region Other Variables
     public Vector2 CurrentVelocity { get; private set; }
@@ -48,7 +57,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private PlayerData playerData;
 
-    private Vector2 workSpace;
+    private Vector2 workspace;
     #endregion
     #region Unity Callback Functions
     public void Awake()
@@ -58,14 +67,18 @@ public class Player : MonoBehaviour
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
         JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
-        InAirState = new PlayerInAirState (this, StateMachine, playerData, "inAir");
-        LandState =  new PlayerLandState(this, StateMachine, playerData, "land");
+        InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
+        LandState = new PlayerLandState(this, StateMachine, playerData, "land");
         WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
         WallGrabState = new PlayerWallGrabState(this, StateMachine, playerData, "wallGrab");
         WallClimbState = new PlayerWallClimbState(this, StateMachine, playerData, "wallClimb");
         WallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
         LedgeClimbState = new PlayerLedgeClimbState(this, StateMachine, playerData, "ledgeClimbState");
         DashState = new PlayerDashState(this, StateMachine, playerData, "inAir");
+        CrouchIdleState = new PlayerCrouchIdleState(this, StateMachine, playerData, "crouchIdle");
+        CrouchMoveState = new PlayerCrouchMoveState(this, StateMachine, playerData, "crouchMove");
+        PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        SecondaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
     }
 
     private void Start()
@@ -73,8 +86,14 @@ public class Player : MonoBehaviour
         Anim = GetComponent<Animator>();
         InputHandler = GetComponent<PlayerInputHandler>();
         RB = GetComponent<Rigidbody2D>();
+        DashDirectionIndicator = transform.Find("DashDirectionIndicator");
+        MovementCollider = GetComponent<BoxCollider2D>();
+        Inventory = GetComponent<PlayerInventory>();
 
         FacingDirection = 1;
+
+        PrimaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
+       // SecondaryAttackState.SetWeapon(Inventory.weapons[(int)CombatInputs.primary]);
 
         StateMachine.Initialize(IdleState);
     }
@@ -99,25 +118,37 @@ public class Player : MonoBehaviour
     public void SetVelocity(float velocity, Vector2 angle, int direction)
     {
         angle.Normalize();
-        workSpace.Set(angle.x * velocity * direction, angle.y * velocity);
-        RB.velocity = workSpace;
-        CurrentVelocity = workSpace;
+        workspace.Set(angle.x * velocity * direction, angle.y * velocity);
+        RB.velocity = workspace;
+        CurrentVelocity = workspace;
+    }
+
+    public void SetVelocity(float velocity, Vector2 direction)
+    {
+        workspace = direction * velocity;
+        RB.velocity = workspace;
+        CurrentVelocity = workspace;
     }
     public void SetVelocityX(float velocity)
     {
-        workSpace.Set(velocity, CurrentVelocity.y);
-        RB.velocity = workSpace;
-        CurrentVelocity = workSpace;
+        workspace.Set(velocity, CurrentVelocity.y);
+        RB.velocity = workspace;
+        CurrentVelocity = workspace;
     }
     public void SetVelocityY(float velocity)
     {
-        workSpace.Set(CurrentVelocity.x, velocity);
-        RB.velocity = workSpace;
-        CurrentVelocity = workSpace;
+        workspace.Set(CurrentVelocity.x, velocity);
+        RB.velocity = workspace;
+        CurrentVelocity = workspace;
     }
 
     #endregion
     #region Check Functions
+
+    public bool CheckForCeiling()
+    {
+        return Physics2D.OverlapCircle(CellingCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+    }
 
     public bool CheckIfGrounded()
     {
@@ -146,16 +177,25 @@ public class Player : MonoBehaviour
     #endregion
     #region Other Functions
 
+    public void SetColliderHeight(float height)
+    {
+        Vector2 center = MovementCollider.offset;
+        workspace.Set(MovementCollider.size.x, height);
+
+        MovementCollider.size = new Vector3(MovementCollider.size.x, height, 1);
+
+    }
+
     public Vector2 DetermineCornerPosition()
     {
         RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * FacingDirection, playerData.WallCheckDistance, playerData.whatIsGround);
         float xDist = xHit.distance;
-        workSpace.Set(xDist * FacingDirection, 0f);
-        RaycastHit2D yHit = Physics2D.Raycast(LedgeCheck.position + (Vector3)(workSpace), Vector3.down, LedgeCheck.position.y - wallCheck.position.y, playerData.whatIsGround);
+        workspace.Set((xDist + 0.015f) * FacingDirection, 0f);
+        RaycastHit2D yHit = Physics2D.Raycast(LedgeCheck.position + (Vector3)(workspace), Vector3.down, LedgeCheck.position.y - wallCheck.position.y + 0.015f, playerData.whatIsGround);
         float yDist = yHit.distance;
 
-        workSpace.Set(wallCheck.position.x + (xDist * FacingDirection), LedgeCheck.position.y - yDist);
-        return workSpace;
+        workspace.Set(wallCheck.position.x + (xDist * FacingDirection), LedgeCheck.position.y - yDist);
+        return workspace;
 
 
     }    
@@ -167,5 +207,6 @@ public class Player : MonoBehaviour
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
     }
+
     #endregion
 }
