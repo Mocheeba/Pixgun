@@ -5,7 +5,7 @@ using UnityEngine;
 public class Core : MonoBehaviour
 {
     public Movement Movement { get; private set; }
-
+                
 
     private void Awake()
     {
