@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Components
+    public Core Core { get; private set; }
+
     public PlayerInputHandler InputHandler { get; private set; }
 
     public Rigidbody2D RB { get; private set; }
@@ -52,7 +54,6 @@ public class Player : MonoBehaviour
 
     #endregion
     #region Other Variables
-    public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
     [SerializeField]
     private PlayerData playerData;
@@ -62,6 +63,8 @@ public class Player : MonoBehaviour
     #region Unity Callback Functions
     public void Awake()
     {
+        Core = GetComponentInChildren<Core>(); 
+
         StateMachine = new PlayerStateMachine();
 
         IdleState = new PlayerIdleState(this, StateMachine, playerData, "idle");
@@ -100,7 +103,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        CurrentVelocity = RB.velocity;
+        Core.LogicUpdate();
         StateMachine.CurrentState.LogicUpdate();
     }
 
@@ -108,40 +111,6 @@ public class Player : MonoBehaviour
     {
         StateMachine.CurrentState.PhysicsUpdate();
     }
-    #endregion
-    #region Set Functions
-    public void SetVelocityZero()
-    {
-        RB.velocity = Vector2.zero;
-        CurrentVelocity = Vector2.zero;
-    }
-    public void SetVelocity(float velocity, Vector2 angle, int direction)
-    {
-        angle.Normalize();
-        workspace.Set(angle.x * velocity * direction, angle.y * velocity);
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
-    }
-
-    public void SetVelocity(float velocity, Vector2 direction)
-    {
-        workspace = direction * velocity;
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
-    }
-    public void SetVelocityX(float velocity)
-    {
-        workspace.Set(velocity, CurrentVelocity.y);
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
-    }
-    public void SetVelocityY(float velocity)
-    {
-        workspace.Set(CurrentVelocity.x, velocity);
-        RB.velocity = workspace;
-        CurrentVelocity = workspace;
-    }
-
     #endregion
     #region Check Functions
 

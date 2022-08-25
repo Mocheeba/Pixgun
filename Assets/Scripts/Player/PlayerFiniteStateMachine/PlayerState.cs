@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerState : MonoBehaviour
+public class PlayerState
 {
+    protected Core core;
+
     protected Player player; // another class can acces to variable 
     protected PlayerStateMachine stateMachine;
     protected PlayerData playerData;
@@ -22,6 +24,7 @@ public class PlayerState : MonoBehaviour
         this.stateMachine = stateMachine;
         this.playerData = playerData;    
         this.animBoolName = animBoolName;
+        core = player.Core;
     }
 
     public virtual void Enter()
