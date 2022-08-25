@@ -54,7 +54,6 @@ public class Player : MonoBehaviour
 
     #endregion
     #region Other Variables
-    public Vector2 CurrentVelocity { get; private set; }
     public int FacingDirection { get; private set; }
     [SerializeField]
     private PlayerData playerData;
@@ -104,7 +103,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        CurrentVelocity = RB.velocity;
+        Core.LogicUpdate();
         StateMachine.CurrentState.LogicUpdate();
     }
 
