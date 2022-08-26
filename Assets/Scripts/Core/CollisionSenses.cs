@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionSenses : CoreComponent
 {
     #region Check Transforms
+
     public Transform GroundCheck { get => groundCheck; private set => groundCheck = value; }
 
     public Transform WallCheck { get => wallCheck; private set => wallCheck = value; }
@@ -29,7 +30,7 @@ public class CollisionSenses : CoreComponent
 
     public bool Ceiling
     {
-        get => Physics2D.OverlapCircle(CellingCheck.position, groundCheckRadius, whatIsGround);
+        get => Physics2D.OverlapCircle(ceilingCheck.position, groundCheckRadius, whatIsGround);
     }
 
     public bool Grounded
@@ -39,15 +40,15 @@ public class CollisionSenses : CoreComponent
 
     public bool Ledge
     {
-        get => Physics2D.Raycast(ledgeCheck.position, Vector2.right * core.Movement.FacingDirection, WallCheckDistance, whatIsGround);
+        get => Physics2D.Raycast(ledgeCheck.position, Vector2.right * core.Movement.FacingDirection, wallCheckDistance, whatIsGround);
     }
     public bool WallBack
     {
-        get => Physics2D.Raycast(-wallCheck.position, Vector2.right * core.Movement.FacingDirection, WallCheckDistance, whatIsGround);
+        get => Physics2D.Raycast(-wallCheck.position, Vector2.right * core.Movement.FacingDirection, wallCheckDistance, whatIsGround);
     }
     public bool Wall
     {
-        get => Physics2D.Raycast(wallCheck.position, Vector2.right * core.Movement.FacingDirection, WallCheckDistance, whatIsGround);
+        get => Physics2D.Raycast(WallCheck.position, Vector2.right * core.Movement.FacingDirection, wallCheckDistance, whatIsGround);
     }
     #endregion
  

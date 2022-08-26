@@ -15,7 +15,7 @@ public class PlayerAbilityState : PlayerState
     {
         base.DoChecks();
 
-        isGrounded = core.CollisionSenses.Ground;
+        isGrounded = core.CollisionSenses.Grounded;
     }
 
     public override void Enter()

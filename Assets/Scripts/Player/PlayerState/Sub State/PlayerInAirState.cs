@@ -36,7 +36,7 @@ public class PlayerInAirState : PlayerState
         oldIsTouchingWall = isTouchingWall;
         oldIsTouchingWallBack = isTouchingWallBack;
 
-        isGrounded = core.CollisionSenses.Ground;
+        isGrounded = core.CollisionSenses.Grounded;
         isTouchingWall = core.CollisionSenses.Wall;
         isTouchingWallBack = core.CollisionSenses.WallBack;
         isTouchingLedge = core.CollisionSenses.Ledge;
@@ -116,7 +116,7 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.WallGrabState);            
         }
-        else if(isTouchingWall && xInput == core.Movement.core.Movement.FacingDirection && core.Movement.CurrentVelocity.y <= 0)
+        else if(isTouchingWall && xInput == core.Movement.FacingDirection && core.Movement.CurrentVelocity.y <= 0)
         {
             stateMachine.ChangeState(player.WallSlideState);
         }

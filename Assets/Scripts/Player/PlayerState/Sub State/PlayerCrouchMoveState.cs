@@ -30,7 +30,7 @@ public class PlayerCrouchMoveState : PlayerGroundedState
 
         if (!isExitingState)
         {
-            core.Movement.SetVelocityX(playerData.crouchMovementVelocity * core.Movement.core.Movement.FacingDirection);
+            core.Movement.SetVelocityX(playerData.crouchMovementVelocity * core.Movement.FacingDirection);
 
             core.Movement.CheckIfShouldFlip(xInput);
 

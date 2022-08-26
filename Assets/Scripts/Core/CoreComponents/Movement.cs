@@ -30,7 +30,7 @@ public class Movement : CoreComponent
     private void Flip()
     {
         FacingDirection *= -1;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
+        RB.transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
     public void CheckIfShouldFlip(int xInput)

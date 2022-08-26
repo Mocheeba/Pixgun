@@ -12,7 +12,7 @@ public class Core : MonoBehaviour
         Movement = GetComponentInChildren<Movement>();
         CollisionSenses = GetComponentInChildren<CollisionSenses>();
 
-        if (!Movement)
+        if (!Movement || !CollisionSenses)
         {
             Debug.LogError("Missing Core Component");
         }

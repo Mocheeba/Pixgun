@@ -31,7 +31,7 @@ public class PlayerTouchingWallState : PlayerState
     {
         base.DoChecks();
 
-        isGrounded = core.CollisionSenses.Ground;
+        isGrounded = core.CollisionSenses.Grounded;
         isTouchingWall = core.CollisionSenses.Wall;
         isTouchingLedge = core.CollisionSenses.Ledge;
 
@@ -70,7 +70,7 @@ public class PlayerTouchingWallState : PlayerState
         {
             stateMachine.ChangeState(player.IdleState);
         }
-        else if(!isTouchingWall || xInput !=  core.Movement.core.Movement.FacingDirection && !grabInput)
+        else if(!isTouchingWall || xInput !=  core.Movement.FacingDirection && !grabInput)
         {
             stateMachine.ChangeState(player.InAirState);
         }
