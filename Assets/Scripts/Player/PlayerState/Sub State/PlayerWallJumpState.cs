@@ -15,7 +15,7 @@ public class PlayerWallJumpState : PlayerAbilityState
         player.InputHandler.UseJumpInput();
         player.JumpState.ResetAmountOfJumpsLeft();
         core.Movement.SetVelocity(playerData.wallJumpVelocity, playerData.wallJumpAngle, wallJumpDirection);
-        player.CheckIfShouldFlip(wallJumpDirection);
+        core.Movement.CheckIfShouldFlip(wallJumpDirection);
         player.JumpState.DecreseAmountOfJumpsLeft(); 
     }
 
@@ -36,11 +36,11 @@ public class PlayerWallJumpState : PlayerAbilityState
     {
         if(isTouchingWall)
         {
-            wallJumpDirection = -player.FacingDirection;
+            wallJumpDirection = -core.Movement.core.Movement.FacingDirection;
         }
         else
         {
-            wallJumpDirection = player.FacingDirection;
+            wallJumpDirection = core.Movement.core.Movement.FacingDirection;
         }
     }
 }
