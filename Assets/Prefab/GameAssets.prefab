@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2799782026058240624}
+  - component: {fileID: 825445279}
   m_Layer: 0
   m_Name: GameAssets
   m_TagString: Untagged
@@ -29,5 +30,18 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &825445279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2799782026058240627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c928399f3cad91348a9002ea1eed40d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerJumpAudio: {fileID: 8300000, guid: 23893ff7c1271b149a0aca6d6c453b70, type: 3}
