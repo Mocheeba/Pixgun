@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15f2f027c8402b4fbfd37a692a28db4, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
-  movementVelocity: 6
+  movementVelocity: 5.5
   jumpVelocity: 16
   amountOfJumps: 1
-  wallJumpVelocity: 16
+  wallJumpVelocity: 15
   wallJumpTime: 0.2
   wallJumpAngle: {x: 1, y: 2}
   coyoteTime: 0.2
@@ -24,14 +24,14 @@ MonoBehaviour:
   wallClimbVelocity: 7
   startOffSet: {x: 0.4, y: 0.58}
   stopOffSet: {x: 0.24, y: 0.55}
-  dashCooldown: 1.98
-  maxHoldTime: 2.34
-  holdTimeScale: 0.25
+  dashCooldown: 0.5
+  maxHoldTime: 1
+  holdTimeScale: 2.44
   dashTime: 0.29
   dashVelocity: 28.9
   drag: 11.7
   dashEndYMultiplier: 0.26
-  distanceBetweenAfterImages: 2.29
+  distanceBetweenAfterImages: 0.07
   crouchMovementVelocity: 5
   crouchColliderHeight: 0.16
   standColliderHeight: 1.8

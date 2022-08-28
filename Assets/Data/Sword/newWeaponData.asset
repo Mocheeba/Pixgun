@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: newWeaponData
   m_EditorClassIdentifier: 
   movementSpeed:
-  - 1
-  - 1
-  - -1
+  - -0.1
+  - 0.1
