@@ -15,5 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Dungeon_Marcel.unity
     guid: a7eb55689883c83438360d78b54db977
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: fa24af12c5906464a96207c11bd2bc6c, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 0bec0d2cdf6abcf428d1f8fc57b39711, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 2d0de397745b23943bd9a50746e91d00, type: 2}
