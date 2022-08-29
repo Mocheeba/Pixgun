@@ -7,7 +7,7 @@ public class State
     protected FiniteStateMachine stateMachine;
     protected Entity entity;
 
-    protected float startTime; // when enemy enter the state
+    protected float startTime;
 
     protected string animBoolName;
 
@@ -18,7 +18,7 @@ public class State
         this.animBoolName = animBoolName;
     }
 
-    public virtual void Enter() //this function can be redife in diriving class
+    public virtual void Enter()
     {
         startTime = Time.time;
         entity.anim.SetBool(animBoolName, true);
@@ -31,7 +31,7 @@ public class State
 
     public virtual void LogicUpdate()
     {
-        
+
     }
 
     public virtual void PhysicsUpdate()
