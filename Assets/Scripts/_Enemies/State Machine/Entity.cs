@@ -23,20 +23,20 @@ public class Entity : MonoBehaviour
     [SerializeField] private Transform ledgeCheck;
     #endregion
 
-    public virtual void Start()
+   public virtual void Start()
     {
-        aliveGO = transform.Find("Alive").gameObject; // take reference from Hierarchy
+        facingDirection = 1;
 
+        aliveGO = transform.Find("Alive").gameObject;
         rb = aliveGO.GetComponent<Rigidbody2D>();
-
         anim = aliveGO.GetComponent<Animator>();
-        
-        stateMachine = new FiniteStateMachine();
 
+        stateMachine = new FiniteStateMachine();
     }
 
     public virtual void Update()
     {
+        ChecksAliveGo();
         stateMachine.currentState.LogicUpdate();
     }
 
@@ -68,4 +68,15 @@ public class Entity : MonoBehaviour
         aliveGO.transform.Rotate(0f, 180f, 0f);
     }
 
+    public virtual void OnDrawGizmos() {
+        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * facingDirection * entityData.wallCheckDistance));
+        Gizmos.DrawLine(ledgeCheck.position, ledgeCheck.position + (Vector3)(Vector2.down * entityData.ledgeCheckDistance));
+    }
+
+    public virtual void ChecksAliveGo()
+    {
+           if(aliveGO == null){
+            Debug.Log("There is no " + aliveGO + " Object in scene!");
+        }
+    }
 }

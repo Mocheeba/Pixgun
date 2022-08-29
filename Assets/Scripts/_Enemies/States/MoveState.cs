@@ -9,15 +9,14 @@ public class MoveState : State
     protected bool isDetectingWall;
     protected bool isDetectingLedge;
 
-    public MoveState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData): base(entity, stateMachine, animBoolName)
+    public MoveState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
     }
 
     public override void Enter()
     {
-        base.Enter(); // we can remove so base its not called 
-
+        base.Enter();
         entity.SetVelocity(stateData.movementSpeed);
 
         isDetectingLedge = entity.CheckLedge();
@@ -26,20 +25,19 @@ public class MoveState : State
 
     public override void Exit()
     {
-        base.Exit(); 
+        base.Exit();
     }
 
     public override void LogicUpdate()
     {
-        base.LogicUpdate(); 
+        base.LogicUpdate();
     }
 
     public override void PhysicsUpdate()
     {
-        base.PhysicsUpdate(); 
+        base.PhysicsUpdate();
 
         isDetectingLedge = entity.CheckLedge();
         isDetectingWall = entity.CheckWall();
     }
-
 }

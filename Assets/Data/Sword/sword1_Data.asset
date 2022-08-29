@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDetails:
   - attackName: 1
-    movementSpeed: 1
+    movementSpeed: 0.1
     damageAmount: 11
   - attackName: 2
-    movementSpeed: 1
+    movementSpeed: 0.1
     damageAmount: 12

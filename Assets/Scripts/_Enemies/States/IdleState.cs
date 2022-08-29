@@ -11,15 +11,14 @@ public class IdleState : State
 
     protected float idleTime;
 
-    // When we enter Idle we randomly choose 'time' between min and max. 
-    public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData): base(entity, stateMachine, animBoolName)
+    public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
     }
 
-     public override void Enter()
+    public override void Enter()
     {
-        base.Enter(); // we can remove so base its not called 
+        base.Enter();
 
         entity.SetVelocity(0f);
         isIdleTimeOver = false;
@@ -28,7 +27,7 @@ public class IdleState : State
 
     public override void Exit()
     {
-        base.Exit(); 
+        base.Exit();
 
         if (flipAfterIdle)
         {
@@ -38,9 +37,9 @@ public class IdleState : State
 
     public override void LogicUpdate()
     {
-        base.LogicUpdate(); 
+        base.LogicUpdate();
 
-        if (Time.time >= startTime + idleTime)
+        if(Time.time >= startTime + idleTime)
         {
             isIdleTimeOver = true;
         }
@@ -48,7 +47,7 @@ public class IdleState : State
 
     public override void PhysicsUpdate()
     {
-        base.PhysicsUpdate(); 
+        base.PhysicsUpdate();
     }
 
     public void SetFlipAfterIdle(bool flip)
