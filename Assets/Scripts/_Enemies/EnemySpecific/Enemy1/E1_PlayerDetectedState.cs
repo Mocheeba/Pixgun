@@ -20,9 +20,6 @@ public class E1_PlayerDetectedState : State
     public override void Enter()
     {
         base.Enter();
-       
-        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
-        isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
     }
 
     public override void Exit()
@@ -34,7 +31,7 @@ public class E1_PlayerDetectedState : State
     {
         base.LogicUpdate();
 
-        if(!isPlayerInMaxAgroRange)
+        if (!isPlayerInMaxAgroRange)
         {
             enemy.idleState.SetFlipAfterIdle(false);
             stateMachine.ChangeState(enemy.idleState);
@@ -45,8 +42,7 @@ public class E1_PlayerDetectedState : State
     {
         base.PhysicsUpdate();
         
-        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
-        isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
+       
     }
 
 }
