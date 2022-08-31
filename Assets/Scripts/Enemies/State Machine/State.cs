@@ -11,9 +11,9 @@ public class State
 
     protected string animBoolName;
 
-    public State(Entity etity, FiniteStateMachine stateMachine, string animBoolName)
+    public State(Entity entity, FiniteStateMachine stateMachine, string animBoolName)
     {
-        this.entity = etity;
+        this.entity = entity;
         this.stateMachine = stateMachine;
         this.animBoolName = animBoolName;
     }

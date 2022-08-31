@@ -6,7 +6,7 @@ public class E1_PlayerDetectedState : PlayerDetectedState
 {
     private Enemy1 enemy;
 
-    public E1_PlayerDetectedState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData, Enemy1 enemy) : base(etity, stateMachine, animBoolName, stateData)
+    public E1_PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData, Enemy1 enemy) : base(entity, stateMachine, animBoolName, stateData)
     {
         this.enemy = enemy;
     }
@@ -33,6 +33,8 @@ public class E1_PlayerDetectedState : PlayerDetectedState
         {
             stateMachine.ChangeState(enemy.lookForPlayerState);
         }
+
+        //TODO: Transition to attack state
     }
 
     public override void PhysicsUpdate()
