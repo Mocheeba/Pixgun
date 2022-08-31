@@ -28,6 +28,8 @@ public class Entity : MonoBehaviour
         anim = aliveGO.GetComponent<Animator>();
 
         stateMachine = new FiniteStateMachine();
+        Debug.Log(stateMachine);
+
     }
 
     public virtual void Update()
