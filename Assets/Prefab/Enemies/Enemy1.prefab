@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549924007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -0.168, z: 0}
+  m_LocalPosition: {x: -0.08, y: -0.168, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -83,6 +83,8 @@ MonoBehaviour:
   idleStateData: {fileID: 11400000, guid: 964bf3bc5de5da74eb0b726da3aa4020, type: 2}
   moveStateData: {fileID: 11400000, guid: 4fb2b0bc23e88c84eb2f5f2ef1888071, type: 2}
   playerDetectedData: {fileID: 11400000, guid: 1cd69f2bd7133cc40966d0754e7aea48, type: 2}
+  chargeStateData: {fileID: 11400000, guid: 3b624f778f14bb9468b3cd07617a1f9a, type: 2}
+  lookForPlayerStateData: {fileID: 11400000, guid: 300cd58a3245d3040bfdfb28e2d75406, type: 2}
 --- !u!1 &2081255468237529270
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8873815572709223941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.468, y: -0.072, z: 0}
+  m_LocalPosition: {x: -1.46, y: -0.072, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -295,7 +297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9214143562828777120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.454, y: -0.856, z: 0}
+  m_LocalPosition: {x: -1.37, y: -0.856, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
