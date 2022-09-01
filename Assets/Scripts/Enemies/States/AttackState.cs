@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,16 +6,15 @@ public class AttackState : State
 {
     protected Transform attackPosition;
 
-    protected bool isAnimationFinish;
+    protected bool isAnimationFinished;
     protected bool isPlayerInMinAgroRange;
 
-    
-    public AttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition) : base(entity, stateMachine, animBoolName)
+    public AttackState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition) : base(etity, stateMachine, animBoolName)
     {
         this.attackPosition = attackPosition;
     }
 
-     public override void DoChecks()
+    public override void DoChecks()
     {
         base.DoChecks();
 
@@ -27,7 +26,7 @@ public class AttackState : State
         base.Enter();
 
         entity.atsm.attackState = this;
-        isAnimationFinish = false;
+        isAnimationFinished = false;
         entity.SetVelocity(0f);
     }
 
@@ -39,7 +38,6 @@ public class AttackState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
     }
 
     public override void PhysicsUpdate()
@@ -49,12 +47,11 @@ public class AttackState : State
 
     public virtual void TriggerAttack()
     {
-        
+
     }
 
     public virtual void FinishAttack()
     {
-        isAnimationFinish = true;
+        isAnimationFinished = true;
     }
-
 }

@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08c13c1dc6dd8a647909321921214e9f, type: 3}
-  m_Name: E2_BaseEntityData
+  m_Script: {fileID: 11500000, guid: 2ddba91bfbc9f7741bb39c784ae0c26f, type: 3}
+  m_Name: E1_StunStateData
   m_EditorClassIdentifier: 
-  wallCheckDistance: 1
-  ledgeCheckDistance: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 512
+  stunTime: 3
+  stunKnockbackTime: 0.2
+  stunKnockbackSpeed: 20
+  stunKnockbackAngle: {x: 1, y: 2}
