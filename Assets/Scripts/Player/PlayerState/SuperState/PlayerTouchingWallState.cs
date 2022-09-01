@@ -60,7 +60,6 @@ public class PlayerTouchingWallState : PlayerState
         grabInput = player.InputHandler.GrabInput;
         jumpInput = player.InputHandler.JumpInput;
 
-
         if(jumpInput)
         {
             player.WallJumpState.DetermineWallJumpDirection(isTouchingWall);

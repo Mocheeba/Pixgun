@@ -7,6 +7,8 @@ public class AttackState : State
     protected Transform attackPosition;
 
     protected bool isAnimationFinish;
+    protected bool isPlayerInMinAgroRange;
+
     
     public AttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition) : base(entity, stateMachine, animBoolName)
     {
@@ -16,6 +18,8 @@ public class AttackState : State
      public override void DoChecks()
     {
         base.DoChecks();
+
+        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
     }
 
     public override void Enter()
@@ -45,7 +49,7 @@ public class AttackState : State
 
     public virtual void TriggerAttack()
     {
-
+        
     }
 
     public virtual void FinishAttack()

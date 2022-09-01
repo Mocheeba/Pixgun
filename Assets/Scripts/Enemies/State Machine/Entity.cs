@@ -82,4 +82,13 @@ public class Entity : MonoBehaviour
         facingDirection *= -1;
         aliveGO.transform.Rotate(0f, 180f, 0f);
     }
+
+    public virtual void OnDrawGizmos()
+    {
+
+        Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.closeRangeActionDistance), 0.2f);
+        Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.minAgroDistance), 0.2f);
+        Gizmos.DrawWireSphere(playerCheck.position + (Vector3)(Vector2.right * entityData.maxAgroDistance), 0.2f);
+    }
+
 }

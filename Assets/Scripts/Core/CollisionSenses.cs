@@ -51,11 +51,4 @@ public class CollisionSenses : CoreComponent
         get => Physics2D.Raycast(wallCheck.position, Vector2.right * core.Movement.FacingDirection, wallCheckDistance, whatIsGround);
     }
     #endregion
- 
-
-   public virtual void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * core.Movement.FacingDirection * wallCheckDistance));
-    }
-
 }
