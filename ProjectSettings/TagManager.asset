@@ -10,6 +10,8 @@ TagManager:
   - TrapSaw
   - SpikeTrap
   - Cat
+  - Water
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
@@ -26,7 +28,7 @@ TagManager:
   - Weapon
   - Damageable
   - Dead
-  - 
+  - CheckPoint
   - 
   - 
   - 
