@@ -31,10 +31,14 @@ public class E2_IdleState : IdleState
     {
         base.LogicUpdate();
 
-        if(isIdleTimeOver)
-            {
-                stateMachine.ChangeState(enemy.moveState);
-            }
+        if( isPlayerInMinAgroRange)
+        {
+            stateMachine.ChangeState(enemy.playerDetectedState);
+        }
+        else if(isIdleTimeOver)
+        {
+            stateMachine.ChangeState(enemy.moveState);
+        }
     }
 
     public override void PhysicsUpdate()

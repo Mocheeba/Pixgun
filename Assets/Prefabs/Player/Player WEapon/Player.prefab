@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 155730021699488423}
   - component: {fileID: 155730021290170377}
   - component: {fileID: 5169654214179674558}
+  - component: {fileID: 664687274}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -99,7 +100,7 @@ Transform:
   - {fileID: 8000822256143966252}
   - {fileID: 4964342127172936595}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &155730021699488414
 MonoBehaviour:
@@ -399,6 +400,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - {fileID: 5169654215026531949}
+--- !u!114 &664687274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155730021699488415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f723516c8a11f746aaf5b9f352303d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &155730021905484419
 GameObject:
   m_ObjectHideFlags: 0
