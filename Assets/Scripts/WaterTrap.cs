@@ -24,6 +24,7 @@ public class WaterTrap : MonoBehaviour
     if(collision.tag == "Player")
         Debug.Log("Dead!");
         Destroy(player.gameObject);
+        SceneManager.LoadScene("Dungeon_Marcel", LoadSceneMode.Additive);
    }
 
 }
