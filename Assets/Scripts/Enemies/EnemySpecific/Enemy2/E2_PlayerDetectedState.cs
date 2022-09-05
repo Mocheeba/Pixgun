@@ -34,6 +34,10 @@ public class E2_PlayerDetectedState : PlayerDetectedState
         {
             stateMachine.ChangeState(enemy.meleeAttackState);
         }
+        else if (!isPlayerInMinAgroRange)
+        {
+            stateMachine.ChangeState(enemy.lookForPlayerState);
+        }
 
     }
 
