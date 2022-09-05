@@ -16,6 +16,7 @@ public class PlayerCrouchIdleState : PlayerGroundedState
 
         core.Movement.SetVelocityZero();
         player.SetColliderHeight(playerData.crouchColliderHeight);
+        //Debug.Log(playerData.crouchColliderHeight);
 
     }
 
@@ -35,6 +36,7 @@ public class PlayerCrouchIdleState : PlayerGroundedState
             if (xInput != 0 )
             {
                 stateMachine.ChangeState(player.CrouchMoveState);
+                //Debug.Log(playerData.crouchColliderHeight);
             }
             else if(yInput != -1 && !isTouchingCeiling)
             {

@@ -23,7 +23,7 @@ MonoBehaviour:
   wallSlideVelocity: 2
   wallClimbVelocity: 7
   startOffSet: {x: 0.4, y: 0.58}
-  stopOffSet: {x: 0.24, y: 0.55}
+  stopOffSet: {x: 0.26, y: 0.55}
   dashCooldown: 0.5
   maxHoldTime: 0.001
   holdTimeScale: 2.44
@@ -31,8 +31,8 @@ MonoBehaviour:
   dashVelocity: 28.9
   drag: 11.7
   dashEndYMultiplier: 0.26
-  distanceBetweenAfterImages: 1
-  crouchMovementVelocity: 5
+  distanceBetweenAfterImages: 0.56
+  crouchMovementVelocity: 3
   crouchColliderHeight: 0.16
   standColliderHeight: 1.8
   groundCheckRadius: 0.2
