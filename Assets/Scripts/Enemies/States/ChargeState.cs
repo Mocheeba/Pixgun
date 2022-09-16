@@ -12,8 +12,7 @@ public class ChargeState : State
     protected bool isChargeTimeOver;
     protected bool performCloseRangeAction;
 
-
-    public ChargeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData) : base(entity, stateMachine, animBoolName)
+    public ChargeState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData) : base(etity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
     }
