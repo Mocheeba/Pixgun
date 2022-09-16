@@ -11,7 +11,7 @@ public class E2_PlayerDetectedState : PlayerDetectedState
         this.enemy = enemy;
   }
 
-   public override void DoChecks()
+    public override void DoChecks()
     {
         base.DoChecks();
     }
@@ -32,7 +32,14 @@ public class E2_PlayerDetectedState : PlayerDetectedState
 
         if (performCloseRangeAction)
         {
-            stateMachine.ChangeState(enemy.meleeAttackState);
+            if(Time.time >= enemy.dodgeState.startTime + enemy.dodgeStateData.dodgeCooldown)
+            {
+                stateMachine.ChangeState(enemy.dodgeState);
+            }
+            else
+            {
+                stateMachine.ChangeState(enemy.meleeAttackState);
+            }
         }
         else if (!isPlayerInMinAgroRange)
         {

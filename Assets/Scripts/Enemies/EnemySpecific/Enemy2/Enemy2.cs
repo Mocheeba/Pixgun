@@ -10,6 +10,8 @@ public class Enemy2 : Entity
     public E2_MeleeAttackState meleeAttackState { get; private set; }
     public E2_LookForPlayerState lookForPlayerState { get; private set; }
     public E2_StunState stunState { get; private set; }
+    public E2_DeadState deadState { get; private set; }
+    public E2_DodgeState dodgeState { get; private set; }
 
     [SerializeField] private D_MoveState moveStateData;
     [SerializeField] private D_IdleState idleStateData;
@@ -17,6 +19,8 @@ public class Enemy2 : Entity
     [SerializeField] private D_MeleeAttack meleeAttackStateData;
     [SerializeField] private D_LookForPlayer lookForPlayerStateData;
     [SerializeField] private D_StunState stunStateData;
+    [SerializeField] private D_DeadState deadStateData;
+    [SerializeField] public D_DodgeState dodgeStateData;
 
 
     [SerializeField] private Transform meleeAttackPosition;
@@ -32,6 +36,8 @@ public class Enemy2 : Entity
             meleeAttackState = new E2_MeleeAttackState(this, stateMachine, "meleeAttack", meleeAttackPosition, meleeAttackStateData, this);
             lookForPlayerState = new E2_LookForPlayerState(this, stateMachine, "lookForPlayer", lookForPlayerStateData,this);
             stunState = new E2_StunState(this, stateMachine, "stun", stunStateData, this);
+            deadState = new E2_DeadState(this, stateMachine, "dead", deadStateData, this);
+            dodgeState = new E2_DodgeState(this, stateMachine, "dodge", dodgeStateData, this);
 
             stateMachine.Initialize(moveState);
     }
@@ -48,9 +54,20 @@ public class Enemy2 : Entity
     {
         base.Damage(attackDetails);
 
-        if(isStunned && stateMachine.currentState != stunState)
+        if (isDead)
+        {
+            stateMachine.ChangeState(deadState);
+        }
+
+        else if(isStunned && stateMachine.currentState != stunState)
         {
             stateMachine.ChangeState(stunState);
+        }
+
+        else if(!CheckPlayerInMinAgroRange())
+        {
+            lookForPlayerState.SetTurnImmediately(true);
+            stateMachine.ChangeState(lookForPlayerState);
         }
 
     }
