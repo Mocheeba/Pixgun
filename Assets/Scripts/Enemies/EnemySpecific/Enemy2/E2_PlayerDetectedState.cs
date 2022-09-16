@@ -11,7 +11,7 @@ public class E2_PlayerDetectedState : PlayerDetectedState
         this.enemy = enemy;
   }
 
-   public override void DoChecks()
+    public override void DoChecks()
     {
         base.DoChecks();
     }
