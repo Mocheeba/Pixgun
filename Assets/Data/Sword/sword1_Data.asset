@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: sword1_Data
   m_EditorClassIdentifier: 
   attackDetails:
-  - attackName: 1
-    movementSpeed: 0.1
-    damageAmount: 11
-  - attackName: 2
-    movementSpeed: 0.1
+  - attackName: asd
+    movementSpeed: 3
+    damageAmount: 12
+  - attackName: asdsad
+    movementSpeed: 2
     damageAmount: 12
