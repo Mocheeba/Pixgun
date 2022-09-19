@@ -19,8 +19,8 @@ public class MoveState : State
     {
         base.DoChecks();
 
-        isDetectingLedge = entity.CheckLedge();
-        isDetectingWall = entity.CheckWall();
+        isDetectingLedge = core.CollisionSenses.LedgeVertical;
+        isDetectingWall = core.CollisionSenses.Wall;
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
     }
 
