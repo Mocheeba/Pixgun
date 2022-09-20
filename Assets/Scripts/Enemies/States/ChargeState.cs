@@ -23,7 +23,7 @@ public class ChargeState : State
 
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         isDetectingLedge = core.CollisionSenses.LedgeVertical;
-        isDetectingWall = core.CollisionSenses.Wall;
+        isDetectingWall =core.CollisionSenses.WallFront;
 
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }
@@ -45,7 +45,9 @@ public class ChargeState : State
     {
         base.LogicUpdate();
 
-        if(Time.time >= startTime + stateData.chargeTime)
+        core.Movement.SetVelocityX(stateData.chargeSpeed * core.Movement.FacingDirection);
+
+        if (Time.time >= startTime + stateData.chargeTime)
         {
             isChargeTimeOver = true;
         }
