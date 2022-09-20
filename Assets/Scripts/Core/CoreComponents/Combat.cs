@@ -9,7 +9,7 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
 
     public void LogicUpdate()
     {
-
+        CheckKnockback();
     }
 
     public void Damage(float amount)
