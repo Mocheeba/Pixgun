@@ -51,8 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 155730022243304179}
   wallCheck: {fileID: 155730021905484418}
-  ledgeCheckHorizontal: {fileID: 155730021985630894}
-  ledgeCheckVertical: {fileID: 0}
+  ledgeCheck: {fileID: 155730021985630894}
   ceilingCheck: {fileID: 5169654214087830050}
   groundCheckRadius: 0.4
   wallCheckDistance: 0.44
@@ -100,7 +99,7 @@ Transform:
   - {fileID: 8000822256143966252}
   - {fileID: 4964342127172936595}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &155730021699488414
 MonoBehaviour:

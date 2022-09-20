@@ -14,7 +14,7 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
 
     public void Damage(float amount)
     {
-        Debug.Log(core.transform.parent.name + " Damaged!");
+        throw new System.NotImplementedException();
     }
 
     public void Knockback(Vector2 angle, float strength, int direction)
