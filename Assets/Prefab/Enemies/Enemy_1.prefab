@@ -129,7 +129,7 @@ Transform:
   - {fileID: 10384451849447144}
   - {fileID: 10384453282784823}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7827030034997061480
 MonoBehaviour:
@@ -483,7 +483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4255070032974338706}
-  - component: {fileID: 3090663490947681591}
+  - component: {fileID: 369154780}
   m_Layer: 13
   m_Name: CollisionSenses
   m_TagString: Untagged
@@ -509,7 +509,7 @@ Transform:
   m_Father: {fileID: 1244580964}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3090663490947681591
+--- !u!114 &369154780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -521,12 +521,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7342df8bf86c4fc4ea8982d3bfdba8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundCheck: {fileID: 0}
-  wallCheck: {fileID: 0}
-  ledgeCheck: {fileID: 0}
+  groundCheck: {fileID: 10384452196656124}
+  wallCheck: {fileID: 10384452136349112}
+  ledgeCheckHorizontal: {fileID: 0}
+  ledgeCheckVertical: {fileID: 10384451994112135}
   ceilingCheck: {fileID: 0}
-  groundCheckRadius: 0
-  wallCheckDistance: 0
+  groundCheckRadius: 0.3
+  wallCheckDistance: 0.2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512

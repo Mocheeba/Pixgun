@@ -57,7 +57,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bulbek_Attack_Animation
+  m_Name: Enemy2_CloseAttack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -161,7 +161,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bulbek_RangedAttackAnimation
+  m_Name: Enemy2_RangedAttack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -222,7 +222,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: E2_LookForPlayer
+  m_Name: Enemy2_LookForPlayer
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
