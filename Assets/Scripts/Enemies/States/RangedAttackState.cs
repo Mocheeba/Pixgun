@@ -1,20 +1,20 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RangedAttackState : AttackState
 {
-    protected D_RangedAttackState stateData;
+   protected D_RangedAttackState stateData;
 
-    protected GameObject projectile;
-    protected Projectile projectileScript;
+   protected GameObject projectile;
+   protected Projectile projectileScript;
 
-    public RangedAttackState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_RangedAttackState stateData) : base(etity, stateMachine, animBoolName, attackPosition)
+    public RangedAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_RangedAttackState stateData) : base(entity, stateMachine, animBoolName, attackPosition)
     {
         this.stateData = stateData;
     }
 
-    public override void DoChecks()
+     public override void DoChecks()
     {
         base.DoChecks();
     }

@@ -20,7 +20,7 @@ public class MoveState : State
         base.DoChecks();
 
         isDetectingLedge = core.CollisionSenses.LedgeVertical;
-        isDetectingWall =core.CollisionSenses.WallFront;
+        isDetectingWall = core.CollisionSenses.Wall;
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
     }
 
@@ -39,7 +39,6 @@ public class MoveState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        core.Movement.SetVelocityX(stateData.movementSpeed * core.Movement.FacingDirection);
     }
 
     public override void PhysicsUpdate()
