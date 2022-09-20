@@ -6,7 +6,7 @@ public class Combat : CoreComponent, IDamageable
 {
     public void Damage(float amount)
     {
-        throw new System.NotImplementedException();
+        Debug.Log(core.transform.parent.name + " Damaged!");
     }
 
 }

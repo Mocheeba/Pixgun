@@ -46,7 +46,7 @@ public class MeleeAttackState : AttackState
         base.PhysicsUpdate();
     }
 
-    public override void TriggerAttack()
+     public override void TriggerAttack()
     {
         base.TriggerAttack();
 
@@ -54,7 +54,13 @@ public class MeleeAttackState : AttackState
 
         foreach (Collider2D collider in detectedObjects)
         {
-            collider.transform.SendMessage("Damage", attackDetails);
+            IDamageable damageable = collider.GetComponent<IDamageable>();
+
+            if(damageable != null)
+            {
+                damageable.Damage(stateData.attackDamage);
+                Debug.Log("Melle Attack State");
+            }
         }
     }
 }
