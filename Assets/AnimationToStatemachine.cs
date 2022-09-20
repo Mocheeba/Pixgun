@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,13 +6,13 @@ public class AnimationToStatemachine : MonoBehaviour
 {
     public AttackState attackState;
 
-    private void TriggerAttack()
-    {
+   private void TriggerAttack()
+   {
         attackState.TriggerAttack();
-    }
+   }
 
-    private void FinishAttack()
-    {
+   private void FinishAttack()
+   {
         attackState.FinishAttack();
-    }
+   }
 }
