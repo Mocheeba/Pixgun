@@ -120,8 +120,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d31bf61595e9bc46af3f5623663b431
-      internalID: -1227880035
+      spriteID: b25d46be8f3e6dd49a7da50dd2aab758
+      internalID: 1069742455
       vertices: []
       indices: 
       edges: []
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c167564fe79719a4eaa55356528521ba
-      internalID: 737279569
+      spriteID: b823e8344f977474ba3ab6156947953d
+      internalID: 786924690
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ab4337701f45424e9cb9f2ab343f7fa
-      internalID: 222855272
+      spriteID: 9fa8ba628a20f4644964019d4ac32119
+      internalID: -32487363
       vertices: []
       indices: 
       edges: []
@@ -183,8 +183,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c293fc3f14120664ebf6094cd62ba5fc
-      internalID: 324476886
+      spriteID: f5027f1a54e47a145b7f0255c9089531
+      internalID: 1307780531
       vertices: []
       indices: 
       edges: []
@@ -200,10 +200,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LookingForPlayerSpider_0: -1227880035
-      LookingForPlayerSpider_2: 222855272
-      LookingForPlayerSpider_1: 737279569
-      LookingForPlayerSpider_3: 324476886
+      LookingForPlayerSpider_0: 1069742455
+      LookingForPlayerSpider_2: -32487363
+      LookingForPlayerSpider_1: 786924690
+      LookingForPlayerSpider_3: 1307780531
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

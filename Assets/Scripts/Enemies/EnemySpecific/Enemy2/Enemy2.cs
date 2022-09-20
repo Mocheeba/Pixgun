@@ -43,6 +43,9 @@ public class Enemy2 : Entity
             dodgeState = new E2_DodgeState(this, stateMachine, "dodge", dodgeStateData, this);
             rangedAttackState = new E2_RangedAttackState(this, stateMachine, "rangedAttack", rangedAttackPosition, rangedAttackStateData, this);
 
+    }
+
+    private void Start() {
             stateMachine.Initialize(moveState);
     }
 
