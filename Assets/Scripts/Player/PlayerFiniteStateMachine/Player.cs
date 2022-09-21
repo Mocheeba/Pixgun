@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public PlayerAttackState PrimaryAttackState { get; private set; }
     public PlayerAttackState SecondaryAttackState { get; private set; }
     #endregion
-
+    
     #region Components
     public Core Core { get; private set; }
 

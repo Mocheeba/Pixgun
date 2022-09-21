@@ -26,7 +26,7 @@ public class PlayerGroundedState : PlayerState
 
         isGrounded = core.CollisionSenses.Grounded;
         isTouchingWall = core.CollisionSenses.Wall;
-        isTouchingLedge = core.CollisionSenses.Ledge;
+        isTouchingLedge = core.CollisionSenses.LedgeHorizontal;
         isTouchingCeiling = core.CollisionSenses.Ceiling;
     }
 

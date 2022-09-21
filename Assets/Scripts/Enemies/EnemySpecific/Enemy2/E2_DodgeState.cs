@@ -36,16 +36,14 @@ public class E2_DodgeState : DodgeState
             {
                 stateMachine.ChangeState(enemy.meleeAttackState);
             }
-            // else if(isPlayerInMaxAgroRange && !performCloseRangeAction)
-            // {
-            //     stateMachine.ChangeState(enemy.rangedAttackState);
-            // }
+            else if(isPlayerInMaxAgroRange && !performCloseRangeAction)
+            {
+                stateMachine.ChangeState(enemy.rangedAttackState);
+            }
             else if (!isPlayerInMaxAgroRange)
             {
                 stateMachine.ChangeState(enemy.lookForPlayerState);
             }
-
-            //TODO: ranged attack state
         }
     }
 
