@@ -42,9 +42,9 @@ public class Core : MonoBehaviour
             component.LogicUpdate();
         }
     }
-    public void AddComponent(ILogicUpdate component)
+   public void AddComponent(ILogicUpdate component)
     {
-        if (!component.Contains(component))
+        if (!components.Contains(component))
         {
             components.Add(component);
         }
