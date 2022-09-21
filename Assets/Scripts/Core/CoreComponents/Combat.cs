@@ -17,6 +17,7 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
     public void Damage(float amount)
     {
         Debug.Log(core.transform.parent.name + " Damaged!");
+        core.Stats.DecreaseHealth(amount);
     }
 
     public void Knockback(Vector2 angle, float strength, int direction)
@@ -29,7 +30,7 @@ public class Combat : CoreComponent, IDamageable, IKnockbackable
 
     private void CheckKnockback()
     {
-        if(isKnockbackActive && core.Movement.CurrentVelocity.y <= 0.01f && core.CollisionSenses.Grounded) 
+        if(isKnockbackActive && (core.Movement.CurrentVelocity.y <= 0.01f && core.CollisionSenses.Grounded) || Time.time >= knockbackStartTime + maxKnockbackTime)
         {
             isKnockbackActive = false;
             core.Movement.CanSetVelocity = true;
