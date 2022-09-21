@@ -26,6 +26,8 @@ public class Core : MonoBehaviour
     private CollisionSenses collisionSenses;
     private Combat combat;
 
+    private List<ILogicUpdate> components = new List<ILogicUpdate>();
+
     private void Awake()
     {
         Movement = GetComponentInChildren<Movement>();
@@ -35,7 +37,17 @@ public class Core : MonoBehaviour
 
     public void LogicUpdate()
     {
-        Movement.LogicUpdate();
-        Combat.LogicUpdate();
+        foreach (ILogicUpdate component in components)
+        {
+            component.LogicUpdate();
+        }
     }
+    public void AddComponent(ILogicUpdate component)
+    {
+        if (!component.Contains(component))
+        {
+            components.Add(component);
+        }
+    }
+    
 }

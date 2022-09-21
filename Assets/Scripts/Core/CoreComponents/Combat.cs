@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Combat : CoreComponent, IDamageable, IKnockbackable
 {
+    [SerializeField] private float maxKnockbackTime = 0.2f;
+
     private bool isKnockbackActive;
     private float knockbackStartTime;
 
-    public void LogicUpdate()
+    public override void LogicUpdate()
     {
         CheckKnockback();
     }
