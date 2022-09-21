@@ -44,7 +44,7 @@ public class Core : MonoBehaviour
     }
     public void AddComponent(ILogicUpdate component)
     {
-        if (!component.Contains(component))
+        if (!components.Contains(component))
         {
             components.Add(component);
         }
