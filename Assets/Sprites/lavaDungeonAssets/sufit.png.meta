@@ -193,7 +193,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 9}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -645,6 +645,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sufit_polowa
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fe2bf97e76821489ad4f057f151b67
+      internalID: -1755074369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -661,6 +682,7 @@ TextureImporter:
       sufit_2: 4689586934617548979
       sufit_19: -3387120978394297664
       sufit_12: -5218148300100861321
+      sufit_polowa: -1755074369
       sufit_10: 1693583718855284326
       sufit_8: 7511798803618779939
       sufit_17: -6651763708348143404
