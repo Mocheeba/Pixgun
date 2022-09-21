@@ -20,6 +20,6 @@ MonoBehaviour:
     knockbackAngle: {x: 6, y: 6}
   - attackName: asdsad
     movementSpeed: 1
-    damageAmount: 12
-    knockbackStrenght: 11
+    damageAmount: 22
+    knockbackStrenght: 33
     knockbackAngle: {x: 6, y: 6}
