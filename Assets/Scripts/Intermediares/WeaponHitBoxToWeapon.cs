@@ -13,14 +13,14 @@ public class WeaponHitBoxToWeapon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("OnTriggerEnter 2D");
+        //Debug.Log("OnTriggerEnter 2D");
 
         weapon.AddToDetected(collision);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("OnExit 2D");
+       // Debug.Log("OnExit 2D");
 
         weapon.RemoveFromDetected(collision);
     }

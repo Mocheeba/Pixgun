@@ -16,6 +16,10 @@ MonoBehaviour:
   - attackName: asd
     movementSpeed: 3
     damageAmount: 12
+    knockbackStrenght: 10
+    knockbackAngle: {x: 1, y: 1}
   - attackName: asdsad
     movementSpeed: 2
     damageAmount: 12
+    knockbackStrenght: 10
+    knockbackAngle: {x: 2, y: 2}

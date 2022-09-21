@@ -57,7 +57,7 @@ public class PlayerAttackState : PlayerAbilityState
     {
         this.weapon = weapon;
 
-        weapon.InitializeWeapon(this);
+        weapon.InitializeWeapon(this, core);
     }
 
 

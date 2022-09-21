@@ -59,7 +59,6 @@ public class MeleeAttackState : AttackState
             if(damageable != null)
             {
                 damageable.Damage(stateData.attackDamage);
-                Debug.Log("Melle Attack State");
             }
         }
     }
