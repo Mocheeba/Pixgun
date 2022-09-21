@@ -20,7 +20,7 @@ public class MoveState : State
         base.DoChecks();
 
         isDetectingLedge = core.CollisionSenses.LedgeVertical;
-        isDetectingWall =core.CollisionSenses.WallFront;
+        isDetectingWall = core.CollisionSenses.Wall;
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
     }
 

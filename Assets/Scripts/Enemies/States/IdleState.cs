@@ -48,7 +48,7 @@ public class IdleState : State
 
         core.Movement.SetVelocityX(0f);
 
-        if (Time.time >= startTime + idleTime)
+        if(Time.time >= startTime + idleTime)
         {
             isIdleTimeOver = true;
         }

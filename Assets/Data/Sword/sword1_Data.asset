@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDetails:
   - attackName: asd
-    movementSpeed: 3
+    movementSpeed: 1
     damageAmount: 12
+    knockbackStrenght: 11
+    knockbackAngle: {x: 6, y: 6}
   - attackName: asdsad
-    movementSpeed: 2
+    movementSpeed: 1
     damageAmount: 12
+    knockbackStrenght: 11
+    knockbackAngle: {x: 6, y: 6}

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MeleeAttackState : AttackState
 {
-    protected D_MeleeAttack stateData;    
+    protected D_MeleeAttack stateData;
+
 
     public MeleeAttackState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_MeleeAttack stateData) : base(etity, stateMachine, animBoolName, attackPosition)
     {
@@ -19,6 +20,8 @@ public class MeleeAttackState : AttackState
     public override void Enter()
     {
         base.Enter();
+
+        
     }
 
     public override void Exit()
@@ -41,7 +44,7 @@ public class MeleeAttackState : AttackState
         base.PhysicsUpdate();
     }
 
-    public override void TriggerAttack()
+     public override void TriggerAttack()
     {
         base.TriggerAttack();
 
@@ -57,10 +60,9 @@ public class MeleeAttackState : AttackState
             }
 
             IKnockbackable knockbackable = collider.GetComponent<IKnockbackable>();
-
             if(knockbackable != null)
             {
-                knockbackable.Knockback(stateData.knockbackAngle, stateData.knockbackStrength, core.Movement.FacingDirection);
+                knockbackable.Knockback(stateData.knockbackAngle, stateData.knockbackStrenght, core.Movement.FacingDirection);
             }
         }
     }
