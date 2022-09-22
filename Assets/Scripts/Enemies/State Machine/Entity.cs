@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    public FiniteStateMachine stateMachine;
+    private Movement Movement { get => movement ?? Core.GetCoreComponent(ref movement); }
 
-    public D_Entity entityData;
+	private Movement movement;
+
+	public FiniteStateMachine stateMachine;
+
+	public D_Entity entityData;
 
     public int facingDirection { get; private set; }
-    public Rigidbody2D rb { get; private set; }
+    public Rigidbody2D RB { get; private set; }
     public Animator anim { get; private set; }
     public AnimationToStatemachine atsm { get; private set; }
     public int lastDamageDirection { get; private set; }
@@ -41,7 +45,7 @@ public class Entity : MonoBehaviour
         currentHealth = entityData.maxHealth;
         currentStunResistance = entityData.stunResistance;
 
-        rb = GetComponent<Rigidbody2D>();
+        RB = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         atsm = GetComponent<AnimationToStatemachine>();
 
@@ -53,7 +57,7 @@ public class Entity : MonoBehaviour
         Core.LogicUpdate();
         stateMachine.currentState.LogicUpdate();
 
-        anim.SetFloat("yVelocity", rb.velocity.y);
+        anim.SetFloat("yVelocity", Movement.RB.velocity.y);
 
         if(Time.time >= lastDamageTime + entityData.stunRecoveryTime)
         {
@@ -68,15 +72,15 @@ public class Entity : MonoBehaviour
 
     public virtual void SetVelocity(float velocity)
     {
-        velocityWorkspace.Set(facingDirection * velocity, rb.velocity.y);
-        rb.velocity = velocityWorkspace;
+        velocityWorkspace.Set(facingDirection * velocity, RB.velocity.y);
+        RB.velocity = velocityWorkspace;
     }
 
     public virtual void SetVelocity(float velocity, Vector2 angle, int direction)
     {
         angle.Normalize();
         velocityWorkspace.Set(angle.x * velocity * direction, angle.y * velocity);
-        rb.velocity = velocityWorkspace;
+        RB.velocity = velocityWorkspace;
     }
 
 
@@ -97,8 +101,8 @@ public class Entity : MonoBehaviour
 
     public virtual void DamageHop(float velocity)
     {
-        velocityWorkspace.Set(rb.velocity.x, velocity);
-        rb.velocity = velocityWorkspace;
+        velocityWorkspace.Set(Movement.RB.velocity.x, velocity);
+        RB.velocity = velocityWorkspace;
     }
 
     public virtual void ResetStunResistance()
