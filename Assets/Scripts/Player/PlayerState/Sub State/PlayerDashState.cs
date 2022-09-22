@@ -16,8 +16,6 @@ public class PlayerDashState : PlayerAbilityState
 
     private Vector2 lastAfterimagePosition;
 
-    
-
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -28,10 +26,8 @@ public class PlayerDashState : PlayerAbilityState
 
         CanDash = false;
         player.InputHandler.UseDashInput();
-
         isHolding = true;
         dashDirection = Vector2.right * Movement.FacingDirection;
-
         Time.timeScale = playerData.holdTimeScale;
         startTime = Time.unscaledTime;
 

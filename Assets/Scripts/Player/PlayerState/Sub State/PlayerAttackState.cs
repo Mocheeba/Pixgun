@@ -50,7 +50,7 @@ public class PlayerAttackState : PlayerAbilityState {
 	}
 
 	public void SetPlayerVelocity(float velocity) {
-		Movement.SetVelocityX(velocity * Movement.FacingDirection);
+		Movement?.SetVelocityX(velocity * Movement.FacingDirection);
 
 		velocityToSet = velocity;
 		setVelocity = true;
@@ -70,3 +70,4 @@ public class PlayerAttackState : PlayerAbilityState {
 
 	#endregion
 }
+ 
