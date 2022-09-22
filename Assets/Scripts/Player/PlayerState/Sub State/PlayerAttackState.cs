@@ -28,24 +28,22 @@ public class PlayerAttackState : PlayerAbilityState
         weapon.EnterWeapon();
     }
 
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
+   public override void LogicUpdate() 
+   {
+		base.LogicUpdate();
 
-        xInput = player.InputHandler.NormInputX;
+		xInput = player.InputHandler.NormInputX;
 
-        if (shouldCheckFlip)
-        {
-            core.Movement.CheckIfShouldFlip(xInput);
-        }
-
-        if (setVelocity)
-        {
-            core.Movement.SetVelocityX(velocityToSet * core.Movement.FacingDirection);
-        }
+		if (shouldCheckFlip) {
+			Movement?.CheckIfShouldFlip(xInput);
+		}
 
 
-    }
+		if (setVelocity) {
+			Movement?.SetVelocityX(velocityToSet * Movement.FacingDirection);
+		}
+	}
+
     public override void Exit()
     {
         base.Exit();
