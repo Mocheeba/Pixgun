@@ -2,34 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttackState : PlayerAbilityState
-{
-    private Weapon weapon;
+public class PlayerAttackState : PlayerAbilityState {
+	private Weapon weapon;
 
-    private int xInput;
+	private int xInput;
 
-    private float velocityToSet;
-    private bool setVelocity;
+	private float velocityToSet;
 
-    private bool shouldCheckFlip;
+	private bool setVelocity;
+	private bool shouldCheckFlip;
 
-    public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
-    {
+	public PlayerAttackState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName) {
+	}
 
+	public override void Enter() {
+		base.Enter();
 
-    }
+		setVelocity = false;
 
-    public override void Enter()
-    {
-        base.Enter();
+		weapon.EnterWeapon();
+	}
 
-        setVelocity = false;
+	public override void Exit() {
+		base.Exit();
 
-        weapon.EnterWeapon();
-    }
+		weapon.ExitWeapon();
+	}
 
-   public override void LogicUpdate() 
-   {
+	public override void LogicUpdate() {
 		base.LogicUpdate();
 
 		xInput = player.InputHandler.NormInputX;
@@ -44,43 +44,29 @@ public class PlayerAttackState : PlayerAbilityState
 		}
 	}
 
-    public override void Exit()
-    {
-        base.Exit();
+	public void SetWeapon(Weapon weapon) {
+		this.weapon = weapon;
+		this.weapon.InitializeWeapon(this, core);
+	}
 
-        weapon.ExitWeapon();
-    }
+	public void SetPlayerVelocity(float velocity) {
+		Movement.SetVelocityX(velocity * Movement.FacingDirection);
 
-    public void SetWeapon(Weapon weapon)
-    {
-        this.weapon = weapon;
+		velocityToSet = velocity;
+		setVelocity = true;
+	}
 
-        weapon.InitializeWeapon(this, core);
-    }
+	public void SetFlipCheck(bool value) {
+		shouldCheckFlip = value;
+	}
 
+	#region Animation Triggers
 
-    public void SetPlayerVelocity(float velocity)
-    {
-        core.Movement.SetVelocityX(velocity * core.Movement.FacingDirection);
+	public override void AnimationFinishTrigger() {
+		base.AnimationFinishTrigger();
 
-        velocityToSet = velocity;
-        setVelocity = true;
-    }
+		isAbilityDone = true;
+	}
 
-    #region
-    public override void AnimationFinishTrigger()
-    {
-        base.AnimationFinishTrigger();
-
-        isAbilityDone = true;
-    }
-
-    #endregion
-
-
-    public void SetFlipCheck(bool value)
-    {
-        shouldCheckFlip = value;
-    }
-
+	#endregion
 }
