@@ -17,6 +17,9 @@ public class Health : MonoBehaviour
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRend;
 
+    [Header ("Sound")]
+    [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private AudioClip deadSound;
     private void Update()
      {
         if (Input.GetKeyDown(KeyCode.E))
@@ -37,6 +40,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
+          SoundMenager.instance.PlaySound(hurtSound);
           anim.SetTrigger("hurt");
           StartCoroutine(Invunerability());
           anim.ResetTrigger("hurt");
@@ -45,8 +49,8 @@ public class Health : MonoBehaviour
         {
              if (!dead)
              {
+                 SoundMenager.instance.PlaySound(deadSound);
                  anim.SetTrigger("die");
-                 
                  dead = true;
                  
 

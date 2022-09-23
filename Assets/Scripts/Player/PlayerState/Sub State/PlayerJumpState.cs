@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerJumpState : PlayerAbilityState
 {
+    [SerializeField] private AudioClip jumpSound;
     public int amountOfJumpsLeft;
     public PlayerJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -13,6 +14,8 @@ public class PlayerJumpState : PlayerAbilityState
     public override void Enter()
     {
         base.Enter();
+        SoundMenager.instance.PlaySound(playerData.jumpSound);
+
         player.InputHandler.UseJumpInput();
         Movement?.SetVelocityY(playerData.jumpVelocity);
         isAbilityDone = true;
