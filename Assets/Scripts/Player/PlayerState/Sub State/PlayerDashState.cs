@@ -35,12 +35,12 @@ public class PlayerDashState : PlayerAbilityState
         startTime = Time.unscaledTime;
 
         player.DashDirectionIndicator.gameObject.SetActive(true); // turn ON indicator 
+
     }
 
     public override void Exit()
     {
         base.Exit();
-        SoundMenager.instance.PlaySound(playerData.dashSound);
         if(Movement?.CurrentVelocity.y > 0)
         {
             Movement?.SetVelocityY(Movement.CurrentVelocity.y * playerData.dashEndYMultiplier);
@@ -58,6 +58,8 @@ public class PlayerDashState : PlayerAbilityState
 
             if (isHolding)
             {
+                //SoundMenager.instance.PlaySound(playerData.dashSound);
+
                 dashDirectionInput = player.InputHandler.DashDirectionInput;
                 //determine directoin, set graphic
                 DashInputStop = player.InputHandler.DashInputStop;
@@ -73,6 +75,8 @@ public class PlayerDashState : PlayerAbilityState
 
                 if (DashInputStop || Time.unscaledTime >= startTime + playerData.maxHoldTime)
                 {
+                    SoundMenager.instance.PlaySound(playerData.dashSound);
+
                     isHolding = false;
                     Time.timeScale = 1f;
                     startTime = Time.time;

@@ -12,6 +12,19 @@ public class SoundMenager : MonoBehaviour
     {
         instance = this;
         source = GetComponent<AudioSource>();
+        DontDestroyOnLoad(gameObject);
+
+        if(instance == null)
+
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        // Destroy duplcate object
+        else if (instance != null && instance != this)
+            Destroy(gameObject);
+
     }
 
     public void PlaySound(AudioClip _sound)

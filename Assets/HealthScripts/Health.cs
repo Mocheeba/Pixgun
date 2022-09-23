@@ -49,6 +49,7 @@ public class Health : MonoBehaviour
         {
              if (!dead)
              {
+                 anim.SetTrigger("idle");
                  SoundMenager.instance.PlaySound(deadSound);
                  anim.SetTrigger("die");
                  dead = true;
@@ -57,9 +58,21 @@ public class Health : MonoBehaviour
              }
         }
     }
+
+    public void Respawn()
+    {
+        dead = false;
+        AddHealth(startingHealth);
+        anim.ResetTrigger("die");
+        anim.Play("idle");
+        StartCoroutine(Invunerability());
+    }
+
      public void AddHealth(float _value)
      {
-         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
+        {
+            currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
+        }
      }
 
     private IEnumerator Invunerability()
