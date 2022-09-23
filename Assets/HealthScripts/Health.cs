@@ -38,7 +38,8 @@ public class Health : MonoBehaviour
         if (currentHealth > 0)
         {
           anim.SetTrigger("hurt");
-            StartCoroutine(Invunerability());
+          StartCoroutine(Invunerability());
+          anim.ResetTrigger("hurt");
         }
         else
         {
@@ -47,6 +48,8 @@ public class Health : MonoBehaviour
                  anim.SetTrigger("die");
                  
                  dead = true;
+                 
+
              }
         }
     }
