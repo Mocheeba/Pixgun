@@ -5,7 +5,6 @@ using Cinemachine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
     private Transform respawnPoint;
     [SerializeField]
     private GameObject player;
@@ -20,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        CVC = GameObject.Find("Player Camera").GetComponent<CinemachineVirtualCamera>();
+        CVC = GameObject.Find("ChixieCamera").GetComponent<CinemachineVirtualCamera>();
     }
 
     private void Update()

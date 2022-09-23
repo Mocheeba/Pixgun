@@ -40,6 +40,6 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  jumpSound: {fileID: 8300000, guid: 23893ff7c1271b149a0aca6d6c453b70, type: 3}
+  jumpSound: {fileID: 8300000, guid: 5ecd6c898e39bd544b1caf9cb80cac3b, type: 3}
   movementSound: {fileID: 8300000, guid: 706e159fba832504a86343005ce66eb8, type: 3}
   dashSound: {fileID: 8300000, guid: b4ec400bf7c0e1b44a1968a31b87e8ec, type: 3}

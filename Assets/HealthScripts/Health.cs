@@ -1,9 +1,12 @@
 using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 
 public class Health : MonoBehaviour
 {
+
+    [SerializeField] GameManager GM;
+
     [Header ("Health")]
     
     [SerializeField] private float startingHealth;
@@ -20,6 +23,10 @@ public class Health : MonoBehaviour
     [Header ("Sound")]
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private AudioClip deadSound;
+
+    private void Start() {
+        
+    }
     private void Update()
      {
         if (Input.GetKeyDown(KeyCode.E))
@@ -33,6 +40,7 @@ public class Health : MonoBehaviour
         anim = GetComponent<Animator>();
         RB = GetComponentInParent<Rigidbody2D>();
         spriteRend = GetComponent<SpriteRenderer>();
+        
     }
     public void TakeDamage(float _damage)
     {
@@ -42,8 +50,8 @@ public class Health : MonoBehaviour
         {
           SoundMenager.instance.PlaySound(hurtSound);
           anim.SetTrigger("hurt");
-          StartCoroutine(Invunerability());
           anim.ResetTrigger("hurt");
+          StartCoroutine(Invunerability());
         }
         else
         {
@@ -51,11 +59,13 @@ public class Health : MonoBehaviour
              {
                  anim.SetTrigger("idle");
                  SoundMenager.instance.PlaySound(deadSound);
+                 Debug.Log("dead");
                  anim.SetTrigger("die");
                  dead = true;
                  
-
-             }
+                 Respawn();
+                 Destroy(gameObject);
+             }   
         }
     }
 
@@ -65,15 +75,12 @@ public class Health : MonoBehaviour
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
         anim.Play("idle");
-        StartCoroutine(Invunerability());
+        //StartCoroutine(Invunerability());
     }
 
      public void AddHealth(float _value)
-     {
-        {
-            currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
-        }
-     }
+     {currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);}
+     
 
     private IEnumerator Invunerability()
     {
