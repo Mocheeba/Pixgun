@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 41cbbfe2fc13f8d408463d2bab224842, type: 2}
+  playerAttackSound: {fileID: 8300000, guid: 20ff76b42c6590d42a4f337df824db24, type: 3}
 --- !u!1 &3189096151793726603
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +801,7 @@ Transform:
   - {fileID: 3394409888814473082}
   - {fileID: 3189096151333191665}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7626560863741769335
 MonoBehaviour:
@@ -1128,6 +1129,8 @@ MonoBehaviour:
   startingHealth: 3
   iFramesDuration: 3
   numberOfFlashes: 3
+  hurtSound: {fileID: 8300000, guid: ae3598977aae4f24a93604cd2a500d1f, type: 3}
+  deadSound: {fileID: 8300000, guid: d845ad3f15db6174eb0618bed3d0c8f5, type: 3}
 --- !u!1 &7626560863820854890
 GameObject:
   m_ObjectHideFlags: 0

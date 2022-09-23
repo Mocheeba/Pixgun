@@ -16,6 +16,8 @@ public class PlayerDashState : PlayerAbilityState
 
     private Vector2 lastAfterimagePosition;
 
+    private AudioClip jumpSound;
+
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -24,6 +26,7 @@ public class PlayerDashState : PlayerAbilityState
     {
         base.Enter();
 
+        
         CanDash = false;
         player.InputHandler.UseDashInput();
         isHolding = true;
@@ -37,7 +40,7 @@ public class PlayerDashState : PlayerAbilityState
     public override void Exit()
     {
         base.Exit();
-
+        SoundMenager.instance.PlaySound(playerData.dashSound);
         if(Movement?.CurrentVelocity.y > 0)
         {
             Movement?.SetVelocityY(Movement.CurrentVelocity.y * playerData.dashEndYMultiplier);
