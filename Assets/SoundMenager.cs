@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SoundMenager : MonoBehaviour
 {
+    [SerializeField] private AudioClip playerAttackSound;
     public static SoundMenager instance {get; private set;} //SoundMenager.instace and call method 
-    private AudioSource source
+    private AudioSource source;
 
     private void Awake()
     {
