@@ -19,11 +19,18 @@ namespace DialogueSystem
         [Header ("Sound")]
         [SerializeField] private AudioClip sound;
 
+        [Header ("Character Image")]
+        [SerializeField] private Sprite characterSprite;
+        [SerializeField] private Image imageHolder;
+
         private void Awake()
         {
             textHolder = GetComponent<Text>();
+            textHolder.text = "";
 
             StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound));
+            imageHolder.sprite = characterSprite;
+            imageHolder.preserveAspect = true;
         }
     }
 }
