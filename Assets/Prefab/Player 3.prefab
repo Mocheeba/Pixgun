@@ -567,7 +567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3394409888814473082
 Transform:
   m_ObjectHideFlags: 0
@@ -778,9 +778,9 @@ GameObject:
   - component: {fileID: 1476713124}
   - component: {fileID: 1476713134}
   - component: {fileID: 1476713156}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Player 3
-  m_TagString: Player
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -797,8 +797,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3189096151322704521}
   - {fileID: 357788094641626309}
+  - {fileID: 3189096151322704521}
   - {fileID: 3394409888814473082}
   - {fileID: 3189096151333191665}
   m_Father: {fileID: 0}
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cf05fd5ff6988488f739c11f6c5af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  afterImagePrefab: {fileID: 3394409888814473084}
+  afterImagePrefab: {fileID: 5101911514305088199, guid: 5de4d148492bfb24f97d99ead99df069, type: 3}
 --- !u!114 &3189096152339162455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1128,9 +1128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875da0456b571f045ab37c638e5a2d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {x: 0, y: 0, z: 0}
-  respawnPoint1: {x: 0, y: 0, z: 0}
-  respawnPoint2: {x: 0, y: 0, z: 0}
+  respawnStart: {fileID: 0}
+  currentRespawn: {fileID: 0}
+  respawnPoint1: {fileID: 0}
+  respawnPoint2: {fileID: 0}
   startingHealth: 3
   iFramesDuration: 3
   numberOfFlashes: 3

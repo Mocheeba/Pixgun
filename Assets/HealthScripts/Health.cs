@@ -27,18 +27,19 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private AudioClip deadSound;
 
-    private void Start() {
-        currentRespawn.position = respawnStart.position;
-    }
+  
     private void Update()
      {
         if (Input.GetKeyDown(KeyCode.T))
         {
             TakeDamage(1);
         }
+
     }
     private void Awake()
     {
+        currentRespawn.position = respawnStart.position;
+
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         RB = GetComponentInParent<Rigidbody2D>();
@@ -86,6 +87,11 @@ public class Health : MonoBehaviour
         {
             Debug.Log("Czekpoint1");
             currentRespawn = collision.transform;
+        }
+        else if(collision.transform.tag == "CheckPoint2")
+        {
+             Debug.Log("Czekpoint2");
+             currentRespawn = collision.transform;
         }
     }
 
