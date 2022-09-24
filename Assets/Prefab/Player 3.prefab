@@ -1129,6 +1129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {x: 0, y: 0, z: 0}
+  respawnPoint1: {x: 0, y: 0, z: 0}
+  respawnPoint2: {x: 0, y: 0, z: 0}
   startingHealth: 3
   iFramesDuration: 3
   numberOfFlashes: 3

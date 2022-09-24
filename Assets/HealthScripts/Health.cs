@@ -4,10 +4,14 @@ using System.Collections.Generic;
 
 public class Health : MonoBehaviour
 {
-    public Vector3 respawnPoint;
-
-     
-
+    //  [Header("CheckPoints Settings")]
+    // [SerializeField] Transform respawnPoint1;
+    // [SerializeField] Transform respawnPoint2;
+    
+    [SerializeField] Vector3 respawnPoint;
+    [SerializeField] Vector3 respawnPoint1;
+    [SerializeField] Vector3 respawnPoint2;
+ 
     [Header ("Health")]
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
@@ -25,7 +29,7 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip deadSound;
 
     private void Start() {
-        respawnPoint = new Vector3(-156.0f, -69.0f, 0.0f);
+        respawnPoint = transform.position;
     }
     private void Update()
      {
@@ -51,26 +55,22 @@ public class Health : MonoBehaviour
           SoundMenager.instance.PlaySound(hurtSound);
           anim.SetTrigger("hurt");
           StartCoroutine(Invunerability());
-
           anim.ResetTrigger("hurt");
         }
         else
         {
              if (!dead)
              {
-                 //SoundMenager.instance.PlaySound(deadSound);
+                 SoundMenager.instance.PlaySound(deadSound);
                  Debug.Log("dead");
                  anim.SetTrigger("die");
                  dead = true;
                  Respawn();
-
              }   
         }
     }
-
     public void Respawn()
     {   
-
         dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
@@ -80,18 +80,7 @@ public class Health : MonoBehaviour
         Debug.Log("Obecny checkpoint = " + respawnPoint );
     }
 
-    
-
-    private void OnTriggerEnter2D(Collider2D collision)
-   {
-    if(collision.tag == "CheckPointTwo")
-        Debug.Log("Found a Checkpoint on Player Scripts");
-        respawnPoint = new Vector3(-213.0f, -68.0f, 8.0f);
-        
-        // Play changing animation
-        // Play Sound
-        // deactivate checkpoint
-   }
+  
 
        private IEnumerator Invunerability()
     {
