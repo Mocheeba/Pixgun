@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
     }
     private void Update()
      {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             TakeDamage(1);
         }
@@ -74,8 +74,8 @@ public class Health : MonoBehaviour
         dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
-        anim.Play("idle");
-        //StartCoroutine(Invunerability());
+        StartCoroutine(Invunerability());
+        // 
     }
 
      public void AddHealth(float _value)
