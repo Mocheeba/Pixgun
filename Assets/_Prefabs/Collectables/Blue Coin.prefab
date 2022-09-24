@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4651779305815315265}
   m_Layer: 0
   m_Name: Blue Coin
-  m_TagString: Untagged
+  m_TagString: Coins
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1141940335
-  m_SortingLayer: 16
+  m_SortingLayer: 18
   m_SortingOrder: 0
   m_Sprite: {fileID: -686203429, guid: d2fe74d4c6ead3c4f8520508ab3fcc05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
