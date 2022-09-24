@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Health : MonoBehaviour
 {
-
+    [SerializeField] Vector3 respawnPoint;
     [SerializeField] GameManager GM;
 
     [Header ("Health")]
@@ -25,6 +25,7 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip deadSound;
 
     private void Start() {
+        respawnPoint = transform.position;
         
     }
     private void Update()
@@ -50,32 +51,34 @@ public class Health : MonoBehaviour
         {
           SoundMenager.instance.PlaySound(hurtSound);
           anim.SetTrigger("hurt");
-          anim.ResetTrigger("hurt");
           StartCoroutine(Invunerability());
+
+          anim.ResetTrigger("hurt");
         }
         else
         {
              if (!dead)
              {
-                 anim.SetTrigger("idle");
-                 SoundMenager.instance.PlaySound(deadSound);
+                 //SoundMenager.instance.PlaySound(deadSound);
                  Debug.Log("dead");
                  anim.SetTrigger("die");
                  dead = true;
-                 
                  Respawn();
-                 Destroy(gameObject);
+
              }   
         }
     }
 
     public void Respawn()
-    {
+    {   
+
         dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
         StartCoroutine(Invunerability());
-        // 
+        transform.position = respawnPoint;
+
+        Debug.Log("Obecny checkpoint = " + respawnPoint );
     }
 
      public void AddHealth(float _value)
@@ -94,4 +97,15 @@ public class Health : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(7, 8, false);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+   {
+    if(collision.tag == "CheckPoint")
+        Debug.Log("Found a Checkpoint on Player Scripts");
+       // respawnPoint = collision.transform;
+        
+        // Play changing animation
+        // Play Sound
+        // deactivate checkpoint
+   }
 }
