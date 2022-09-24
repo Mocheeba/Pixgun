@@ -543,7 +543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3189096152414033610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.036, z: 0}
+  m_LocalPosition: {x: -0, y: 0.048, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -750,7 +750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7626560863455626822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.587, z: 0}
+  m_LocalPosition: {x: 0, y: 0.567, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -777,7 +777,6 @@ GameObject:
   - component: {fileID: 3189096152339162455}
   - component: {fileID: 1476713124}
   - component: {fileID: 1476713134}
-  - component: {fileID: 1476713145}
   - component: {fileID: 1476713156}
   m_Layer: 7
   m_Name: Player 3
@@ -803,7 +802,7 @@ Transform:
   - {fileID: 3394409888814473082}
   - {fileID: 3189096151333191665}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7626560863741769335
 MonoBehaviour:
@@ -1115,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dedffb83d9d51684ca602ed88a47bf86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tpSound: {fileID: 8300000, guid: fc5ea59ee535b874fb96ac7d13c23d52, type: 3}
   currentTeleporter: {fileID: 0}
 --- !u!114 &1476713134
 MonoBehaviour:
@@ -1128,24 +1128,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875da0456b571f045ab37c638e5a2d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GM: {fileID: 0}
+  respawnPoint: {x: 0, y: 0, z: 0}
   startingHealth: 3
   iFramesDuration: 3
   numberOfFlashes: 3
   hurtSound: {fileID: 8300000, guid: ae3598977aae4f24a93604cd2a500d1f, type: 3}
   deadSound: {fileID: 8300000, guid: d845ad3f15db6174eb0618bed3d0c8f5, type: 3}
---- !u!114 &1476713145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7626560863741769334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3acc1b19916e19448006e5c4ec2ecb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1476713156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1158,7 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e46b17953fb10c048a63915f52e701f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPickupSound: {fileID: 8300000, guid: 0170ac8a992de094cb052e42551df1dd, type: 3}
+  coinPickupSound: {fileID: 8300000, guid: 90c9a95a633d88341aac17b28f803897, type: 3}
   coins: 0
   coinsCount: {fileID: 0}
 --- !u!1 &7626560863820854890

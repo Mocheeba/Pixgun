@@ -8,6 +8,7 @@ public class PlayerTeleportation : MonoBehaviour
     [SerializeField] private AudioClip tpSound;
     
     [SerializeField] GameObject currentTeleporter;
+    
     private GameObject teleportSound;
     // Start is called before the first frame update
 

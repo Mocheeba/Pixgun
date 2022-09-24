@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] Vector3 respawnPoint;
-    [SerializeField] GameManager GM;
+    public Vector3 respawnPoint;
+
+     
 
     [Header ("Health")]
-    
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
     private Animator anim;
@@ -25,8 +25,7 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip deadSound;
 
     private void Start() {
-        respawnPoint = transform.position;
-        
+        respawnPoint = new Vector3(-156.0f, -69.0f, 0.0f);
     }
     private void Update()
      {
@@ -81,11 +80,20 @@ public class Health : MonoBehaviour
         Debug.Log("Obecny checkpoint = " + respawnPoint );
     }
 
-     public void AddHealth(float _value)
-     {currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);}
-     
+    
 
-    private IEnumerator Invunerability()
+    private void OnTriggerEnter2D(Collider2D collision)
+   {
+    if(collision.tag == "CheckPointTwo")
+        Debug.Log("Found a Checkpoint on Player Scripts");
+        respawnPoint = new Vector3(-213.0f, -68.0f, 8.0f);
+        
+        // Play changing animation
+        // Play Sound
+        // deactivate checkpoint
+   }
+
+       private IEnumerator Invunerability()
     {
         Physics2D.IgnoreLayerCollision(7, 8, true);
         for (int i = 0; i < numberOfFlashes; i++)
@@ -98,14 +106,7 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 8, false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-   {
-    if(collision.tag == "CheckPoint")
-        Debug.Log("Found a Checkpoint on Player Scripts");
-       // respawnPoint = collision.transform;
-        
-        // Play changing animation
-        // Play Sound
-        // deactivate checkpoint
-   }
+     public void AddHealth(float _value)
+     {currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);}
+     
 }

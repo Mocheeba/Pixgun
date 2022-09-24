@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class CheckPoints : MonoBehaviour
 {
-   /// <summary>
-   /// Sent when another object enters a trigger collider attached to this
-   /// object (2D physics only).
-   /// </summary>
-   /// <param name="other">The other Collider2D involved in this collision.</param>
+
+    [SerializeField] private AudioClip checkPointActiveSound;
+
+   private Animator anim;
+   private Collider2D collider;
+
+
+private void Start() {
+    anim = GetComponent<Animator>();
+    collider = GetComponent<Collider2D>();
+
+}
    private void OnTriggerEnter2D(Collider2D collision)
    {
     if(collision.tag == "Player")
         Debug.Log("Found a PLAYER on CheckPoints Scripts");
-        // Play changing animation
-        // Play Sound
-        // deactivate checkpoint
+        anim.SetTrigger("appear");
+        SoundMenager.instance.PlaySound(checkPointActiveSound);
+        collider.enabled = false;
    }
 }
