@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        CVC = GameObject.Find("ChixieCamera").GetComponent<CinemachineVirtualCamera>();
+        CVC = GameObject.Find("Chixie Camera").GetComponent<CinemachineVirtualCamera>();
     }
 
     private void Update()

@@ -59,4 +59,8 @@ public class PlayerData : ScriptableObject
 
     [SerializeField] public AudioClip dashSound;
 
+    [SerializeField] public AudioClip playerWallJumpSound;
+    //[SerializeField] public AudioClip ;
+
+
 }

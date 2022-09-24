@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 41cbbfe2fc13f8d408463d2bab224842, type: 2}
-  playerAttackSound: {fileID: 8300000, guid: 20ff76b42c6590d42a4f337df824db24, type: 3}
+  playerAttackSound: {fileID: 8300000, guid: ea5be01050cc4d84fbc337f9faaed25a, type: 3}
 --- !u!1 &3189096151793726603
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +778,7 @@ GameObject:
   - component: {fileID: 1476713124}
   - component: {fileID: 1476713134}
   - component: {fileID: 1476713145}
+  - component: {fileID: 1476713156}
   m_Layer: 7
   m_Name: Player 3
   m_TagString: Player
@@ -802,7 +803,7 @@ Transform:
   - {fileID: 3394409888814473082}
   - {fileID: 3189096151333191665}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7626560863741769335
 MonoBehaviour:
@@ -1127,6 +1128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875da0456b571f045ab37c638e5a2d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GM: {fileID: 0}
   startingHealth: 3
   iFramesDuration: 3
   numberOfFlashes: 3
@@ -1144,6 +1146,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3acc1b19916e19448006e5c4ec2ecb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1476713156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626560863741769334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46b17953fb10c048a63915f52e701f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPickupSound: {fileID: 8300000, guid: 0170ac8a992de094cb052e42551df1dd, type: 3}
+  coins: 0
+  coinsCount: {fileID: 0}
 --- !u!1 &7626560863820854890
 GameObject:
   m_ObjectHideFlags: 0

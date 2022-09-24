@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class CoinPlayer : CoreComponent
 {
+
+    [SerializeField] private AudioClip coinPickupSound;
     public int coins;
     public Text coinsCount;
     public Rigidbody2D RB { get; private set; }
@@ -25,6 +27,7 @@ public class CoinPlayer : CoreComponent
    {
         if(other.CompareTag("Coins"))
         {
+            SoundMenager.instance.PlaySound(coinPickupSound);
             Debug.Log("Coins");
             coins++;
             Destroy(other.gameObject);
