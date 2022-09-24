@@ -4,13 +4,12 @@ using System.Collections.Generic;
 
 public class Health : MonoBehaviour
 {
-    //  [Header("CheckPoints Settings")]
-    // [SerializeField] Transform respawnPoint1;
-    // [SerializeField] Transform respawnPoint2;
+     [Header("CheckPoints Settings")]
+     [SerializeField] Transform respawnStart;
+     [SerializeField] Transform currentRespawn;
+     [SerializeField] Transform respawnPoint1;
+     [SerializeField] Transform respawnPoint2;
     
-    [SerializeField] Vector3 respawnPoint;
-    [SerializeField] Vector3 respawnPoint1;
-    [SerializeField] Vector3 respawnPoint2;
  
     [Header ("Health")]
     [SerializeField] private float startingHealth;
@@ -29,7 +28,7 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip deadSound;
 
     private void Start() {
-        respawnPoint = transform.position;
+        currentRespawn.position = respawnStart.position;
     }
     private void Update()
      {
@@ -75,12 +74,20 @@ public class Health : MonoBehaviour
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
         StartCoroutine(Invunerability());
-        transform.position = respawnPoint;
+        transform.position = currentRespawn.position;
+        
 
-        Debug.Log("Obecny checkpoint = " + respawnPoint );
+        Debug.Log("Obecny checkpoint = " + currentRespawn);
     }
 
-  
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.tag == "CheckPoint")
+        {
+            Debug.Log("Czekpoint1");
+            currentRespawn = collision.transform;
+        }
+    }
 
        private IEnumerator Invunerability()
     {
