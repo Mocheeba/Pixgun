@@ -9,8 +9,9 @@ public class Health : MonoBehaviour
      [SerializeField] Transform currentRespawn;
      [SerializeField] Transform respawnPoint1;
      [SerializeField] Transform respawnPoint2;
-    
- 
+     [SerializeField] Transform respawnPoint3;
+
+
     [Header ("Health")]
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
