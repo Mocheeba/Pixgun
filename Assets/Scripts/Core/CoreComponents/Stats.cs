@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Stats : CoreComponent
-{
+{   
+
     [SerializeField] private float maxHealth;
+
+    public GameObject myPrefab;
+
     private float currentHealth;
 
     protected override void Awake()
@@ -21,7 +25,9 @@ public class Stats : CoreComponent
         if(currentHealth <= 0)
         {
             currentHealth = 0;
+            Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             Debug.Log("Health is zero!!");
+
         }
     }
 

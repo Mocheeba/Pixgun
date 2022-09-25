@@ -62,6 +62,7 @@ public class MeleeAttackState : AttackState
             if(damageable != null)
             {
                 damageable.Damage(stateData.attackDamage);
+                // tutaj?
             }
 
             IKnockbackable knockbackable = collider.GetComponent<IKnockbackable>();

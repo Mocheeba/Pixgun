@@ -3,17 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Health : MonoBehaviour
-{
+{      
+    #region Checkpoints
      [Header("CheckPoints Settings")]
      [SerializeField] Transform respawnStart;
      [SerializeField] Transform currentRespawn;
      [SerializeField] Transform respawnPoint1;
      [SerializeField] Transform respawnPoint2;
-    
+
+     [SerializeField] Transform respawnPoint3;
+
+     [SerializeField] Transform respawnPoint4;
+   #endregion 
  
     [Header ("Health")]
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
+
     private Animator anim;
     public Rigidbody2D RB { get; private set; }
     private bool dead;
@@ -65,10 +71,13 @@ public class Health : MonoBehaviour
                  Debug.Log("dead");
                  anim.SetTrigger("die");
                  dead = true;
+                 //Invoke("Respawn", 1.0f);
                  Respawn();
              }   
         }
     }
+
+    
     public void Respawn()
     {   
         dead = false;
