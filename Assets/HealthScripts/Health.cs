@@ -102,11 +102,27 @@ public class Health : MonoBehaviour
              Debug.Log("Czekpoint2");
              currentRespawn = collision.transform;
         }
+
+        //  else if(collision.transform.tag == "Enemy")
+        //  {
+              
+              
+        //  }
     }
 
-       private IEnumerator Invunerability()
+ 
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.transform.tag == "Enemy");
+    //     {
+    //           Debug.Log("Spider");
+    //           TakeDamage(1);
+    //     }
+    // }
+
+    private IEnumerator Invunerability()
     {
-        Physics2D.IgnoreLayerCollision(7, 8, true);
+        Physics2D.IgnoreLayerCollision(7, 9, true);
         for (int i = 0; i < numberOfFlashes; i++)
         {
             spriteRend.color = new Color(1, 0, 0, 0.5f);
@@ -114,7 +130,7 @@ public class Health : MonoBehaviour
             spriteRend.color = Color.white;
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
-        Physics2D.IgnoreLayerCollision(7, 8, false);
+        Physics2D.IgnoreLayerCollision(7, 9, false);
     }
 
      public void AddHealth(float _value)

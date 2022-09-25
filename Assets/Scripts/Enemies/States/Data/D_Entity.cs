@@ -5,6 +5,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newEntityData", menuName = "Data/Entity Data/Base Data")]
 public class D_Entity : ScriptableObject
 {
+    [Header("SoundsClip")]
+    [SerializeField] public AudioClip spiderAttackSound;
+    [SerializeField] public AudioClip movementSound;
+
+    [SerializeField] public AudioClip dashSound;
+
+    [SerializeField] public AudioClip attackSound;
+
+    [SerializeField] public AudioClip lookingForplayer;
+
     public float maxHealth = 30f;
 
     public float damageHopSpeed = 3f;

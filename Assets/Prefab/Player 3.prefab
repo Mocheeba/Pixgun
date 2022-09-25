@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 3189096151003356437}
   m_Layer: 7
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 3189096151522948712}
   m_Layer: 7
   m_Name: Base
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,6 +695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  myPrefab: {fileID: 0}
 --- !u!1 &7626560863215255065
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +781,7 @@ GameObject:
   - component: {fileID: 1476713156}
   m_Layer: 13
   m_Name: Player 3
-  m_TagString: CheckPoint
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,6 +1133,8 @@ MonoBehaviour:
   currentRespawn: {fileID: 0}
   respawnPoint1: {fileID: 0}
   respawnPoint2: {fileID: 0}
+  respawnPoint3: {fileID: 0}
+  respawnPoint4: {fileID: 0}
   startingHealth: 3
   iFramesDuration: 3
   numberOfFlashes: 3
