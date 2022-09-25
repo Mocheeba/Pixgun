@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15f2f027c8402b4fbfd37a692a28db4, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
-  movementVelocity: 5.5
+  movementVelocity: 5.3
   jumpVelocity: 16
   amountOfJumps: 1
-  wallJumpVelocity: 15
-  wallJumpTime: 0.2
-  wallJumpAngle: {x: 1, y: 2}
-  coyoteTime: 0.2
-  variableJumpHeightMultiplier: 0.6
-  wallSlideVelocity: 2
-  wallClimbVelocity: 7
+  wallJumpVelocity: 16
+  wallJumpTime: 0.1
+  wallJumpAngle: {x: 1.1, y: 2.1}
+  coyoteTime: 0.3
+  variableJumpHeightMultiplier: 0.7
+  wallSlideVelocity: 1.4
+  wallClimbVelocity: 3
   startOffSet: {x: 0.4, y: 0.58}
   stopOffSet: {x: 0.26, y: 0.55}
   dashCooldown: 0.5
@@ -40,6 +40,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  jumpSound: {fileID: 8300000, guid: 5ecd6c898e39bd544b1caf9cb80cac3b, type: 3}
-  movementSound: {fileID: 8300000, guid: 706e159fba832504a86343005ce66eb8, type: 3}
+  jumpSound: {fileID: 8300000, guid: fc3eedee1e7a9d54399c7b8de2212067, type: 3}
+  movementSound: {fileID: 0}
   dashSound: {fileID: 8300000, guid: b4ec400bf7c0e1b44a1968a31b87e8ec, type: 3}
+  playerWallJumpSound: {fileID: 8300000, guid: e7fcf663ef0e8fc4fa658621b58c53bd, type: 3}
+  playerMovementSound: {fileID: 8300000, guid: 706e159fba832504a86343005ce66eb8, type: 3}

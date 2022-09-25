@@ -31,7 +31,7 @@ public class CoinPlayer : CoreComponent
             Debug.Log("Coins");
             coins++;
             Destroy(other.gameObject);
-            coinsCount.text = "Coins :" + coins.ToString();
+            coinsCount.text = "" + coins.ToString();
         }
    }
 

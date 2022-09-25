@@ -4,11 +4,14 @@ using System.Collections.Generic;
 
 public class Health : MonoBehaviour
 {
-
-    [SerializeField] GameManager GM;
-
-    [Header ("Health")]
+     [Header("CheckPoints Settings")]
+     [SerializeField] Transform respawnStart;
+     [SerializeField] Transform currentRespawn;
+     [SerializeField] Transform respawnPoint1;
+     [SerializeField] Transform respawnPoint2;
     
+ 
+    [Header ("Health")]
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
     private Animator anim;
@@ -24,18 +27,19 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private AudioClip deadSound;
 
-    private void Start() {
-        
-    }
+  
     private void Update()
      {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             TakeDamage(1);
         }
+
     }
     private void Awake()
     {
+        currentRespawn.position = respawnStart.position;
+
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
         RB = GetComponentInParent<Rigidbody2D>();
@@ -50,39 +54,48 @@ public class Health : MonoBehaviour
         {
           SoundMenager.instance.PlaySound(hurtSound);
           anim.SetTrigger("hurt");
-          anim.ResetTrigger("hurt");
           StartCoroutine(Invunerability());
+          anim.ResetTrigger("hurt");
         }
         else
         {
              if (!dead)
              {
-                 anim.SetTrigger("idle");
                  SoundMenager.instance.PlaySound(deadSound);
                  Debug.Log("dead");
                  anim.SetTrigger("die");
                  dead = true;
-                 
                  Respawn();
-                 Destroy(gameObject);
              }   
         }
     }
-
     public void Respawn()
-    {
+    {   
         dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
-        anim.Play("idle");
-        //StartCoroutine(Invunerability());
+        StartCoroutine(Invunerability());
+        transform.position = currentRespawn.position;
+        
+
+        Debug.Log("Obecny checkpoint = " + currentRespawn);
     }
 
-     public void AddHealth(float _value)
-     {currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);}
-     
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.transform.tag == "CheckPoint")
+        {
+            Debug.Log("Czekpoint1");
+            currentRespawn = collision.transform;
+        }
+        else if(collision.transform.tag == "CheckPoint2")
+        {
+             Debug.Log("Czekpoint2");
+             currentRespawn = collision.transform;
+        }
+    }
 
-    private IEnumerator Invunerability()
+       private IEnumerator Invunerability()
     {
         Physics2D.IgnoreLayerCollision(7, 8, true);
         for (int i = 0; i < numberOfFlashes; i++)
@@ -94,4 +107,8 @@ public class Health : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(7, 8, false);
     }
+
+     public void AddHealth(float _value)
+     {currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);}
+     
 }

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6736329570915830424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -180.64, y: -9.12, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthValue: 1
-  heartPickup: {fileID: 8300000, guid: 09838d9c41b779246ad9ff040273a6db, type: 3}
+  heartPickup: {fileID: 8300000, guid: daf9f57d990bb6f43bf54b6133dde897, type: 3}
 --- !u!61 &6736329570915830428
 BoxCollider2D:
   m_ObjectHideFlags: 0
