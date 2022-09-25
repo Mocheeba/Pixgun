@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerWallJumpState : PlayerAbilityState
 {
+
+    [SerializeField] private AudioClip playerWallJumpSound;
     private int wallJumpDirection;
     public PlayerWallJumpState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -11,6 +13,9 @@ public class PlayerWallJumpState : PlayerAbilityState
 
     public override void Enter()
     {
+
+        SoundMenager.instance.PlaySound(playerData.playerWallJumpSound);
+
         base.Enter();
         player.InputHandler.UseJumpInput();
         player.JumpState.ResetAmountOfJumpsLeft();

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerMoveState : PlayerGroundedState
 {
+
+    [SerializeField] private AudioClip playerMovementSound;
+    
+    
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -15,6 +19,8 @@ public class PlayerMoveState : PlayerGroundedState
 
     public override void Enter()
     {
+        SoundMenager.instance.PlaySound(playerData.playerMovementSound);
+
         base.Enter();
     }
 

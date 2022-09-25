@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttackState : PlayerAbilityState {
+
+	//[SerializeField] private AudioClip playerAttackSound;
 	private Weapon weapon;
 
 	private int xInput;
@@ -17,6 +19,8 @@ public class PlayerAttackState : PlayerAbilityState {
 
 	public override void Enter() {
 		base.Enter();
+
+		//SoundMenager.instance.PlaySound(playerAttackSound);
 
 		setVelocity = false;
 

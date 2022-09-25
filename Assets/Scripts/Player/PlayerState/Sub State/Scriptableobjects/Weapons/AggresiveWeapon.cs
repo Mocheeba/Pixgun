@@ -4,7 +4,10 @@ using UnityEngine;
 using System.Linq;
 
 public class AggresiveWeapon : Weapon
+
 {
+
+    [SerializeField] private AudioClip playerAttackSound;
     private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
 
 	private Movement movement;
@@ -16,6 +19,7 @@ public class AggresiveWeapon : Weapon
     protected override void Awake()
     {
         base.Awake();
+
 
         if (weaponData.GetType() == typeof(SO_AggresiveWeaponData))
         {
@@ -29,6 +33,8 @@ public class AggresiveWeapon : Weapon
 
     public override void AnimationActionTrigger()
     {
+        SoundMenager.instance.PlaySound(playerAttackSound);
+
         base.AnimationActionTrigger();
 
         CheckMeleeAttack();

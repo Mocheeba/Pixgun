@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerTeleportation : MonoBehaviour
 {
+    [Header("SFX")]
+    [SerializeField] private AudioClip tpSound;
+    
     [SerializeField] GameObject currentTeleporter;
+    
     private GameObject teleportSound;
     // Start is called before the first frame update
 
@@ -15,7 +19,7 @@ public class PlayerTeleportation : MonoBehaviour
         {
             if (currentTeleporter != null)
             {
-               // teleportSound.Play();
+                SoundMenager.instance.PlaySound(tpSound);
                 transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
 
             }

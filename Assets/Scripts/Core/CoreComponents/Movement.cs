@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Movement : CoreComponent
 {
+
     public Rigidbody2D RB { get; private set; }
 
     public int FacingDirection { get; private set; }
@@ -25,6 +26,8 @@ public class Movement : CoreComponent
         CanSetVelocity = true;
 
     }
+
+  
 
     public override void LogicUpdate()
     {

@@ -16,6 +16,8 @@ public class PlayerDashState : PlayerAbilityState
 
     private Vector2 lastAfterimagePosition;
 
+    private AudioClip jumpSound;
+
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -24,6 +26,7 @@ public class PlayerDashState : PlayerAbilityState
     {
         base.Enter();
 
+        
         CanDash = false;
         player.InputHandler.UseDashInput();
         isHolding = true;
@@ -32,12 +35,12 @@ public class PlayerDashState : PlayerAbilityState
         startTime = Time.unscaledTime;
 
         player.DashDirectionIndicator.gameObject.SetActive(true); // turn ON indicator 
+
     }
 
     public override void Exit()
     {
         base.Exit();
-
         if(Movement?.CurrentVelocity.y > 0)
         {
             Movement?.SetVelocityY(Movement.CurrentVelocity.y * playerData.dashEndYMultiplier);
@@ -55,6 +58,8 @@ public class PlayerDashState : PlayerAbilityState
 
             if (isHolding)
             {
+                //SoundMenager.instance.PlaySound(playerData.dashSound);
+
                 dashDirectionInput = player.InputHandler.DashDirectionInput;
                 //determine directoin, set graphic
                 DashInputStop = player.InputHandler.DashInputStop;
@@ -70,6 +75,8 @@ public class PlayerDashState : PlayerAbilityState
 
                 if (DashInputStop || Time.unscaledTime >= startTime + playerData.maxHoldTime)
                 {
+                    SoundMenager.instance.PlaySound(playerData.dashSound);
+
                     isHolding = false;
                     Time.timeScale = 1f;
                     startTime = Time.time;

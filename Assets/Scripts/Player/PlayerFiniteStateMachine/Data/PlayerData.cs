@@ -53,5 +53,15 @@ public class PlayerData : ScriptableObject
     public float WallCheckDistance = 0.5f;
     public LayerMask whatIsGround;
 
-    
+    [Header("SoundsClip")]
+    [SerializeField] public AudioClip jumpSound;
+    [SerializeField] public AudioClip movementSound;
+
+    [SerializeField] public AudioClip dashSound;
+
+    [SerializeField] public AudioClip playerWallJumpSound;
+
+    [SerializeField] public AudioClip playerMovementSound;
+
+
 }
