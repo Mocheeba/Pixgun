@@ -30,8 +30,8 @@ namespace DialogueSystem
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                Deactivate();
-                gameObject.SetActive = false;
+               // Deactivate();
+               // gameObject.SetActive = false;
             }
 
             else if (Input.GetMouseButtonDown(0))
