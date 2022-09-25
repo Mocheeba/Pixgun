@@ -17,7 +17,6 @@ namespace DialogueSystem
         [SerializeField] private float delay;
         [SerializeField] private float delayBetweenLines;
 
-
         [Header ("Sound")]
         [SerializeField] private AudioClip sound;
 
@@ -25,8 +24,28 @@ namespace DialogueSystem
         [SerializeField] private Sprite characterSprite;
         [SerializeField] private Image imageHolder;
 
-
+        private IEnumerator lineApear;
         
+        private void Update()
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Deactivate();
+                gameObject.SetActive = false;
+            }
+
+            else if (Input.GetMouseButtonDown(0))
+            {
+                if (textHolder.text != input)
+                {
+                    StartCoroutine(lineApear);
+                    textHolder.text = input;
+                }
+                else
+                    finished = true;
+            }
+        }
+
 
         private void Awake()
         {
@@ -38,7 +57,8 @@ namespace DialogueSystem
         }
 
         private void Start() {
-            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound, delayBetweenLines));
+            lineApear = WriteText(input, textHolder, textColor, textFont, delay, sound, delayBetweenLines);
+            StartCoroutine(lineApear);
         }
     }
 }

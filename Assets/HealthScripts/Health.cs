@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Health : MonoBehaviour
 {      
+
+    private NPC_Controller npc;
     #region Checkpoints
      [Header("CheckPoints Settings")]
      [SerializeField] Transform respawnStart;
@@ -42,6 +44,11 @@ public class Health : MonoBehaviour
             TakeDamage(1);
         }
 
+        if (inDialogue())
+        {  
+
+        }
+    
     }
     private void Awake()
     {
@@ -53,6 +60,16 @@ public class Health : MonoBehaviour
         spriteRend = GetComponent<SpriteRenderer>();
         
     }
+
+
+    private bool inDialogue()
+    {
+        if(npc != null)
+            return npc.ActiveDialogue();
+        else
+            return false;
+    }
+
     public void TakeDamage(float _damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
@@ -117,9 +134,17 @@ public class Health : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cat")
         {
+            npc = collision.gameObject.GetComponent<NPC_Controller>();
+
             if(Input.GetKey(KeyCode.G))
-                collision.gameObject.GetComponent<NPC_Controller>().ActiveDialogue();
+                npc.ActiveDialogue();
         }
+    }
+
+   
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        npc = null;
     }
 
  

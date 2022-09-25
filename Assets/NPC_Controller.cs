@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPC_Controller : MonoBehaviour
 {
-    private GameObject dialogue;
+    [SerializeField] private GameObject dialogue;
     //public DialogueTrigger trigger;
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -12,6 +12,7 @@ public class NPC_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") == true)
         {
             dialogue.SetActive(true);
+            Debug.Log("NPC DIALOG START");
             
         }
     }

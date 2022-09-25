@@ -519,6 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0118b0ab0bacef242b608af6421fc785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpiderSound: {fileID: 0}
 --- !u!1 &3189096152414033610
 GameObject:
   m_ObjectHideFlags: 0
