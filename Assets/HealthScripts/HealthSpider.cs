@@ -61,7 +61,7 @@ public class HealthSpider : MonoBehaviour
                  anim.SetTrigger("dead");
                  dead = true;
                  Instantiate(coinPrefab, transform.position, transform.rotation); 
-                 Destroy(gameObject);
+                 Destroy(gameObject, 2);
              }   
         }
         

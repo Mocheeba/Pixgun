@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
      [SerializeField] Transform respawnPoint4;
    #endregion 
  
+
     [Header ("Health")]
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
@@ -103,11 +104,22 @@ public class Health : MonoBehaviour
              currentRespawn = collision.transform;
         }
 
-        //  else if(collision.transform.tag == "Enemy")
-        //  {
+        //   else if(collision.gameObject.name == "CAT")
+        //   {
+        //       if(Input.GetKeyDown(KeyCode.R))
+        //         collision.gameObject.GetComponent<NPC_Controller>().ActiveDialogue();
               
-              
-        //  }
+        //   }
+    }
+
+    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Cat")
+        {
+            if(Input.GetKey(KeyCode.G))
+                collision.gameObject.GetComponent<NPC_Controller>().ActiveDialogue();
+        }
     }
 
  
@@ -119,6 +131,17 @@ public class Health : MonoBehaviour
     //           TakeDamage(1);
     //     }
     // }
+
+    // private void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.GameObject.tag == "CAT");
+    //     {
+    //           if(Input.GetKeyDown(KeyCode.E))
+    //             collision.gameObject.GetComponent<NPC_Controller>().active = true;
+    //     }
+    // }
+
+
 
     private IEnumerator Invunerability()
     {

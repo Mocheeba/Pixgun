@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class E1_MeleeAttackState : MeleeAttackState
 {
+    [SerializeField] private AudioClip jumpSound;
     private Enemy1 enemy;
 
     public E1_MeleeAttackState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_MeleeAttack stateData, Enemy1 enemy) : base(etity, stateMachine, animBoolName, attackPosition, stateData)
