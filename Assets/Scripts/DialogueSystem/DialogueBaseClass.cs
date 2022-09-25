@@ -6,7 +6,9 @@ namespace DialogueSystem
 {
     public class DialogueBaseClass : MonoBehaviour
     {
-        protected IEnumerator WriteText(string input, Text textHolder, Color textColor, Font textFont, float delay, AudioClip sound)
+        public bool finished { get; private set; }
+    
+        protected IEnumerator WriteText(string input, Text textHolder, Color textColor, Font textFont, float delay, AudioClip sound, float dalayBetweenLines)
         {
             textHolder.color = textColor;
             textHolder.font = textFont;
@@ -17,8 +19,9 @@ namespace DialogueSystem
                 SoundMenager.instance.PlaySound(sound);
                 yield return new WaitForSeconds(delay);
             }
+
+            yield return new WaitUntil(() => Input.GetMouseButton(0));
+            finished = true;
         }
     }
 }
-
-

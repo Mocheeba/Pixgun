@@ -15,6 +15,8 @@ namespace DialogueSystem
 
         [Header ("Time Parameters")]
         [SerializeField] private float delay;
+        [SerializeField] private float delayBetweenLines;
+
 
         [Header ("Sound")]
         [SerializeField] private AudioClip sound;
@@ -23,14 +25,20 @@ namespace DialogueSystem
         [SerializeField] private Sprite characterSprite;
         [SerializeField] private Image imageHolder;
 
+
+        
+
         private void Awake()
         {
             textHolder = GetComponent<Text>();
             textHolder.text = "";
 
-            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound));
             imageHolder.sprite = characterSprite;
             imageHolder.preserveAspect = true;
+        }
+
+        private void Start() {
+            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound, delayBetweenLines));
         }
     }
 }
