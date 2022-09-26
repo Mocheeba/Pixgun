@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8616551fadf786b468748b4b85698cb9, type: 3}
   m_Name: E2_BaseData
   m_EditorClassIdentifier: 
+  spiderAttackSound: {fileID: 0}
+  movementSound: {fileID: 0}
+  dashSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  lookingForplayer: {fileID: 0}
   maxHealth: 30
   damageHopSpeed: 2
-  wallCheckDistance: 0.2
-  ledgeCheckDistance: 0.4
-  groundCheckRadius: 0.3
+  wallCheckDistance: 0.8
+  ledgeCheckDistance: 0.94
+  groundCheckRadius: 0.69
   minAgroDistance: 7
   maxAgroDistance: 12
   stunResistance: 3

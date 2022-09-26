@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Movement : CoreComponent
 {
-    [SerializeField] private AudioClip moveSpiderSound;
+    //[SerializeField] private AudioClip moveSpiderSound;
     public Rigidbody2D RB { get; private set; }
 
     public int FacingDirection { get; private set; }
@@ -38,7 +38,7 @@ public class Movement : CoreComponent
     {
         FacingDirection *= -1;
         RB.transform.Rotate(0.0f, 180.0f, 0.0f);
-        SoundMenager.instance.PlaySound(moveSpiderSound);
+      //  SoundMenager.instance.PlaySound(moveSpiderSound);
     }
 
     private void SetFinalVelocity()
