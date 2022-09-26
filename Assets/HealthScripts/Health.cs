@@ -35,7 +35,8 @@ public class Health : MonoBehaviour
      {
         if(inDialogue())
         {
-                // de
+            RB.constraints = RigidbodyConstraints2D.FreezePositionX;
+            RB.constraints = RigidbodyConstraints2D.FreezePositionY;
         }
 
         else if (Input.GetKeyDown(KeyCode.T))
