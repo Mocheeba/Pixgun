@@ -30,18 +30,34 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private AudioClip deadSound;
 
-  
+    private void Awake()
+    {
+        currentRespawn.position = respawnStart.position;
+
+        currentHealth = startingHealth;
+        anim = GetComponent<Animator>();
+        RB = GetComponentInParent<Rigidbody2D>();
+        spriteRend = GetComponent<SpriteRenderer>();
+        
+    }
+
     private void Update()
      {
         if(inDialogue())
         {
-            RB.constraints = RigidbodyConstraints2D.FreezePositionX;
-            RB.constraints = RigidbodyConstraints2D.FreezePositionY;
+            // RB.velocity.x = 0;
+            // RB.velocity.y = 0;
+            // RB.gravityScale = 0.0;
         }
 
         else if (Input.GetKeyDown(KeyCode.T))
         {
             TakeDamage(1);
+        }
+
+        else if (Input.GetKeyDown(KeyCode.H))
+        {
+            AddHealth(1);
         }
     }
 
@@ -53,16 +69,7 @@ public class Health : MonoBehaviour
             return false;
     }
 
-    private void Awake()
-    {
-        currentRespawn.position = respawnStart.position;
-
-        currentHealth = startingHealth;
-        anim = GetComponent<Animator>();
-        RB = GetComponentInParent<Rigidbody2D>();
-        spriteRend = GetComponent<SpriteRenderer>();
-        
-    }
+   
     public void TakeDamage(float _damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
