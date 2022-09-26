@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588173277}
   - component: {fileID: 1588173276}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerAfterImagePool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +129,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2943693214131727076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8642332883701997431}
+  - component: {fileID: 276127433763045732}
+  m_Layer: 7
+  m_Name: PlayerAfterImagePool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8642332883701997431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943693214131727076}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -37.2705, y: 29.661823, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7626560863741769288}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276127433763045732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943693214131727076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cf05fd5ff6988488f739c11f6c5af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  afterImagePrefab: {fileID: 5101911514305088199, guid: 5de4d148492bfb24f97d99ead99df069, type: 3}
 --- !u!1 &3189096151003356434
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0118b0ab0bacef242b608af6421fc785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpiderSound: {fileID: 0}
 --- !u!1 &3189096152414033610
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +869,7 @@ GameObject:
   - component: {fileID: 1476713124}
   - component: {fileID: 1476713134}
   - component: {fileID: 1476713156}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Player 3
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -849,6 +893,7 @@ Transform:
   - {fileID: 3394409888814473082}
   - {fileID: 3189096151333191665}
   - {fileID: 1588173277}
+  - {fileID: 8642332883701997431}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

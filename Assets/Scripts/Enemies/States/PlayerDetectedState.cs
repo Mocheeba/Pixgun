@@ -2,63 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDetectedState : State
-{
-    protected Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+public class PlayerDetectedState : State {
+	protected Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
 	private CollisionSenses CollisionSenses { get => collisionSenses ?? core.GetCoreComponent(ref collisionSenses); }
 
 	private Movement movement;
 	private CollisionSenses collisionSenses;
-    protected D_PlayerDetected stateData;
 
-    protected bool isPlayerInMinAgroRange;
-    protected bool isPlayerInMaxAgroRange;
-    protected bool performLongRangeAction;
-    protected bool performCloseRangeAction;
-    protected bool isDetectingLedge;
+	protected D_PlayerDetected stateData;
 
-    public PlayerDetectedState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData) : base(etity, stateMachine, animBoolName)
-    {
-        this.stateData = stateData;
-    }
+	protected bool isPlayerInMinAgroRange;
+	protected bool isPlayerInMaxAgroRange;
+	protected bool performLongRangeAction;
+	protected bool performCloseRangeAction;
+	protected bool isDetectingLedge;
 
-    public override void DoChecks()
-    {
-        base.DoChecks();
+	public PlayerDetectedState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetected stateData) : base(etity, stateMachine, animBoolName) {
+		this.stateData = stateData;
+	}
 
-        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
-        isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
-        isDetectingLedge = CollisionSenses.LedgeVertical;
-        performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
-    }
+	public override void DoChecks() {
+		base.DoChecks();
 
-    public override void Enter()
-    {
-        base.Enter();
+		isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+		isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
+		isDetectingLedge = CollisionSenses.LedgeVertical;
+		performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
+	}
 
-        performLongRangeAction = false;
-        Movement?.SetVelocityX(0f);     
-    }
+	public override void Enter() {
+		base.Enter();
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
+		performLongRangeAction = false;
+		Movement?.SetVelocityX(0f);
+	}
 
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
+	public override void Exit() {
+		base.Exit();
+	}
 
-        Movement?.SetVelocityX(0f);   
+	public override void LogicUpdate() {
+		base.LogicUpdate();
 
-        if (Time.time >= startTime + stateData.longRangeActionTime)
-        {
-            performLongRangeAction = true;
-        }
-    }
+		Movement?.SetVelocityX(0f);
 
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();        
-    }
+		if (Time.time >= startTime + stateData.longRangeActionTime) {
+			performLongRangeAction = true;
+		}
+	}
+
+	public override void PhysicsUpdate() {
+		base.PhysicsUpdate();
+	}
 }

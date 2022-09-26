@@ -2,66 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChargeState : State
-{
-    private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+public class ChargeState : State {
+	private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
 	private CollisionSenses CollisionSenses { get => collisionSenses ?? core.GetCoreComponent(ref collisionSenses); }
 
 	private Movement movement;
 	private CollisionSenses collisionSenses;
 
-    protected D_ChargeState stateData;
 
-    protected bool isPlayerInMinAgroRange;
-    protected bool isDetectingLedge;
-    protected bool isDetectingWall;
-    protected bool isChargeTimeOver;
-    protected bool performCloseRangeAction;
+	protected D_ChargeState stateData;
 
-    public ChargeState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData) : base(etity, stateMachine, animBoolName)
-    {
-        this.stateData = stateData;
-    }
+	protected bool isPlayerInMinAgroRange;
+	protected bool isDetectingLedge;
+	protected bool isDetectingWall;
+	protected bool isChargeTimeOver;
+	protected bool performCloseRangeAction;
 
-    public override void DoChecks()
-    {
-        base.DoChecks();
+	public ChargeState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData) : base(etity, stateMachine, animBoolName) {
+		this.stateData = stateData;
+	}
 
-        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
-        isDetectingLedge = CollisionSenses.LedgeVertical;
-        isDetectingWall = CollisionSenses.Wall;
+	public override void DoChecks() {
+		base.DoChecks();
 
-        performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
-    }
+		isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
+		isDetectingLedge = CollisionSenses.LedgeVertical;
+		isDetectingWall = CollisionSenses.Wall;
 
-    public override void Enter()
-    {
-        base.Enter();
+		performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
+	}
 
-        isChargeTimeOver = false;
-        Movement?.SetVelocityX(stateData.chargeSpeed * Movement.FacingDirection);
-    }
+	public override void Enter() {
+		base.Enter();
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
+		isChargeTimeOver = false;
+		Movement?.SetVelocityX(stateData.chargeSpeed * Movement.FacingDirection);
+	}
 
-    public override void LogicUpdate()
-    {
-        base.LogicUpdate();
+	public override void Exit() {
+		base.Exit();
+	}
 
-        Movement?.SetVelocityX(stateData.chargeSpeed * Movement.FacingDirection);
+	public override void LogicUpdate() {
+		base.LogicUpdate();
 
-        if(Time.time >= startTime + stateData.chargeTime)
-        {
-            isChargeTimeOver = true;
-        }
+		Movement?.SetVelocityX(stateData.chargeSpeed * Movement.FacingDirection);
 
-    }
+		if (Time.time >= startTime + stateData.chargeTime) {
+			isChargeTimeOver = true;
+		}
+	}
 
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
-    }
+	public override void PhysicsUpdate() {
+		base.PhysicsUpdate();
+	}
 }

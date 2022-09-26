@@ -20,8 +20,6 @@ public class DeadState : State
     {
         base.Enter();
 
-        Debug.Log("Entger dead state");
-
         GameObject.Instantiate(stateData.deathBloodParticle, entity.transform.position, stateData.deathBloodParticle.transform.rotation);
         GameObject.Instantiate(stateData.deathChunkParticle, entity.transform.position, stateData.deathChunkParticle.transform.rotation);
 
