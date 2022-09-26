@@ -1135,7 +1135,6 @@ MonoBehaviour:
   respawnPoint1: {fileID: 0}
   respawnPoint2: {fileID: 0}
   respawnPoint3: {fileID: 0}
-  respawnPoint4: {fileID: 0}
   startingHealth: 3
   iFramesDuration: 3
   numberOfFlashes: 3
