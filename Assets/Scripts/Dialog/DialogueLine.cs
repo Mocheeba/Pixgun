@@ -45,7 +45,7 @@ namespace DialogueSystem
         }
         private void Update()
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 if(textHolder.text != input )
                 {
