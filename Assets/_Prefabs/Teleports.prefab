@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8350549925418754316}
   - component: {fileID: 8112648184097640434}
   - component: {fileID: 1996450693992670383}
+  - component: {fileID: 1085704683}
   m_Layer: 0
-  m_Name: Teleports1Green (01)
-  m_TagString: Untagged
+  m_Name: Teleports1_OUT
+  m_TagString: Teleporter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849873705550869434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.32, y: 4.67, z: 0}
+  m_LocalPosition: {x: 92.66, y: 6.482, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1141940335
-  m_SortingLayer: 16
+  m_SortingLayer: 18
   m_SortingOrder: 10
   m_Sprite: {fileID: -242615530, guid: 681691297026abf4c8ec7b5407918482, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,14 +97,14 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.052757263, y: -0.27436543}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 1.8125, y: 2.6875}
     newSize: {x: 4, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -132,6 +133,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1085704683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849873705550869434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f757f48d1e0bc6642a541711b8a47a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 2181136674024448583}
 --- !u!1 &2181136674024448582
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,9 +158,10 @@ GameObject:
   - component: {fileID: 2181136674024448576}
   - component: {fileID: 879098949}
   - component: {fileID: 879098950}
+  - component: {fileID: 1283125115}
   m_Layer: 0
-  m_Name: Teleports1Green
-  m_TagString: Untagged
+  m_Name: Teleports1_IN
+  m_TagString: Teleporter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2181136674024448582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.72, y: 0.59, z: 0}
+  m_LocalPosition: {x: 22.76, y: 18.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -205,7 +220,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1141940335
-  m_SortingLayer: 16
+  m_SortingLayer: 18
   m_SortingOrder: 10
   m_Sprite: {fileID: -242615530, guid: 681691297026abf4c8ec7b5407918482, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -228,14 +243,14 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.052757263, y: -0.27436543}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
+    oldSize: {x: 1.8125, y: 2.6875}
     newSize: {x: 4, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -254,7 +269,7 @@ Animator:
   m_GameObject: {fileID: 2181136674024448582}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e6ce2151ac131e408d7a5284704ff3e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 90f5d124fb1cdfb40aa01033e120b390, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -264,6 +279,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1283125115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2181136674024448582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f757f48d1e0bc6642a541711b8a47a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 5921021573881683279}
 --- !u!1 &2181136675058351139
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +303,7 @@ GameObject:
   - component: {fileID: 2181136675058351148}
   m_Layer: 0
   m_Name: Teleports
-  m_TagString: Untagged
+  m_TagString: Teleporter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,5 +323,5 @@ Transform:
   - {fileID: 2181136674024448583}
   - {fileID: 5921021573881683279}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
