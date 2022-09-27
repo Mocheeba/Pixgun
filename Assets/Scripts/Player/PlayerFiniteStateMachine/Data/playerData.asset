@@ -41,7 +41,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   jumpSound: {fileID: 8300000, guid: fc3eedee1e7a9d54399c7b8de2212067, type: 3}
-  movementSound: {fileID: 0}
+  movementSound: {fileID: 8300000, guid: b4ec400bf7c0e1b44a1968a31b87e8ec, type: 3}
   dashSound: {fileID: 8300000, guid: b4ec400bf7c0e1b44a1968a31b87e8ec, type: 3}
   playerWallJumpSound: {fileID: 8300000, guid: e7fcf663ef0e8fc4fa658621b58c53bd, type: 3}
   playerMovementSound: {fileID: 8300000, guid: 706e159fba832504a86343005ce66eb8, type: 3}

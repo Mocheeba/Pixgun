@@ -50,15 +50,15 @@ public class Enemy1 : Entity
        
     }
 
-    private void Start() {
-        stateMachine.Initialize(moveState);
+    private void Start()
+    {
+        stateMachine.Initialize(moveState);        
     }
-    
+
     public override void OnDrawGizmos()
     {
         base.OnDrawGizmos();
 
         Gizmos.DrawWireSphere(meleeAttackPosition.position, meleeAttackStateData.attackRadius);
     }
-
 }

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Health : MonoBehaviour
 {
+    private NPC_Controller npc;
+
      [Header("CheckPoints Settings")]
      [SerializeField] Transform respawnStart;
      [SerializeField] Transform currentRespawn;
@@ -28,15 +30,6 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private AudioClip deadSound;
 
-  
-    private void Update()
-     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(1);
-        }
-
-    }
     private void Awake()
     {
         currentRespawn.position = respawnStart.position;
@@ -47,6 +40,36 @@ public class Health : MonoBehaviour
         spriteRend = GetComponent<SpriteRenderer>();
         
     }
+
+    private void Update()
+     {
+        if(inDialogue())
+        {
+            // RB.velocity.x = 0;
+            // RB.velocity.y = 0;
+            // RB.gravityScale = 0.0;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.T))
+        {
+            TakeDamage(1);
+        }
+
+        else if (Input.GetKeyDown(KeyCode.H))
+        {
+            AddHealth(1);
+        }
+    }
+
+    private bool inDialogue()
+    {
+        if (npc != null)
+            return npc.ActiveDialogue();
+        else
+            return false;
+    }
+
+   
     public void TakeDamage(float _damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
@@ -98,7 +121,7 @@ public class Health : MonoBehaviour
 
        private IEnumerator Invunerability()
     {
-        Physics2D.IgnoreLayerCollision(7, 8, true);
+        Physics2D.IgnoreLayerCollision(8, 13, true);
         for (int i = 0; i < numberOfFlashes; i++)
         {
             spriteRend.color = new Color(1, 0, 0, 0.5f);
@@ -106,7 +129,24 @@ public class Health : MonoBehaviour
             spriteRend.color = Color.white;
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
         }
-        Physics2D.IgnoreLayerCollision(7, 8, false);
+        Physics2D.IgnoreLayerCollision(8, 13, false);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Cat")
+        {
+            if(Input.GetKey(KeyCode.R))
+                npc.ActiveDialogue();
+                npc = collision.gameObject.GetComponent<NPC_Controller>();
+
+            
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        npc = null;
     }
 
      public void AddHealth(float _value)

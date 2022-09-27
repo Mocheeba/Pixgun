@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6079722707990569183}
   m_Layer: 8
   m_Name: FireTrap
-  m_TagString: Enemy
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6079722707990569181
 SpriteRenderer:
@@ -100,8 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  activationDelay: 1
+  activationDelay: 0.2
   activeTime: 2
+  fireTrapSound: {fileID: 8300000, guid: c66e72996ea839f4cb3765c8fa2be06d, type: 3}
 --- !u!61 &6079722707990569182
 BoxCollider2D:
   m_ObjectHideFlags: 0
