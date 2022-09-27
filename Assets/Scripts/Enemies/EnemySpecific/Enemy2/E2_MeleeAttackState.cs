@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,9 +38,8 @@ public class E2_MeleeAttackState : MeleeAttackState
         {
             if (isPlayerInMinAgroRange)
             {
-               stateMachine.ChangeState(enemy.playerDetectedState);
-            }
-            else if(!isPlayerInMinAgroRange)
+                stateMachine.ChangeState(enemy.playerDetectedState);
+            }else if (!isPlayerInMinAgroRange)
             {
                 stateMachine.ChangeState(enemy.lookForPlayerState);
             }
