@@ -24,14 +24,7 @@ public class HealthSpider : MonoBehaviour
     [SerializeField] private AudioClip deadSound;
 
   
-    private void Update()
-     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(1);
-        }
-
-    }
+   
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -61,7 +54,7 @@ public class HealthSpider : MonoBehaviour
                  anim.SetTrigger("dead");
                  dead = true;
                  Instantiate(coinPrefab, transform.position, transform.rotation); 
-                 Destroy(gameObject, 2);
+                 Destroy(gameObject, 1);
              }   
         }
         

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1588173277}
   - component: {fileID: 1588173276}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: PlayerAfterImagePool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 357788094641626309}
   - component: {fileID: 357788094641626362}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: DashDirectionIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8642332883701997431}
   - component: {fileID: 276127433763045732}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: PlayerAfterImagePool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 3189096151003356432}
   - component: {fileID: 3189096151003356436}
   - component: {fileID: 3189096151003356437}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3189096151322704521}
   - component: {fileID: 3189096151322704526}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3189096151333191665}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 3189096151522948715}
   - component: {fileID: 3189096151522948714}
   - component: {fileID: 3189096151522948712}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Base
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3189096151743439491}
   - component: {fileID: 3189096151743439492}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Sword1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3189096151793726600}
   - component: {fileID: 3189096151793726601}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3189096152414033611}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: CellingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +651,7 @@ GameObject:
   - component: {fileID: 3394409888814473082}
   - component: {fileID: 3394409888814473083}
   - component: {fileID: 3394409888814473081}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: AfterImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7626560862682125484}
   - component: {fileID: 7626560862682125485}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7626560863215255066}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7626560863455626823}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: LedgeCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 1476713124}
   - component: {fileID: 1476713134}
   - component: {fileID: 1476713156}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Player 3
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1255,7 +1255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7626560863820854891}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1287,7 +1287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7626560864654353704}
   - component: {fileID: 5867522775208159499}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: CollisionSenses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1346,7 @@ GameObject:
   - component: {fileID: 7782148771790304392}
   - component: {fileID: 7782148771790304395}
   - component: {fileID: 7782148771790304394}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: Combat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
