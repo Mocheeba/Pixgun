@@ -13,6 +13,9 @@ TagManager:
   - Water
   - CheckPoint
   - Teleporter
+  - CheckPoint2
+  - Weapon
+  - Coins
   layers:
   - Default
   - TransparentFX
@@ -31,7 +34,7 @@ TagManager:
   - Dead
   - CheckPoint
   - Activeable
-  - 
+  - Camera
   - 
   - 
   - 
