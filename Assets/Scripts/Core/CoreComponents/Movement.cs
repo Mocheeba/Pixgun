@@ -4,7 +4,10 @@ using UnityEngine;
 
 
 public class Movement : CoreComponent
-{
+{   
+
+	[SerializeField] private ParticleSystem dust;
+
     //[SerializeField] private AudioClip moveSpiderSound;
     public Rigidbody2D RB { get; private set; }
 
@@ -28,6 +31,10 @@ public class Movement : CoreComponent
     }
 
   
+	private void Createdust()
+	{
+		dust.Play();
+	}
 
     public override void LogicUpdate()
     {
@@ -39,6 +46,9 @@ public class Movement : CoreComponent
         FacingDirection *= -1;
         RB.transform.Rotate(0.0f, 180.0f, 0.0f);
       //  SoundMenager.instance.PlaySound(moveSpiderSound);
+        Createdust();
+		Debug.Log("particle");
+
     }
 
     private void SetFinalVelocity()
@@ -55,6 +65,7 @@ public class Movement : CoreComponent
         if (xInput != 0 && xInput != FacingDirection)
         {
             Flip();
+
         }
     }
 

@@ -44,6 +44,8 @@ public class Spikehead : EnemyDamage
                 destination = directions[i];
                 checkTimer = 0;
             }
+
+            //else if (hit.collider) reset back to start pos
         }
     }
     private void CalculateDirections()
