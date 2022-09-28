@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 public class Movement : CoreComponent
 {   
@@ -31,7 +31,7 @@ public class Movement : CoreComponent
     }
 
   
-	private void Createdust()
+	public void Createdust()
 	{
 		dust.Play();
 	}

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPoints : MonoBehaviour
-{
-
-    [SerializeField] private AudioClip checkPointActiveSound;
-
-   private Animator anim;
+{ 
+    
+   [SerializeField] private AudioClip checkPointActiveSound;
+   [SerializeField] private Animator anim;
    private Collider2D collider;
 
 

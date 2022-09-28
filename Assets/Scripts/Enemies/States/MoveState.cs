@@ -15,7 +15,6 @@ public class MoveState : State {
 	protected bool isDetectingLedge;
 	protected bool isPlayerInMinAgroRange;
 
-	public ParticleSystem dust;
 
 	public MoveState(Entity etity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData) : base(etity, stateMachine, animBoolName) {
 		this.stateData = stateData;
@@ -32,15 +31,8 @@ public class MoveState : State {
 	public override void Enter() {
 		base.Enter();
 		Movement?.SetVelocityX(stateData.movementSpeed * Movement.FacingDirection);
-		Createdust();
-		Debug.Log("particle");
+		
 	}
-
-	private void Createdust()
-	{
-		dust.Play();
-	}
-	
 
 	public override void Exit() {
 		base.Exit();
