@@ -10,8 +10,10 @@ public class Spikehead_Vertical : EnemyDamage
     [SerializeField] private float range;
     [SerializeField] private float checkDelay;
     [SerializeField] private LayerMask playerLayer;
+
     private Vector3[] directions = new Vector3[4];
     private Vector3 destination;
+
     private float checkTimer;
     private bool attacking;
 
@@ -41,7 +43,7 @@ public class Spikehead_Vertical : EnemyDamage
     {
         CalculateDirections();
 
-        //Check if spikehead sees player in all 4 directions
+        //Check if spikehead sees player in all 2 directions
         for (int i = 0; i < directions.Length; i++)
         {
             Debug.DrawRay(transform.position, directions[i], Color.red);
@@ -79,7 +81,7 @@ public class Spikehead_Vertical : EnemyDamage
         directions[3] = -transform.up * range; //Down direction
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    new private void OnTriggerEnter2D(Collider2D collision)
     {
         base.OnTriggerEnter2D(collision);
         Stop(); //Stop spikehead once he hits something
