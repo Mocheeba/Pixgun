@@ -71,7 +71,7 @@ public class PlayerDashState : PlayerAbilityState
                 }
 
                 float angle = Vector2.SignedAngle(Vector2.right, dashDirection);
-                player.DashDirectionIndicator.rotation = Quaternion.Euler(0f, 0f, angle - 45f);
+                player.DashDirectionIndicator.rotation = Quaternion.Euler(0f, 0f, angle - 30f);
 
                 if (DashInputStop || Time.unscaledTime >= startTime + playerData.maxHoldTime)
                 {
