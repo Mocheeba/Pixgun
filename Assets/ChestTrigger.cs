@@ -3,7 +3,9 @@ using System.Collections;
 
 public class ChestTrigger : MonoBehaviour
 {
-    [SerializeField] private float damage;
+  public GameObject myPrefab;
+
+  [SerializeField] private float damage;
 
    [Header ("Chest Timers")] 
    [SerializeField] private float activationDelay;
@@ -11,45 +13,57 @@ public class ChestTrigger : MonoBehaviour
    private Animator anim;
    private SpriteRenderer spriteRend;
 
-    [Header ("SFX")]
-    [SerializeField] private AudioClip chestActive;
+   [Header ("SFX")]
+   [SerializeField] private AudioClip chestTriggerSound;
 
     private bool triggered;
     private bool activate;
 
-   private void Awake() {
+    private bool wasActive = false;
+
+    private void Awake() {
     anim = GetComponent<Animator>();
     spriteRend = GetComponent<SpriteRenderer>();
    }
 
-   private void OnTriggerEnter2D(Collider2D collision)
-   {
+
+   private void OnTriggerEnter2D(Collider2D collision){
     if(collision.tag == "Player")
     {
         Debug.Log("Chest Player detected ");
-        // if(!triggered)
-        // {
-        //     StartCoroutine(ActivateFireTrap());
-        // }
-        // if (activate)
-        //     collision.GetComponent<Health>().TakeDamage(damage);
+        if(!triggered & !wasActive)
+        {
+            StartCoroutine(ActivateChestTrigger());
+        }
+        if (activate)
+            collision.GetComponent<Health>().TakeDamage(damage);
+
+        if (wasActive)
+        {
+            Debug.Log("Witaj po raz kolejny!");
+             // Instantiate at position (0, 0, 0) and zero rotation.
+            Instantiate(myPrefab, transform.position, transform.rotation); 
+
+        }
     }
+
    }
-//    private IEnumerator ActivateFireTrap()
-//    {
-//          triggered = true;
-//          spriteRend.color = Color.red;
-//          yield return new WaitForSeconds(activationDelay);
-//          SoundMenager.instance.PlaySound(fireTrapSound);
-//          spriteRend.color = Color.white;
-//          activate = true;
-//          anim.SetBool("isActivated", true);
+   private IEnumerator ActivateChestTrigger()
+   {
+         triggered = true;
+         anim.SetBool("isActivated", true);
+         spriteRend.color = Color.red;
+         SoundMenager.instance.PlaySound(chestTriggerSound);
 
+         yield return new WaitForSeconds(activationDelay);
 
-//          yield return new WaitForSeconds(activeTime);
-//          activate = false;
-//          triggered = false;
-//          anim.SetBool("isActivated", false);
+         spriteRend.color = Color.white;
+         activate = true;
 
-//    }
+         yield return new WaitForSeconds(activeTime);
+         activate = false;
+         triggered = false;
+         anim.SetBool("notActive", true);
+         wasActive = true;   
+   }
 }
