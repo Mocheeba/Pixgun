@@ -6,18 +6,15 @@ using Cinemachine;
 
 public class CinemachineSwitcher : MonoBehaviour
 {
-  public GameObject cam2;
+    [SerializeField] private InputAction action;
 
-  [SerializeField] private InputAction action;
+    [SerializeField] private CinemachineVirtualCamera vcam1; // chixie camera
+    [SerializeField] private CinemachineVirtualCamera vcam2; // chixie camera 2
+    [SerializeField] private CinemachineVirtualCamera cutSceneVcam; // cutscene cam
 
     private Animator anim;
     private bool ChixieCamera = true;
-
-  [SerializeField] private CinemachineVirtualCamera vcam1; // chixie camera
-  [SerializeField] private CinemachineVirtualCamera vcam2; // chixie camera 2 
-
-
-
+   
   private void Awake() {
    // anim = GetComponent<Animator>();
   }
@@ -47,9 +44,13 @@ public class CinemachineSwitcher : MonoBehaviour
       Debug.Log("camera_2");
       vcam1.Priority = 1;
       vcam2.Priority = 0;
-
     }
-      ChixieCamera = !ChixieCamera;
+    else if(cutSceneVcam) {
+      Debug.Log("cutSceneVcam");
+      vcam1.Priority = 1;
+      vcam2.Priority = 0;
+    }
+    ChixieCamera = !ChixieCamera;
   }
 
     
