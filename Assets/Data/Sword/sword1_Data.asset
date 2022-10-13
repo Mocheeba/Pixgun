@@ -13,13 +13,8 @@ MonoBehaviour:
   m_Name: sword1_Data
   m_EditorClassIdentifier: 
   attackDetails:
-  - attackName: asd
+  - attackName: Attack_1
     movementSpeed: 1
     damageAmount: 12
-    knockbackStrenght: 15
-    knockbackAngle: {x: 6, y: 6}
-  - attackName: asdsad
-    movementSpeed: 1
-    damageAmount: 22
     knockbackStrenght: 15
     knockbackAngle: {x: 6, y: 6}

@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7d1c791ede2264e892ce18e3251532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myPrefab: {fileID: 4651779305815315267, guid: ed04faf07a41efe43aa74333aa382786, type: 3}
   damage: 1
   activationDelay: 1
   activeTime: 3
