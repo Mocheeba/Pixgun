@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4972285079347226920}
   - component: {fileID: 4972285079347226935}
   - component: {fileID: 4972285079347226921}
-  m_Layer: 13
+  - component: {fileID: 1914868092}
+  m_Layer: 8
   m_Name: Spikehead
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4972285079347226933
 SpriteRenderer:
@@ -148,8 +149,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   speed: 1.97
-  range: 9.14
+  range: 4.49
   checkDelay: 2.9
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!95 &1914868092
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4972285079347226932}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
