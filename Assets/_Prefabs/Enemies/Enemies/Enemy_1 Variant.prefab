@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &740001463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740001464}
+  - component: {fileID: 740001465}
+  m_Layer: 7
+  m_Name: ParticleMenager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &740001464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740001463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3616437105914499965}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &740001465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740001463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c3cc7d54b0dc94d9febcb618523f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3616437106823241497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8,21 +52,29 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1329489781, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
+      propertyPath: startingHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470075822, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
+      propertyPath: damageParticles
+      value: 
+      objectReference: {fileID: 6240072112886026631, guid: d3ad3f1375e0d114ca19695641fceb61, type: 3}
     - target: {fileID: 10384451546564014, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
       propertyPath: m_RootOrder
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 10384451546564014, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.77
+      value: 12.200001
       objectReference: {fileID: 0}
     - target: {fileID: 10384451546564014, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.346127
+      value: 22.92
       objectReference: {fileID: 0}
     - target: {fileID: 10384451546564014, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3542056
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10384451546564014, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -57,6 +109,10 @@ PrefabInstance:
       value: Enemy_1
       objectReference: {fileID: 0}
     - target: {fileID: 10384451546564015, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 10384451546564015, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -69,5 +125,13 @@ PrefabInstance:
       value: 1.38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1244580964, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 740001464}
   m_SourcePrefab: {fileID: 100100000, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
+--- !u!4 &3616437105914499965 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1244580964, guid: 61865167483995d4d93cbd384af3df2c, type: 3}
+  m_PrefabInstance: {fileID: 3616437106823241497}
+  m_PrefabAsset: {fileID: 0}
