@@ -60,9 +60,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 8638902619326590280, guid: d949628257d6bff4faa371d322684aba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8638902619326590281, guid: d949628257d6bff4faa371d322684aba, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8638902619326590281, guid: d949628257d6bff4faa371d322684aba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -242,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18605cbe260104449bc589651fe5a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageParticles: {fileID: 0}
   maxKnockbackTime: 0.2
 --- !u!4 &1746255984118482516 stripped
 Transform:
