@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerDashState : PlayerAbilityState
 {
+
+    [SerializeField] private GameObject damageParticles;
     public bool CanDash { get; private set; }
     private bool DashInputStop;
 
