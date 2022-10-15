@@ -33,7 +33,7 @@ public class LightTickering : MonoBehaviour
         if (FlickerMode == 1)
         {
             this.gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>().enabled = false;
-            FlickerTime = Random.Range(0.0f, 0.26f);
+            FlickerTime = Random.Range(0.0f, 11.26f);
             yield return new WaitForSeconds(FlickerTime);
             this.gameObject.GetComponent<UnityEngine.Rendering.Universal.Light2D>().enabled = true;
             isFlickering = false;
