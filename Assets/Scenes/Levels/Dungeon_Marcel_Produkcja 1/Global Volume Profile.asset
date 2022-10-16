@@ -18,25 +18,25 @@ MonoBehaviour:
     m_Value: 2
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 8.22
+    m_Value: 0.3
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 24.61
+    m_Value: 14.24
   gaussianMaxRadius:
     m_OverrideState: 1
-    m_Value: 1.031
+    m_Value: 1.184
   highQualitySampling:
     m_OverrideState: 1
     m_Value: 1
   focusDistance:
     m_OverrideState: 1
-    m_Value: 11.54
+    m_Value: 16.23
   aperture:
     m_OverrideState: 1
-    m_Value: 32
+    m_Value: 8.8
   focalLength:
     m_OverrideState: 1
-    m_Value: 43
+    m_Value: 176
   bladeCount:
     m_OverrideState: 1
     m_Value: 7
@@ -64,10 +64,10 @@ MonoBehaviour:
     m_Value: 8
   intensity:
     m_OverrideState: 1
-    m_Value: 0.213
+    m_Value: 1
   response:
     m_OverrideState: 1
-    m_Value: 0.317
+    m_Value: 0.193
   texture:
     m_OverrideState: 0
     m_Value: {fileID: 0}
@@ -83,22 +83,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.69
+    m_Value: 0.09
   contrast:
     m_OverrideState: 0
     m_Value: 75
   colorFilter:
     m_OverrideState: 1
-    m_Value: {r: 0.12941177, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.9483357, g: 0.9528302, b: 0.9528302, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: 41
   saturation:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 51
 --- !u!114 &-70208503548572904
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -159,10 +159,10 @@ MonoBehaviour:
   active: 0
   distance:
     m_OverrideState: 1
-    m_Value: 0.003
+    m_Value: 0.763
   cropToFit:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
 --- !u!114 &3260941411359384218
 MonoBehaviour:
   m_ObjectHideFlags: 3
