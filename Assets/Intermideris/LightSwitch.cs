@@ -6,6 +6,7 @@ public class LightSwitch : MonoBehaviour
 { 
     
    [SerializeField] private AudioClip lightTrigger;
+   [SerializeField] private GameObject lightTriggerGO;
    //[SerializeField] private Animator anim;
    private Collider2D collider;
 
@@ -22,5 +23,6 @@ private void Start() {
       //  anim.SetTrigger("appear");
         SoundMenager.instance.PlaySound(lightTrigger);
        // collider.enabled = false;
+       lightTriggerGO.SetActive(true);
    }
 }
