@@ -8,19 +8,20 @@ public GameObject lightBulb = null;
 
 
 
-void OnTriggerEnter(Collider other ){
+void OnTriggerEnter2D(Collider other ){
 
-if (other.name == "player") {
+if (other.name == "Player") {
+    Debug.Log("lightbulb on ");
 
-    lightBulb.SetActive (true);
+    lightBulb.SetActive(true);
 }
 
 }
 
-void OnTriggerExit( Collider other){
+void OnTriggerExit2D( Collider other){
 
-if (other.name == "player") {
-
+if (other.name == "Player") {
+     Debug.Log("lightbulb off ");
     lightBulb.SetActive(false);
 }
 
