@@ -100,7 +100,6 @@ public class Health : MonoBehaviour
         anim.ResetTrigger("die");
         StartCoroutine(Invunerability());
         transform.position = currentRespawn.position;
-        
 
         Debug.Log("Obecny checkpoint = " + currentRespawn);
     }
