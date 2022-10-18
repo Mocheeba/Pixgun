@@ -24,5 +24,6 @@ private void Start() {
         SoundMenager.instance.PlaySound(lightTrigger);
        // collider.enabled = false;
        lightTriggerGO.SetActive(true);
+       collider.enabled = false;
    }
 }
