@@ -86,13 +86,13 @@ public class PlayerDashState : PlayerAbilityState
                     player.RB.drag = playerData.drag;
                     Movement?.SetVelocity(playerData.dashVelocity, dashDirection);
                     player.DashDirectionIndicator.gameObject.SetActive(false);
-                   // PlaceAfterImage();
+                    PlaceAfterImage();
                 }
             }
             else
             {
                 Movement?.SetVelocity(playerData.dashVelocity, dashDirection);
-             //   CheckIfShouldPlaceAfterImage();
+                CheckIfShouldPlaceAfterImage();
 
                 if (Time.time >= startTime + playerData.dashTime)
                 {
@@ -104,18 +104,18 @@ public class PlayerDashState : PlayerAbilityState
         }
     }
 
-    // private void CheckIfShouldPlaceAfterImage() // compare current position with last AIP
-    // {
-    //     if(Vector2.Distance(player.transform.position, lastAfterimagePosition) >= playerData.distanceBetweenAfterImages)
-    //     {
-    //         PlaceAfterImage();
-    //     }
-    // }
-    // private void PlaceAfterImage()
-    // {
-    //     PlayerAfterImagePool.Instance.GetFromPool();
-    //     lastAfterimagePosition = player.transform.position;
-    // }
+    private void CheckIfShouldPlaceAfterImage() // compare current position with last AIP
+    {
+        if(Vector2.Distance(player.transform.position, lastAfterimagePosition) >= playerData.distanceBetweenAfterImages)
+        {
+            PlaceAfterImage();
+        }
+    }
+    private void PlaceAfterImage()
+    {
+        PlayerAfterImagePool.Instance.GetFromPool();
+        lastAfterimagePosition = player.transform.position;
+    }
 
 
     public bool CheckIfCanDash()
