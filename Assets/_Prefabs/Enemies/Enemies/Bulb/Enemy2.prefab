@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996383065857694754}
   - component: {fileID: 996383065857694755}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: ParticleCointeiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996383066182665555}
   - component: {fileID: 996383066182665552}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 996383066271323394}
   - component: {fileID: 996383066271323392}
   - component: {fileID: 996383066271323395}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Combat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996383066819927497}
   - component: {fileID: 996383066819927494}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996383067336348553}
   - component: {fileID: 996383067336348550}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: CollisionSenses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996383067469233994}
   - component: {fileID: 996383067469233995}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5151683863956049472}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -157.45287, y: -68.97, z: -0.05501917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -553,7 +553,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8000352354110688439}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8000352355776364795}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: ledgeCheckVertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8000352355832034661}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
