@@ -12,21 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8616551fadf786b468748b4b85698cb9, type: 3}
   m_Name: E1_BaseData
   m_EditorClassIdentifier: 
-  jumpSound: {fileID: 8300000, guid: df5405ebecd85d1449f856ba35d0cf27, type: 3}
-  movementSound: {fileID: 8300000, guid: eef2ca21213d6024e97c70f2e1722dab, type: 3}
-  dashSound: {fileID: 8300000, guid: 784d776f6866d174680245de7a9286d4, type: 3}
-  attackSound: {fileID: 8300000, guid: 5cfd145bd0be7b44ebea956671bd9d49, type: 3}
-  lookingForplayer: {fileID: 8300000, guid: cf068604ee1a0004e8349bda80e21121, type: 3}
   maxHealth: 50
   damageHopSpeed: 10
   wallCheckDistance: 0.2
   ledgeCheckDistance: 1
   groundCheckRadius: 0.3
-  minAgroDistance: 5.66
+  minAgroDistance: 4.96
   maxAgroDistance: 12.27
   stunResistance: 3
   stunRecoveryTime: 2
-  closeRangeActionDistance: 1.75
+  closeRangeActionDistance: 1.06
   hitParticle: {fileID: 6240072112886026631, guid: d3ad3f1375e0d114ca19695641fceb61, type: 3}
   whatIsGround:
     serializedVersion: 2

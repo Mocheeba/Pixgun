@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996383065647407565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.48, y: -0.41, z: 0}
+  m_LocalPosition: {x: 1.48, y: -0.109, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 6838261940979017634}
   - component: {fileID: 6838261940979017661}
   - component: {fileID: 7040619769359179116}
+  - component: {fileID: 796277994}
   m_Layer: 8
   m_Name: Enemy2
   m_TagString: Enemy
@@ -544,6 +545,24 @@ MonoBehaviour:
   rangedAttackStateData: {fileID: 11400000, guid: 0ad3801fd63b05b45ad2876e57223e9b, type: 2}
   meleeAttackPosition: {fileID: 8000352354355648230}
   rangedAttackPosition: {fileID: 996383065647407564}
+--- !u!114 &796277994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5151683863956049472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52adf93398626d5418a661d3bf58a9ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 0}
+  startingHealth: 7
+  iFramesDuration: 3
+  numberOfFlashes: 3
+  hurtSound: {fileID: 8300000, guid: b4ec400bf7c0e1b44a1968a31b87e8ec, type: 3}
+  deadSound: {fileID: 8300000, guid: 5cfd145bd0be7b44ebea956671bd9d49, type: 3}
 --- !u!1 &8000352354110688436
 GameObject:
   m_ObjectHideFlags: 0
