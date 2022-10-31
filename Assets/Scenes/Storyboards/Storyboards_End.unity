@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 543.875, y: -490}
+  m_AnchoredPosition: {x: 543.875, y: -370}
   m_SizeDelta: {x: 749.9299, y: 1080}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &168868463
@@ -357,8 +357,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.38
-  m_Text: "DZI\u0118KUJE I POZDRAWIAM:\n\tKAROLINA SABELI\u0106 <3"
+    m_LineSpacing: 2.2
+  m_Text: "DZI\u0118KUJ\u0118 I POZDRAWIAM: \nKarolina Sabela"
 --- !u!222 &168868465
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -367,50 +367,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168868461}
   m_CullTransparentMesh: 1
---- !u!1 &465460529
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 465460531}
-  - component: {fileID: 465460530}
-  m_Layer: 0
-  m_Name: NextSceneLoad
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &465460530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465460529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1623776ec626614599c4bf37c5edc95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &465460531
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465460529}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 767.71814, y: 587.30566, z: -2.3029213}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &666836965
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,7 +942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 543.875, y: -490}
+  m_AnchoredPosition: {x: 543.875, y: -370}
   m_SizeDelta: {x: 749.9299, y: 1080}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &1367301806
@@ -1041,7 +997,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.38
+    m_LineSpacing: 2.2
   m_Text: "Wyczekuj kolejnych przyg\xF3d! "
 --- !u!222 &1367301808
 CanvasRenderer:
@@ -1169,7 +1125,7 @@ PlayableDirector:
   - key: {fileID: 8727218405155831867, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 1946637149}
   - key: {fileID: 7070012484768048548, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
-    value: {fileID: 465460529}
+    value: {fileID: 0}
   - key: {fileID: -3623410746460720945, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 1367301804}
   - key: {fileID: 8421009946230139658, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
@@ -1190,6 +1146,10 @@ PlayableDirector:
     value: {fileID: 1946637151}
   - key: {fileID: 3524476202590814377, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 168868461}
+  - key: {fileID: 5394087019746657212, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 9012499469089384766, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
+    value: {fileID: 2070847616}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1692003026
@@ -1327,7 +1287,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.38
+    m_LineSpacing: 2.2
   m_Text: "GRATULACJE! \n\nZebra\u0142e\u015B wszystkie pozostawione dusze!"
 --- !u!222 &1858833146
 CanvasRenderer:
@@ -1354,7 +1314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 543.875, y: -490}
+  m_AnchoredPosition: {x: 543.875, y: -370}
   m_SizeDelta: {x: 749.9299, y: 1080}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &1858833148
@@ -1395,7 +1355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1904971165
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1413,7 +1373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 543.875, y: -490}
+  m_AnchoredPosition: {x: 543.875, y: -370}
   m_SizeDelta: {x: 749.9299, y: 1080}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &1904971166
@@ -1468,7 +1428,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.38
+    m_LineSpacing: 2.2
   m_Text: "Dzi\u0119ki Twoim staraniom w \u015Bwiecie Pixgun zapanowa\u0142 spok\xF3j!"
 --- !u!222 &1904971168
 CanvasRenderer:
@@ -1514,7 +1474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 543.875, y: -490}
+  m_AnchoredPosition: {x: 543.875, y: -370}
   m_SizeDelta: {x: 749.9299, y: 1080}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &1946637151
@@ -1569,7 +1529,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.38
+    m_LineSpacing: 2.2
   m_Text: "Lecz pami\u0119taj, to tylko niewielki skrawek tego magicznego \u015Bwiata..."
 --- !u!222 &1946637153
 CanvasRenderer:
@@ -1622,3 +1582,47 @@ RectTransform:
   m_AnchoredPosition: {x: -213, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2070847616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2070847617}
+  - component: {fileID: 2070847618}
+  m_Layer: 0
+  m_Name: backToMenuTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2070847617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070847616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 767.71814, y: 587.30566, z: -2.3029213}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2070847618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070847616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a380d783f6cf2c6408a16aac7a9de26d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
