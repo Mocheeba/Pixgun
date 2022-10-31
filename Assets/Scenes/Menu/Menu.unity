@@ -641,7 +641,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: STEROWANIE
+  m_Text: "OSI\u0104GNI\u0118CIA"
 --- !u!222 &589034433
 CanvasRenderer:
   m_ObjectHideFlags: 0
