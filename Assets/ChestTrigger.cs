@@ -42,7 +42,6 @@ public class ChestTrigger : MonoBehaviour
         {
             Debug.Log("Witaj po raz kolejny!");
              // Instantiate at position (0, 0, 0) and zero rotation.
-            Instantiate(myPrefab, transform.position, transform.rotation); 
 
         }
     }
@@ -65,5 +64,7 @@ public class ChestTrigger : MonoBehaviour
          triggered = false;
          anim.SetBool("notActive", true);
          wasActive = true;   
+         Instantiate(myPrefab, transform.position, transform.rotation); 
+
    }
 }
