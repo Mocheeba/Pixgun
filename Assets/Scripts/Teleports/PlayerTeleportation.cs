@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerTeleportation : MonoBehaviour
 {
@@ -31,6 +33,12 @@ public class PlayerTeleportation : MonoBehaviour
         if (collision.CompareTag("Teleporter"))
         {
             currentTeleporter = collision.gameObject;
+        }
+
+        else if (collision.CompareTag("lastTeleport"))
+        {
+            SceneManager.LoadScene("Storyboards_End", LoadSceneMode.Single);
+            Debug.Log("LastLevel");
         }
     }
 
