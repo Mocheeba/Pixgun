@@ -35,11 +35,7 @@ public class PlayerTeleportation : MonoBehaviour
             currentTeleporter = collision.gameObject;
         }
 
-        else if (collision.CompareTag("lastTeleport"))
-        {
-            SceneManager.LoadScene("Storyboards_End", LoadSceneMode.Single);
-            Debug.Log("LastLevel");
-        }
+      
     }
 
     private void OnTriggerExit2D(Collider2D collision)

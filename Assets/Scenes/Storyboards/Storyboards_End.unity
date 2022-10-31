@@ -830,6 +830,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115072353}
   m_CullTransparentMesh: 1
+--- !u!1 &1265402886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1715424074630854115, guid: 8648d6c4abc25a2458a1a81cc1972448, type: 3}
+  m_PrefabInstance: {fileID: 1306611097}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1273479048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,8 +1236,6 @@ PlayableDirector:
     value: {fileID: 666836965}
   - key: {fileID: -8904131736776739813, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 1273479048}
-  - key: {fileID: 8356850551406875324, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
-    value: {fileID: 0}
   - key: {fileID: 760140747402973938, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 1416374088}
   - key: {fileID: 5506558907092083346, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
@@ -1241,14 +1244,12 @@ PlayableDirector:
     value: {fileID: 794324380}
   - key: {fileID: -1613112551943371245, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 165863115}
-  - key: {fileID: 7481541621668708148, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
-    value: {fileID: 1946637151}
   - key: {fileID: 3524476202590814377, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 168868461}
   - key: {fileID: 5394087019746657212, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 0}
   - key: {fileID: 9012499469089384766, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
-    value: {fileID: 2070847616}
+    value: {fileID: 1265402886}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1692003026
