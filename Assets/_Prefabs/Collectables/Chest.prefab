@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1663788010538715850
 BoxCollider2D:
@@ -96,8 +96,8 @@ MonoBehaviour:
   myPrefab: {fileID: 4651779305815315267, guid: ed04faf07a41efe43aa74333aa382786, type: 3}
   damage: 1
   activationDelay: 1
-  activeTime: 3
-  chestTriggerSound: {fileID: 0}
+  activeTime: 2
+  chestTriggerSound: {fileID: 8300000, guid: 6d2296cf58006f443a4b558758d25278, type: 3}
 --- !u!212 &3629268297556203977
 SpriteRenderer:
   m_ObjectHideFlags: 0
