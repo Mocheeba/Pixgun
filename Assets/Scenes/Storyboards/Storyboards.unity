@@ -1099,7 +1099,7 @@ PlayableDirector:
   - key: {fileID: 8356850551406875324, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 1858833148}
   - key: {fileID: 3524476202590814377, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1108291626}
   - key: {fileID: 760140747402973938, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 0}
   - key: {fileID: 5506558907092083346, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
@@ -1111,6 +1111,8 @@ PlayableDirector:
   - key: {fileID: 7481541621668708148, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 0}
   - key: {fileID: 5394087019746657212, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 9012499469089384766, guid: ec26518ea28a2cd4d8cf3f6107d0bd37, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []

@@ -301,10 +301,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d7f4b03cf26f9934287921485c1eb5e5, type: 3}
-    m_FontSize: 55
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 65
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -361,7 +361,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 545.6277, y: 102.305176}
+  m_SizeDelta: {x: 473.2, y: 102.3052}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &454762251
 MonoBehaviour:
@@ -630,10 +630,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d7f4b03cf26f9934287921485c1eb5e5, type: 3}
-    m_FontSize: 55
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 65
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -641,7 +641,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "OSI\u0104GN\u0118CIA"
+  m_Text: STEROWANIE
 --- !u!222 &589034433
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -928,7 +928,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 42.1}
-  m_SizeDelta: {x: 545.6277, y: 102.305176}
+  m_SizeDelta: {x: 450, y: 102.3052}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1292957723
 MonoBehaviour:
@@ -6361,7 +6361,7 @@ GameObject:
   - component: {fileID: 1914463789}
   - component: {fileID: 1914463788}
   m_Layer: 0
-  m_Name: Osiagniecia
+  m_Name: Sterowanie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6385,8 +6385,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 545.6277, y: 102.305176}
+  m_AnchoredPosition: {x: -14.3485, y: 0}
+  m_SizeDelta: {x: 398.6866, y: 102.3052}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1914463788
 MonoBehaviour:
@@ -6567,10 +6567,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: d7f4b03cf26f9934287921485c1eb5e5, type: 3}
-    m_FontSize: 55
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 65
     m_Alignment: 4
     m_AlignByGeometry: 0
