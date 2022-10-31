@@ -7,7 +7,7 @@ public class nextScene: MonoBehaviour
 {
 	void OnEnable()
 	{
-		SceneManager.LoadScene("Dungeon_Marcel_Produkcja",LoadSceneMode.Single);
+		SceneManager.LoadScene("Dungeon_Marcel_Produkcja 1",LoadSceneMode.Single);
 	}
 }
 
