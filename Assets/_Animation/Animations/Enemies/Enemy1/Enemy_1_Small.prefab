@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1195729785129546052}
   - component: {fileID: 1195729785129546053}
   - component: {fileID: 8945207852730145424}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Enemy_1_Small
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ Transform:
   - {fileID: 1195729785367728652}
   - {fileID: 1195729787151553235}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1206104320553030545
 MonoBehaviour:
@@ -226,7 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195729785367728652}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: PlayerCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195729785444695827}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: TouchDamageCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195729785756113244}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195729785898476643}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: LedgeCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195729786098456344}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1195729787151553235}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: MeleeAttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206104319551292056}
   - component: {fileID: 1206104319551292057}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206104320503724160}
   - component: {fileID: 1206104320503724161}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 1206104320945252168}
   - component: {fileID: 1206104320945252170}
   - component: {fileID: 1206104320945252169}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Combat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1206104321078847518}
   - component: {fileID: 1206104321078847519}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2489605617924762949}
   - component: {fileID: 2489605617924762948}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: ParticleCointeiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3148573435601792630}
   - component: {fileID: 1206104319898562104}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: CollisionSenses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
