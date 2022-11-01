@@ -15,4 +15,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Storyboards");
     }
+
+    public void ControlsButton()
+    {
+        // Active windows with Controls
+    }
 }
