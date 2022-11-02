@@ -85,14 +85,21 @@ public class Health : MonoBehaviour
         {
              if (!dead)
              {
-                 SoundMenager.instance.PlaySound(deadSound);
-                 Debug.Log("dead");
-                 anim.SetTrigger("die");
-                 dead = true;
-                 Respawn();
+                SoundMenager.instance.PlaySound(deadSound);
+                Debug.Log("dead");
+                StartCoroutine(PlayerDeath());
              }   
         }
     }
+
+
+     private IEnumerator PlayerDeath()
+   {
+        anim.SetTrigger("die");
+        yield return new WaitForSeconds(1);
+        dead = true;
+        Respawn();
+   }
     public void Respawn()
     {   
         dead = false;
@@ -138,8 +145,6 @@ public class Health : MonoBehaviour
             if(Input.GetKey(KeyCode.R))
                 npc.ActiveDialogue();
                 npc = collision.gameObject.GetComponent<NPC_Controller>();
-
-            
         }
     }
 
