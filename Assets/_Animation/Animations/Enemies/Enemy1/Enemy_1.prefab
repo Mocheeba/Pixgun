@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1215480399561383060}
   - component: {fileID: 1215480399561383061}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: ParticleCointeiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2506972282367517660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.16, y: -0.484, z: 0}
+  m_LocalPosition: {x: 1.995, y: -0.484, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 2506972282672808085}
   - component: {fileID: 2506972282672808084}
   - component: {fileID: 5652396590199302977}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Enemy_1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2506972282672808090}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.33, y: 21.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 4651779305815315267, guid: 42847876a891e034ab765c30b333e5eb, type: 3}
-  startingHealth: 5
+  startingHealth: 10
   iFramesDuration: 2
   numberOfFlashes: 2
   hurtSound: {fileID: 8300000, guid: 6da4488ecef049542a9213c288738d11, type: 3}
@@ -440,7 +440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2506972283083629313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.38, y: -0.227, z: 0}
+  m_LocalPosition: {x: 1.44, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -457,7 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2517066445911618377}
   - component: {fileID: 2517066445911618376}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c67712993f7b97d48b6ebbe8b8acfa31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 9999
+  maxHealth: 100
   myPrefab: {fileID: 4651779305815315267, guid: 42847876a891e034ab765c30b333e5eb, type: 3}
 --- !u!1 &2517066446362728908
 GameObject:
