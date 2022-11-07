@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Dungeon_Marcel_Produkcja 1.unity
     guid: 39d5e4f42ee6f0b4782646327c188edc
   - enabled: 1
-    path: Assets/Scenes/Storyboards/Storyboards_End.unity
-    guid: f51f38f697787d345ae8cdb503d592bb
+    path: Assets/Scenes/Storyboards/endofstory.unity
+    guid: 03a1db3b07f7bfd4f91094cc2369dd07
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: fa24af12c5906464a96207c11bd2bc6c, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 0bec0d2cdf6abcf428d1f8fc57b39711, type: 2}
