@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 763ac820ee732cf4bbbd226c2ac6513c, type: 3}
-  m_Name: E1_MeleeAttackData
+  m_Script: {fileID: 11500000, guid: 2ddba91bfbc9f7741bb39c784ae0c26f, type: 3}
+  m_Name: E3_StunStateData
   m_EditorClassIdentifier: 
-  attackRadius: 1.1
-  attackDamage: 1
-  knockbackAngle: {x: 17.4, y: 10}
-  knockbackStrength: 13.4
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 128
+  stunTime: 3
+  stunKnockbackTime: 0.2
+  stunKnockbackSpeed: 20
+  stunKnockbackAngle: {x: 1, y: 2}
