@@ -15,7 +15,7 @@ public class lastTeleport : MonoBehaviour
         {
             if (collision.CompareTag("Player"))
             {
-                SceneManager.LoadScene("Storyboards_End", LoadSceneMode.Single);
+                SceneManager.LoadScene("endofstory", LoadSceneMode.Single);
                 Debug.Log("LastLevel");
             } 
         }
