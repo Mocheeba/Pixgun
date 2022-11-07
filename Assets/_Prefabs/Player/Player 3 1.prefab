@@ -5096,7 +5096,7 @@ GameObject:
   - component: {fileID: 3221025205420817173}
   - component: {fileID: 3221025205420817169}
   - component: {fileID: 3221025205420817168}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: Weapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -5237,7 +5237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3221025205601606132}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: Weapons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5319,7 +5319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3221025205753906310}
   - component: {fileID: 3221025205753906305}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: Sword1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5369,7 +5369,7 @@ GameObject:
   - component: {fileID: 3221025205940260974}
   - component: {fileID: 3221025205940260975}
   - component: {fileID: 3221025205940260973}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: Base
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -5569,7 +5569,6 @@ GameObject:
   - component: {fileID: 3221025204588020562}
   - component: {fileID: 68278942321474721}
   - component: {fileID: 68278942321474731}
-  - component: {fileID: 68278942321474753}
   - component: {fileID: 7576303500528209996}
   m_Layer: 7
   m_Name: Player 3 1
@@ -5919,21 +5918,6 @@ MonoBehaviour:
   numberOfFlashes: 3
   hurtSound: {fileID: 8300000, guid: ae3598977aae4f24a93604cd2a500d1f, type: 3}
   deadSound: {fileID: 8300000, guid: d845ad3f15db6174eb0618bed3d0c8f5, type: 3}
---- !u!114 &68278942321474753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7576303500528210035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e46b17953fb10c048a63915f52e701f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinPickupSound: {fileID: 8300000, guid: 90c9a95a633d88341aac17b28f803897, type: 3}
-  coins: 0
-  coinsCount: {fileID: 0}
 --- !u!114 &7576303500528209996
 MonoBehaviour:
   m_ObjectHideFlags: 0
