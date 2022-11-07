@@ -95,8 +95,8 @@ public class Health : MonoBehaviour
 
      private IEnumerator PlayerDeath()
    {
-        anim.SetTrigger("die");
-        yield return new WaitForSeconds(1);
+        
+        yield return new WaitForSeconds(0);
         dead = true;
         Respawn();
    }
