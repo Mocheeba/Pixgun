@@ -15,7 +15,7 @@ MonoBehaviour:
   attackRadius: 1.1
   attackDamage: 1
   knockbackAngle: {x: 17.4, y: 10}
-  knockbackStrength: 13.4
+  knockbackStrength: 19
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
