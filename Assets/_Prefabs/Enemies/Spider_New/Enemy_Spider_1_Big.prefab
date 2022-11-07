@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8778351396828048364}
   - component: {fileID: 4818838078425000866}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: CollisionSenses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4818838076582014340}
   - component: {fileID: 4818838076582014341}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4818838077148232986}
   - component: {fileID: 4818838077148232987}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 4818838077361005266}
   - component: {fileID: 4818838077361005264}
   - component: {fileID: 4818838077361005267}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Combat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4818838078109026050}
   - component: {fileID: 4818838078109026051}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4826476893822706169}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: LedgeCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4826476893947763910}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4826476894024848002}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 4826476894431737054}
   - component: {fileID: 4826476894431737055}
   - component: {fileID: 3332876941785571082}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Enemy_Spider_1_Big
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826476894431737041}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 93.98, y: 21.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -433,7 +433,7 @@ Transform:
   - {fileID: 4826476894730409878}
   - {fileID: 4826476892963886921}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4818838077233124875
 MonoBehaviour:
@@ -619,7 +619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4826476894730409878}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: PlayerCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,7 +650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4826476894812846729}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: TouchDamageCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8137962539528169695}
   - component: {fileID: 8137962539528169694}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: ParticleCointeiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
