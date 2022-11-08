@@ -34,6 +34,7 @@ public class ChestTrigger : MonoBehaviour
         if(!triggered & !wasActive)
         {
             StartCoroutine(ActivateChestTrigger());
+
         }
         if (activate)
             collision.GetComponent<Health>().TakeDamage(damage);
@@ -55,9 +56,8 @@ public class ChestTrigger : MonoBehaviour
          SoundMenager.instance.PlaySound(chestTriggerSound);
 
          yield return new WaitForSeconds(activationDelay);
-
+         activate = true;        
          spriteRend.color = Color.white;
-         activate = true;
 
          yield return new WaitForSeconds(activeTime);
          activate = false;

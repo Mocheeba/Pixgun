@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6637934691130944464}
   - component: {fileID: 3975913363612154181}
   - component: {fileID: 3629268297556203977}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7d1c791ede2264e892ce18e3251532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPrefab: {fileID: 4651779305815315267, guid: ed04faf07a41efe43aa74333aa382786, type: 3}
+  myPrefab: {fileID: 0}
   damage: 1
   activationDelay: 1
   activeTime: 2
