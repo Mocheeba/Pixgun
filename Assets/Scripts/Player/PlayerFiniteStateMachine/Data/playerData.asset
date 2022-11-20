@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   movementVelocity: 4.3
-  jumpVelocity: 19
+  jumpVelocity: 18.5
   amountOfJumps: 1
   wallJumpVelocity: 16
   wallJumpTime: 0.4
@@ -36,7 +36,7 @@ MonoBehaviour:
   crouchColliderHeight: 0.16
   standColliderHeight: 1.8
   groundCheckRadius: 0.2
-  WallCheckDistance: 8.1
+  WallCheckDistance: 8
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
