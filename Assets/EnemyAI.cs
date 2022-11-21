@@ -37,7 +37,7 @@ public class EnemyAI : MonoBehaviour
     } 
 
     private void FixedUpdate() {
-        if (targetInDistance() && followEnabled)
+        if (TargetInDistance() && followEnabled)
         {
             PathFollow();
         }
@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
 
     private void UpdatePath()
     {
-        if (followEnabled && targetInDistance() && seeker.IsDone())
+        if (followEnabled && TargetInDistance() && seeker.IsDone())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
@@ -84,26 +84,37 @@ public class EnemyAI : MonoBehaviour
          rb.AddForce(force);
 
         // Next Waypoint 
-        float distance = Vector2.Distance(rb.position, Path.VectorPath(currentWaypoint));
-        
+        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
         if (distance < nextWaypointDistance)
         {
             currentWaypoint++;
         }
-    }
 
-    // Directoin Graphics Handling
-    if (directionLookEnabled)
-    {       
-        if (rb.velocity.x > 0.05f)
-        {
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, Transform.localScale.z);
+        // Directoin Graphics Handling
+        if (directionLookEnabled)
+        {       
+            if (rb.velocity.x > 0.05f)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else if (rb.velocity.x < -0.05f)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
         }
-
-
     }
-   
 
+    private bool TargetInDistance ()
+    {
+        return Vector2.Distance(transform.position, target.transform.position) > activateDistance; // check if we inside the activate system
+    }
 
-
+    private void OnPathComplete(Path p)
+    {
+        if(!p.error)
+        {
+            path = p;
+            currentWaypoint = 0;
+        }
+    }
 }
