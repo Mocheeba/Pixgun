@@ -78,8 +78,7 @@ public class EnemyAI : MonoBehaviour
         Vector2 force = direction * speed * Time.deltaTime;
 
         // Jump
-        if (jumpEnabled && isGrounded)
-        {
+        if (jumpEnabled && isGrounded) {
             if (direction.y > jumpNodeHeightRequirement)
             //if (target.position.y - 1f > rb.transform.position.y && target.position.y == 0 && path.path.Count < 20)
             {
