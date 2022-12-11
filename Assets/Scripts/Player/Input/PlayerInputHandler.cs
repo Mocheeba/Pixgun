@@ -32,11 +32,9 @@ public class PlayerInputHandler : MonoBehaviour
     [SerializeField]
     private float inputHoldTime = 0.2f;
 
-
     private float jumpInputStartTime;
 
-    private void Start()
-    {
+    private void Start() {
         playerInput = GetComponent<PlayerInput>();
 
         int count = Enum.GetValues(typeof(CombatInputs)).Length;
