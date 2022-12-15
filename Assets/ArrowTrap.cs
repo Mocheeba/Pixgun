@@ -13,10 +13,11 @@ public class ArrowTrap : MonoBehaviour
     {
         cooldownTimer = 0;
 
-        SoundMenager.instance.PlaySound(arrowSound);
 
         arrows[FindArrow()].transform.position = firePoint.position;
         arrows[FindArrow()].GetComponent<EnemyProjectile>().ActiveteProjectile();
+        
+        SoundMenager.instance.PlaySound(arrowSound);
     }
     private int FindArrow()
     {

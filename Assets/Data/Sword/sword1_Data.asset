@@ -19,7 +19,7 @@ MonoBehaviour:
     knockbackStrenght: 15
     knockbackAngle: {x: 6, y: 6}
   - attackName: Attack_2
-    movementSpeed: 4
+    movementSpeed: 2
     damageAmount: 12
     knockbackStrenght: 15
-    knockbackAngle: {x: 32.11, y: 24.78}
+    knockbackAngle: {x: 8, y: 8}
