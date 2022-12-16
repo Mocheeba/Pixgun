@@ -104,10 +104,8 @@ public class PlayerDashState : PlayerAbilityState
         }
     }
 
-    private void CheckIfShouldPlaceAfterImage() // compare current position with last AIP
-    {
-        if(Vector2.Distance(player.transform.position, lastAfterimagePosition) >= playerData.distanceBetweenAfterImages)
-        {
+    private void CheckIfShouldPlaceAfterImage() { // compare current position with last AIP 
+        if(Vector2.Distance(player.transform.position, lastAfterimagePosition) >= playerData.distanceBetweenAfterImages) {
             PlaceAfterImage();
         }
     }

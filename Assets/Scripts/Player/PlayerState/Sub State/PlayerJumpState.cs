@@ -11,8 +11,7 @@ public class PlayerJumpState : PlayerAbilityState
         amountOfJumpsLeft = playerData.amountOfJumps;
     }
 
-    public override void Enter()
-    {
+    public override void Enter() {
         SoundMenager.instance.PlaySound(playerData.jumpSound);
 
         base.Enter();
@@ -24,14 +23,11 @@ public class PlayerJumpState : PlayerAbilityState
         player.InAirState.SetIsJumping();
     }
 
-    public bool CanJump()
-    {
-        if (amountOfJumpsLeft > 0)
-        {
+    public bool CanJump() {
+        if (amountOfJumpsLeft > 0) {
             return true;
         }
-        else
-        {
+        else {
             return false;
         }
     }
