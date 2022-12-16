@@ -6,6 +6,8 @@ public class Health : MonoBehaviour
 {
     private NPC_Controller npc;
 
+    [SerializeField] Transform teleportUI;
+
      [Header("CheckPoints Settings")]
      [SerializeField] Transform respawnStart;
      [SerializeField] Transform currentRespawn;
@@ -30,6 +32,8 @@ public class Health : MonoBehaviour
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private AudioClip deadSound;
 
+    
+
     private void Awake()
     {
         currentRespawn.position = respawnStart.position;
@@ -41,23 +45,22 @@ public class Health : MonoBehaviour
         
     }
 
-    private void Update()
-     {
-        if(inDialogue())
-        {
-            // RB.velocity.x = 0;
-            // RB.velocity.y = 0;
-            // RB.gravityScale = 0.0;
+    private void Update() {
+        if(inDialogue()){
+            // Disable movement
         }
-
-        else if (Input.GetKeyDown(KeyCode.T))
-        {
+        else if (Input.GetKeyDown(KeyCode.T)) {  
             TakeDamage(1);
         }
+        else if (Input.GetKeyDown(KeyCode.H)) {
+            AddHealth(1); 
+        }
+         PlayerRespawner();
+    }
 
-        else if (Input.GetKeyDown(KeyCode.H))
-        {
-            AddHealth(1);
+     private void PlayerRespawner() {
+        if(Input.GetKeyDown(KeyCode.R)) {
+            transform.position = currentRespawn.position;
         }
     }
 
@@ -91,39 +94,36 @@ public class Health : MonoBehaviour
              }   
         }
     }
-
-
-     private IEnumerator PlayerDeath()
-   {
-        
+     private IEnumerator PlayerDeath()   {
         yield return new WaitForSeconds(0);
         dead = true;
         Respawn();
    }
-    public void Respawn()
-    {   
+    public void Respawn() {   
         dead = false;
         AddHealth(startingHealth);
         anim.ResetTrigger("die");
         StartCoroutine(Invunerability());
         transform.position = currentRespawn.position;
-
-        Debug.Log("Obecny checkpoint = " + currentRespawn);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.transform.tag == "CheckPoint")
-        {
-            Debug.Log("Czekpoint1");
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.transform.tag == "CheckPoint") {
             currentRespawn = collision.transform;
+            Debug.Log("CheckPoint_1");
+            ShowUI();
         }
-        else if(collision.transform.tag == "CheckPoint2")
-        {
-             Debug.Log("Czekpoint2");
+        else if(collision.transform.tag == "CheckPoint2") {
              currentRespawn = collision.transform;
         }
     }
+
+    private void ShowUI()
+    {
+        teleportUI.gameObject.SetActive(true);
+        Debug.Log("ShowUI");
+    }
+
 
        private IEnumerator Invunerability()
     {
