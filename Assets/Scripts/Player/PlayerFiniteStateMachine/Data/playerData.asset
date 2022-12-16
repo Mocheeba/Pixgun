@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   movementVelocity: 4
-  jumpVelocity: 18
-  amountOfJumps: 1
+  jumpVelocity: 17
+  amountOfJumps: 2
   wallJumpVelocity: 16
-  wallJumpTime: 0.4
+  wallJumpTime: 0.1
   wallJumpAngle: {x: 1.1, y: 2.1}
   coyoteTime: 0.3
-  variableJumpHeightMultiplier: 0.7
+  variableJumpHeightMultiplier: 0.52
   wallSlideVelocity: 1.4
   wallClimbVelocity: 3
   startOffSet: {x: 0.4, y: 0.58}
   stopOffSet: {x: 0.26, y: 0.55}
-  dashCooldown: 4.27
+  dashCooldown: 1
   maxHoldTime: 1.6
-  holdTimeScale: 0.1
-  dashTime: 0.2
+  holdTimeScale: 0.2
+  dashTime: 0.24
   dashVelocity: 25
   drag: 10
   dashEndYMultiplier: 0.2

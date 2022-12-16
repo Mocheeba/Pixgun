@@ -9,17 +9,19 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject player;
     [SerializeField]
+
+    private CinemachineVirtualCamera CVC;
+    [SerializeField]
     private float respawnTime;
 
     private float respawnTimeStart;
 
     private bool respawn;
 
-    private CinemachineVirtualCamera CVC;
-
+    
     private void Start()
     {
-        CVC = GameObject.Find("Chixie Camera").GetComponent<CinemachineVirtualCamera>();
+        
     }
 
     private void Update()

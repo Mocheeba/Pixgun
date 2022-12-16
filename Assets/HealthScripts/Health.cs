@@ -6,6 +6,8 @@ public class Health : MonoBehaviour
 {
     private NPC_Controller npc;
 
+    
+
      [Header("CheckPoints Settings")]
      [SerializeField] Transform respawnStart;
      [SerializeField] Transform currentRespawn;
@@ -29,6 +31,8 @@ public class Health : MonoBehaviour
     [Header ("Sound")]
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private AudioClip deadSound;
+
+    
 
     private void Awake()
     {
@@ -58,6 +62,14 @@ public class Health : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.H))
         {
             AddHealth(1);
+        }
+     PlayerRespawner();
+    }
+
+     private void PlayerRespawner()
+    {
+        if(Input.GetKeyDown(KeyCode.R)) {
+            transform.position = currentRespawn.position;
         }
     }
 
@@ -93,9 +105,7 @@ public class Health : MonoBehaviour
     }
 
 
-     private IEnumerator PlayerDeath()
-   {
-        
+     private IEnumerator PlayerDeath()   {
         yield return new WaitForSeconds(0);
         dead = true;
         Respawn();
@@ -124,6 +134,9 @@ public class Health : MonoBehaviour
              currentRespawn = collision.transform;
         }
     }
+
+   
+
 
        private IEnumerator Invunerability()
     {
