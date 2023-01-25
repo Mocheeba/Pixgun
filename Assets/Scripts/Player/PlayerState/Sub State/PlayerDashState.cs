@@ -4,28 +4,21 @@ using UnityEngine;
 
 public class PlayerDashState : PlayerAbilityState
 {
-
     [SerializeField] private GameObject damageParticles;
     public bool CanDash { get; private set; }
     private bool DashInputStop;
-
     private float lastDashTime;
-     
     private bool isHolding;
-
     private Vector2 dashDirection;
     private Vector2 dashDirectionInput;
-
     private Vector2 lastAfterimagePosition;
-
     private AudioClip jumpSound;
 
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
 
-    public override void Enter()
-    {
+    public override void Enter() {
         base.Enter();
 
         
@@ -37,11 +30,9 @@ public class PlayerDashState : PlayerAbilityState
         startTime = Time.unscaledTime;
 
         player.DashDirectionIndicator.gameObject.SetActive(true); // turn ON indicator 
-
     }
 
-    public override void Exit()
-    {
+    public override void Exit() {
         base.Exit();
         if(Movement?.CurrentVelocity.y > 0)
         {
@@ -75,7 +66,7 @@ public class PlayerDashState : PlayerAbilityState
                 float angle = Vector2.SignedAngle(Vector2.right, dashDirection);
                 player.DashDirectionIndicator.rotation = Quaternion.Euler(0f, 0f, angle - 30f);
 
-                if (DashInputStop || Time.unscaledTime >= startTime + playerData.maxHoldTime)
+                if (DashInputStop || Time.unscaledTime >= startTime + playerData.maxHoldTime )
                 {
                     SoundMenager.instance.PlaySound(playerData.dashSound);
 
@@ -109,15 +100,13 @@ public class PlayerDashState : PlayerAbilityState
             PlaceAfterImage();
         }
     }
-    private void PlaceAfterImage()
-    {
+    private void PlaceAfterImage() {
         PlayerAfterImagePool.Instance.GetFromPool();
         lastAfterimagePosition = player.transform.position;
     }
 
 
-    public bool CheckIfCanDash()
-    {
+    public bool CheckIfCanDash() {
         return CanDash && Time.time >= lastDashTime + playerData.dashCooldown;
     }
 
