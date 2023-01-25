@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerAfterImagePool : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject afterImagePrefab;
+    [SerializeField] private GameObject afterImagePrefab;
 
     private Queue<GameObject> availableObjects = new Queue<GameObject>();
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
-    public Transform TeleportUI;
+    
     // ustawiamy do jakiego tp 
     [SerializeField] private Transform destination;
 

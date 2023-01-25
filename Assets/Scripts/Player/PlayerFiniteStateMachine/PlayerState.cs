@@ -5,21 +5,15 @@ using UnityEngine;
 public class PlayerState
 {
     protected Core core;
-
     protected Player player; // another class can acces to variable 
     protected PlayerStateMachine stateMachine;
     protected PlayerData playerData;
-
     protected float startTime;
-
     protected bool isAnimationFinished;
     protected bool isExitingState;
-
     private string animBoolName;
 
-    public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName)
-
-    {
+    public PlayerState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) {
         this.player = player;
         this.stateMachine = stateMachine;
         this.playerData = playerData;    
@@ -27,8 +21,7 @@ public class PlayerState
         core = player.Core;
     }
 
-    public virtual void Enter()
-    {
+    public virtual void Enter() {
         DoChecks();
         player.Anim.SetBool(animBoolName, true);
         startTime = Time.time;
@@ -38,8 +31,7 @@ public class PlayerState
 
     }
 
-    public virtual void Exit()
-    {
+    public virtual void Exit() {
         player.Anim.SetBool(animBoolName, false);
         isExitingState = true;
     }

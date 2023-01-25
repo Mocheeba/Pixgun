@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDetails:
   - attackName: Attack_1
-    movementSpeed: 1
+    movementSpeed: 0.6
     damageAmount: 12
     knockbackStrenght: 15
     knockbackAngle: {x: 6, y: 6}
   - attackName: Attack_2
-    movementSpeed: 2
+    movementSpeed: 1
     damageAmount: 12
     knockbackStrenght: 15
     knockbackAngle: {x: 8, y: 8}

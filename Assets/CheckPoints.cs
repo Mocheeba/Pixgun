@@ -7,13 +7,11 @@ public class CheckPoints : MonoBehaviour
     [SerializeField] Transform teleportUI;
    [SerializeField] private AudioClip checkPointActiveSound;
    [SerializeField] private Animator anim;
-   private Collider2D collider;
-
+   private Collider2D _collider;
 
 private void Start() {
     anim = GetComponent<Animator>();
-    collider = GetComponent<Collider2D>();
-
+    _collider = GetComponent<Collider2D>();
 }
    private void OnTriggerEnter2D(Collider2D collision)
    {
@@ -21,7 +19,7 @@ private void Start() {
         Debug.Log("Found a PLAYER on CheckPoints Scripts");
         anim.SetTrigger("appear");
         SoundMenager.instance.PlaySound(checkPointActiveSound);
-        //collider.enabled = false;
+        _collider.enabled = false;
         ShowUI();
 
    }
