@@ -12,18 +12,16 @@ public class PlayerLandState : PlayerGroundedState
     {
         base.LogicUpdate();
 
-
         if (!isExitingState)
         {
               if (xInput != 0)
-        {
-            stateMachine.ChangeState(player.MoveState);
-        }
+              {
+              stateMachine.ChangeState(player.MoveState);
+              }
         else if(isAnimationFinished)
-        {
-            stateMachine.ChangeState(player.IdleState);
+            {
+                stateMachine.ChangeState(player.IdleState);
+            }
         }
-        }
-      
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15f2f027c8402b4fbfd37a692a28db4, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: 
-  movementVelocity: 4
+  movementVelocity: 6
   jumpVelocity: 17
   amountOfJumps: 2
   wallJumpVelocity: 16
@@ -26,7 +26,7 @@ MonoBehaviour:
   stopOffSet: {x: 0.26, y: 0.55}
   dashCooldown: 1
   maxHoldTime: 1.6
-  holdTimeScale: 0.2
+  holdTimeScale: 0.1
   dashTime: 0.24
   dashVelocity: 25
   drag: 10
